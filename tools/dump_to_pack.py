@@ -7,7 +7,10 @@ The output is a *skeleton*: every player-facing quest lands in one
 "Uncurated" line, sorted by editor ID. Curation — grouping quests into
 questlines, ordering them, marking optional branches, writing blurbs — is
 deliberately a human step. The stage lists, though, are authoritative:
-straight from the plugin, ascending, fail stages dropped.
+straight from the plugin, ascending, fail stages dropped. Internal stages
+(no log entries) are kept, because their script fragments matter; when a
+quest has any, its 'journal' key lists the stages that do show in the quest
+log, so the GUI can dim the internal ones.
 
 Options:
   --include-nameless   keep quests with no display name (internal machinery,
@@ -49,6 +52,17 @@ def main():
         if completes:
             last = max(completes)
             entry['stages'] = [i for i in stages if i <= last]
+        # Journal stages vs internal ones. A stage is player-visible if it has
+        # log text, or if an objective shares its index (Bethesda convention
+        # for stages that update objectives without a journal entry). All of
+        # them get a setstage; 'journal' just lets the GUI dim internal lines.
+        # Older dumps without the 'log' field: treat everything as journal.
+        if any('log' in s for s in q.get('stages', [])):
+            visible = {s['i'] for s in q.get('stages', []) if s.get('log')}
+            visible |= set(q.get('objectives', []))
+            journal = [i for i in entry['stages'] if i in visible]
+            if len(journal) < len(entry['stages']):
+                entry['journal'] = journal
         quests.append(entry)
 
     quests.sort(key=lambda q: q['edid'].lower())

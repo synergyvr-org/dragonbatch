@@ -39,6 +39,7 @@ Rules the app relies on:
 - **Line and quest order is meaningful.** Output is generated in pack order, never click order, because later quests assume earlier ones ran.
 - `stages` is ascending and complete: every index gets a `setstage`.
 - `optional: true` keeps a quest out of the "through here" sweep and the line-level select-all; the reader opts in per quest (used for branches with consequences, like the quest that decides Paarthurnax's fate).
+- `journal` (optional) lists the subset of `stages` that appear in the quest log. The rest are internal machinery: they still get a `setstage` — their script fragments are half the reason this tool exists — but the preview dims them. No `journal` key means every stage is a journal stage.
 
 The vanilla pack currently covers the **main quest line**, compiled from UESP's quest-stage tables and verified 2026-09-10. Guild lines, Daedric quests, and the DLC lines come in via the xEdit pipeline below, which is also the road to list-specific packs (MGO, Synergy VR, Nordic Adventures each ship different quest mods).
 
@@ -46,11 +47,12 @@ The vanilla pack currently covers the **main quest line**, compiled from UESP's 
 
 1. Load the plugin(s) in SSEEdit/TES5VREdit — `Skyrim.esm`, the DLC masters, or any quest mod's plugin.
 2. Right-click → **Apply Script** → `tools/ExportQuestsJSON.pas`. One `<Plugin>.quests.json` lands next to the xEdit executable per plugin.
-3. `python3 tools/dump_to_pack.py Skyrim.esm.quests.json > data/packs/whatever.json`
-4. Curate: group the "Uncurated" line into real questlines, order them, prune the radiant/internal quests the name filter didn't catch, mark optional branches, add blurbs and notes.
-5. Add the pack to `data/manifest.json`.
+3. `python3 tools/dump_to_pack.py Skyrim.esm.quests.json > skeleton.json` — turns the dump into an uncurated pack skeleton.
+4. Curate in `data/curation/<pack>.json`: group quests into ordered lines, mark optional branches, add blurbs and notes, and list prune patterns for the radiant/internal quests the name filter didn't catch. Curation lives in the overlay, not the pack, so re-dumping a plugin never loses it.
+5. `python3 tools/curate_pack.py skeleton.json data/curation/skyrim.json > data/packs/skyrim.json` — applies the overlay; anything unplaced and unpruned lands in a trailing "Uncurated" line, and a quest named in the overlay but missing from the skeleton fails the run loudly.
+6. Add the pack to `data/manifest.json`.
 
-The dump keeps stage `complete`/`fail` flags from the plugin, and the converter drops fail stages and trims anything after the last completion stage. Editor IDs and stage indices are never hand-typed anywhere in this pipeline; that's the point of it.
+The dump keeps each stage's `complete`/`fail` flags, whether it has log text, and the quest's objective indices. The converter drops fail stages, trims anything after the last completion stage, and records in `journal` the stages that are player-visible (log text, or an objective sharing the stage index) so the GUI can dim the internal ones. Editor IDs and stage indices are never hand-typed anywhere in this pipeline; that's the point of it.
 
 ## Roadmap
 

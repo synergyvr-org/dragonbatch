@@ -2,7 +2,9 @@
 //
 // Data lives in JSON packs (data/manifest.json lists them). A pack holds
 // ordered questlines; each quest carries its editor ID and the ascending list
-// of journal-stage indices. Generation replays every stage in order with
+// of stage indices (an optional `journal` subset marks the ones that show in
+// the quest log; the rest are internal, dimmed in the preview but still
+// generated). Generation replays every stage in order with
 // `setstage`, because completing a quest properly means running the script
 // fragments its stages carry: `completequest` alone marks the journal and
 // leaves the world none the wiser.
@@ -109,20 +111,24 @@ function render() {
 
 function generate() {
   const withComments = $('#comments').checked;
-  const out = [];
+  const rows = [];
   let quests = 0, commands = 0;
   for (const line of state.pack.lines) {
     for (const quest of questsOf(line)) {
       if (!state.selected.has(quest.edid)) continue;
       quests++;
-      if (withComments) out.push('; ' + quest.name + ' (' + quest.edid + ')');
+      if (withComments) rows.push({ text: '; ' + quest.name + ' (' + quest.edid + ')', internal: false });
+      // quest.journal, when present, lists the stages that show in the quest
+      // log; the rest are internal. All of them get a setstage either way —
+      // the split only affects how the preview displays them.
+      const journal = quest.journal ? new Set(quest.journal) : null;
       for (const stage of quest.stages) {
-        out.push('setstage ' + quest.edid + ' ' + stage);
+        rows.push({ text: 'setstage ' + quest.edid + ' ' + stage, internal: journal !== null && !journal.has(stage) });
         commands++;
       }
     }
   }
-  return { text: out.join('\n') + (out.length ? '\n' : ''), quests, commands };
+  return { rows, text: rows.map(r => r.text).join('\n') + (rows.length ? '\n' : ''), quests, commands };
 }
 
 function update() {
@@ -142,8 +148,18 @@ function update() {
       lineBox.indeterminate = on > 0 && !lineBox.checked;
     }
   }
-  const { text, quests, commands } = generate();
-  $('#preview').textContent = text || '(no quests selected)';
+  const { rows, quests, commands } = generate();
+  const pre = $('#preview');
+  pre.textContent = '';
+  let internal = 0;
+  for (const row of rows) {
+    const span = document.createElement('span');
+    span.textContent = row.text + '\n';
+    if (row.internal) { span.className = 'internal'; internal++; }
+    pre.appendChild(span);
+  }
+  if (!rows.length) pre.textContent = '(no quests selected)';
+  $('#internal-note').hidden = internal === 0;
   $('#count').textContent = quests + ' quest' + (quests === 1 ? '' : 's') + ' · ' + commands + ' command' + (commands === 1 ? '' : 's');
   $('#download').disabled = $('#copy').disabled = commands === 0;
 }
