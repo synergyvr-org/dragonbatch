@@ -2,8 +2,12 @@
  "schema": 1,
  "packs": [
   {
-   "file": "packs/skyrim-vanilla.json",
+   "file": "packs/skyrim.json",
    "default": true
+  },
+  {
+   "file": "packs/skyrim-vanilla.json",
+   "default": false
   }
  ]
 }

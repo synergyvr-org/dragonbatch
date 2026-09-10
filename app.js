@@ -37,8 +37,8 @@ function render() {
   root.innerHTML = '';
   for (const line of state.pack.lines) {
     const details = document.createElement('details');
-    details.open = true;
     details.className = 'line';
+    details.addEventListener('toggle', updateToggleLines);
 
     const summary = document.createElement('summary');
     const lineBox = document.createElement('input');
@@ -107,6 +107,14 @@ function render() {
     details.appendChild(list);
     root.appendChild(details);
   }
+  updateToggleLines();
+}
+
+// The button expands when everything is collapsed, collapses otherwise, and
+// its label always names the action it will take.
+function updateToggleLines() {
+  const anyOpen = Array.from(document.querySelectorAll('#lines details.line')).some(d => d.open);
+  $('#toggle-lines').textContent = anyOpen ? 'Collapse all' : 'Expand all';
 }
 
 function generate() {
@@ -182,6 +190,12 @@ function download() {
 
 document.addEventListener('DOMContentLoaded', () => {
   $('#select-none').addEventListener('click', () => { state.selected.clear(); update(); });
+  $('#toggle-lines').addEventListener('click', () => {
+    const details = document.querySelectorAll('#lines details.line');
+    const anyOpen = Array.from(details).some(d => d.open);
+    details.forEach(d => { d.open = !anyOpen; });
+    updateToggleLines();
+  });
   $('#comments').addEventListener('change', update);
   $('#download').addEventListener('click', download);
   $('#copy').addEventListener('click', async () => {

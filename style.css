@@ -80,7 +80,12 @@ details.line li { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.
   cursor: pointer;
   text-align: left;
 }
-.quest-name:hover { color: var(--accent); }
+.quest-name:hover, .quest-name:focus-visible {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 0.2em;
+}
 .edid { color: var(--dim); font-family: ui-monospace, Menlo, monospace; font-size: 0.8em; }
 .tag {
   font-size: 0.68em;
