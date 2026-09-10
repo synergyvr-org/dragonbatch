@@ -1,0 +1,9 @@
+{
+ "schema": 1,
+ "packs": [
+  {
+   "file": "packs/skyrim-vanilla.json",
+   "default": true
+  }
+ ]
+}

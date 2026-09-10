@@ -1,0 +1,263 @@
+{
+ "schema": 1,
+ "id": "skyrim-vanilla",
+ "title": "Skyrim + official DLC",
+ "source": {
+  "type": "uesp",
+  "verified": "2026-09-10",
+  "notes": "Main quest line compiled from UESP quest-stage tables. Guild, Daedric, and DLC lines arrive with the xEdit dump pipeline (see tools/)."
+ },
+ "lines": [
+  {
+   "id": "main-quest",
+   "title": "Main Quest",
+   "blurb": "Alduin, the Greybeards, the works. Complete it all, or stop partway and start your game as a mid-story Dragonborn.",
+   "quests": [
+    {
+     "edid": "MQ101",
+     "name": "Unbound",
+     "stages": [
+      150,
+      160,
+      180,
+      250,
+      255,
+      315,
+      390,
+      900
+     ]
+    },
+    {
+     "edid": "MQ102",
+     "name": "Before the Storm",
+     "stages": [
+      10,
+      20,
+      30,
+      100,
+      110,
+      160
+     ]
+    },
+    {
+     "edid": "MQ103",
+     "name": "Bleak Falls Barrow",
+     "stages": [
+      10,
+      50,
+      180,
+      190
+     ]
+    },
+    {
+     "edid": "MQ104",
+     "name": "Dragon Rising",
+     "stages": [
+      10,
+      13,
+      40,
+      65,
+      80,
+      90,
+      160
+     ]
+    },
+    {
+     "edid": "MQ105",
+     "name": "The Way of the Voice",
+     "stages": [
+      8,
+      10,
+      30,
+      50,
+      58,
+      80,
+      100,
+      120,
+      140,
+      160
+     ]
+    },
+    {
+     "edid": "MQ105Ustengrav",
+     "name": "The Horn of Jurgen Windcaller",
+     "stages": [
+      10,
+      15,
+      20,
+      30,
+      40,
+      50,
+      60
+     ]
+    },
+    {
+     "edid": "MQ106",
+     "name": "A Blade in the Dark",
+     "stages": [
+      30,
+      50,
+      102,
+      150,
+      200
+     ]
+    },
+    {
+     "edid": "MQ201",
+     "name": "Diplomatic Immunity",
+     "stages": [
+      30,
+      40,
+      50,
+      70,
+      100,
+      110,
+      140,
+      160,
+      170,
+      210,
+      230,
+      250,
+      255
+     ]
+    },
+    {
+     "edid": "MQ202",
+     "name": "A Cornered Rat",
+     "stages": [
+      10,
+      20,
+      50,
+      150,
+      180
+     ]
+    },
+    {
+     "edid": "MQ203",
+     "name": "Alduin's Wall",
+     "stages": [
+      10,
+      50,
+      60,
+      200,
+      280
+     ]
+    },
+    {
+     "edid": "MQ204",
+     "name": "The Throat of the World",
+     "stages": [
+      10,
+      60,
+      70,
+      83,
+      90,
+      100,
+      120,
+      135,
+      140,
+      200
+     ]
+    },
+    {
+     "edid": "MQ205",
+     "name": "Elder Knowledge",
+     "stages": [
+      10,
+      20,
+      30,
+      50,
+      60,
+      80,
+      100
+     ]
+    },
+    {
+     "edid": "MQ206",
+     "name": "Alduin's Bane",
+     "stages": [
+      10,
+      20,
+      70,
+      100,
+      220
+     ]
+    },
+    {
+     "edid": "MQ301",
+     "name": "The Fallen",
+     "stages": [
+      10,
+      25,
+      30,
+      50,
+      70,
+      120,
+      150,
+      200,
+      220
+     ]
+    },
+    {
+     "edid": "MQ302",
+     "name": "Season Unending",
+     "stages": [
+      10,
+      15,
+      40,
+      55,
+      60,
+      300,
+      310,
+      350
+     ],
+     "optional": true,
+     "note": "Season Unending is the peace-council quest, and the game skips it on its own if the civil war is far enough along. Selecting it records the truce as brokered."
+    },
+    {
+     "edid": "MQPaarthurnax",
+     "name": "Paarthurnax",
+     "stages": [
+      20,
+      50,
+      100
+     ],
+     "optional": true,
+     "note": "Completing this quest means Paarthurnax dies. If you'd rather he lived, leave this unchecked; the main quest completes fine without it."
+    },
+    {
+     "edid": "MQ303",
+     "name": "The World-Eater's Eyrie",
+     "stages": [
+      10,
+      40,
+      50,
+      100,
+      180,
+      300
+     ]
+    },
+    {
+     "edid": "MQ304",
+     "name": "Sovngarde",
+     "stages": [
+      10,
+      50,
+      150,
+      200
+     ]
+    },
+    {
+     "edid": "MQ305",
+     "name": "Dragonslayer",
+     "stages": [
+      10,
+      100,
+      120,
+      200
+     ]
+    }
+   ]
+  }
+ ]
+}

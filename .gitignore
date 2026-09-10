@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# Python (tools/dump_to_pack.py)
+__pycache__/
+*.pyc
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Raw xEdit dumps (intermediate; curated packs live in data/packs/)
+*.quests.json

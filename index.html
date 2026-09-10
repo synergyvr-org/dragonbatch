@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dragonbatch — Skyrim console batch builder</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Dragonbatch</h1>
+    <p class="tagline">Build a Skyrim console batch file that completes the quests you'd rather skip, so a new game starts where you want it to.</p>
+  </header>
+
+  <main>
+    <section class="picker">
+      <div class="picker-head">
+        <h2 id="pack-title">Loading…</h2>
+        <div class="picker-actions">
+          <button type="button" id="select-none">Clear selection</button>
+        </div>
+      </div>
+      <p class="hint">Click a <strong>quest name</strong> to complete the line through that quest (everything before it comes along). Use the <strong>checkboxes</strong> to fine-tune individual quests. Optional side quests stay out of the through-here sweep, so check those yourself.</p>
+      <div id="lines"></div>
+    </section>
+
+    <section class="output">
+      <h2>Your batch file</h2>
+      <div class="controls">
+        <label>Filename
+          <span class="filename-wrap"><input type="text" id="filename" value="startquests" spellcheck="false"><span class="ext">.txt</span></span>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" id="comments">
+          Include comment lines <span class="dim">(the console logs a harmless error for each)</span>
+        </label>
+        <span class="count" id="count">0 quests · 0 commands</span>
+        <button type="button" id="copy">Copy</button>
+        <button type="button" id="download" class="primary">Download</button>
+      </div>
+      <pre id="preview" aria-live="polite"></pre>
+
+      <h2>How to use it</h2>
+      <ol class="howto">
+        <li>Put the downloaded file in your Skyrim VR <code>Data</code> folder (the one with all the plugins). The console also finds batch files next to <code>SkyrimVR.exe</code>, but <code>Data</code> keeps the game's root folder clean.
+          <details class="aside">
+            <summary>Using Mod Organizer 2? Keep it out of the game folder entirely.</summary>
+            <p>In MO2's left pane, right-click → <strong>All Mods → Create empty mod</strong>, name it something like <em>Dragonbatch batch files</em>, then right-click the new mod → <strong>Open in Explorer</strong> and drop the <code>.txt</code> in at the top level. Enable the mod and launch the game through MO2 as usual: its virtual file system merges the mod into <code>Data</code>, so <code>bat</code> finds the file without anything touching your actual install. MO2 may flag the mod as containing no valid game data — that's fine, plain text files just aren't on its checklist.</p>
+          </details>
+        </li>
+        <li>Start a <strong>new game</strong>. Finish character creation, and if your mod list configures itself on first launch (MCM recorders and the like), let it finish first.</li>
+        <li><strong>Save.</strong> There is no undo for what comes next.</li>
+        <li>Open the console and run <code>bat startquests</code> (or whatever you named the file).</li>
+        <li>Give it a moment to churn through the stages, then get on with your new life.</li>
+      </ol>
+      <p class="fine-print">Advancing quests by console replays each quest's stages in order, which is the most reliable method there is, but it's still a shortcut through content the game expects you to play. Expect the occasional oddity in NPC chatter and world state, and keep a save from before you ran it.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Quest data: <span id="source-note"></span></p>
+    <p>A <a href="https://synergyvr.org/">Synergy Team</a> tool. Not affiliated with Bethesda.</p>
+  </footer>
+</body>
+</html>
