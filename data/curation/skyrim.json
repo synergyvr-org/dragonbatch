@@ -1,0 +1,245 @@
+{
+ "id": "skyrim",
+ "title": "Skyrim (vanilla)",
+ "notes": "Stages from Skyrim.esm via xEdit. Questline grouping and order curated by hand against UESP. Verified 2026-09-10.",
+ "lines": [
+  {
+   "id": "main-quest",
+   "title": "Main Quest",
+   "blurb": "Alduin, the Greybeards, all of it. Complete it all, or stop partway and start your game as a mid-story Dragonborn.",
+   "quests": [
+    {"edid": "MQ101"},
+    {"edid": "MQ102"},
+    {"edid": "MQ103"},
+    {"edid": "MQ104"},
+    {"edid": "MQ105"},
+    {"edid": "MQ105Ustengrav"},
+    {"edid": "MQ106"},
+    {"edid": "MQ201"},
+    {"edid": "MQ202"},
+    {"edid": "MQ203"},
+    {"edid": "MQ204"},
+    {"edid": "MQ205"},
+    {"edid": "MQ206"},
+    {"edid": "MQ301"},
+    {"edid": "MQ302", "optional": true, "note": "Season Unending is the peace-council quest, and the game skips it on its own if the civil war is far enough along. Selecting it records the truce as brokered."},
+    {"edid": "MQPaarthurnax", "optional": true, "note": "Completing this quest means Paarthurnax dies. If you'd rather he lived, leave this unchecked; the main quest completes fine without it."},
+    {"edid": "MQ303"},
+    {"edid": "MQ304"},
+    {"edid": "MQ305"}
+   ]
+  },
+  {
+   "id": "civil-war",
+   "title": "Civil War",
+   "blurb": "Pick ONE side here. For either side, 'Joining' and the 'Jagged Crown' are the only scriptable skips. The campaign battles beyond these reuse radiant quest records for every hold and both sides, so replaying their stages blind would corrupt the war's state. Play the campaign out, or sidestep the war with 'Season Unending' from the main quest.",
+   "quests": [
+    {"edid": "CW01A", "optional": true, "note": "Imperial: Joining the Legion."},
+    {"edid": "CW02A", "optional": true, "note": "Imperial version of The Jagged Crown."},
+    {"edid": "CW01B", "optional": true, "note": "Stormcloak: Joining the Stormcloaks."},
+    {"edid": "CW02B", "optional": true, "note": "Stormcloak version of The Jagged Crown."}
+   ]
+  },
+  {
+   "id": "companions",
+   "title": "The Companions",
+   "blurb": "The Jorrvaskr line, 'Take Up Arms' through 'Glory of the Dead'. You end up Harbinger. Oh, and a werewolf.",
+   "quests": [
+    {"edid": "C00"},
+    {"edid": "C01"},
+    {"edid": "C02"},
+    {"edid": "C03"},
+    {"edid": "C04"},
+    {"edid": "C05"},
+    {"edid": "C06"}
+   ]
+  },
+  {
+   "id": "college",
+   "title": "College of Winterhold",
+   "blurb": "'First Lessons' through 'The Eye of Magnus'. You end up Arch-Mage.",
+   "quests": [
+    {"edid": "MG01"},
+    {"edid": "MG02"},
+    {"edid": "MG03"},
+    {"edid": "MG04"},
+    {"edid": "mg06", "note": "'Revealing the Unseen' plays before 'Containment' despite the editor IDs."},
+    {"edid": "MG05"},
+    {"edid": "MG07"},
+    {"edid": "MG08"}
+   ]
+  },
+  {
+   "id": "college-side",
+   "title": "College of Winterhold — Side Quests",
+   "blurb": "Arniel's Endeavor is a four-part series, in order. The apprentices' favors and the master-spell rituals are independent, so they're optional. The rituals normally unlock at skill 90 in their school.",
+   "quests": [
+    {"edid": "MGRArniel01", "note": "Part one of four."},
+    {"edid": "MGRArniel02"},
+    {"edid": "MGRArniel03"},
+    {"edid": "MGRArniel04"},
+    {"edid": "MGRAppBrelyna01", "optional": true},
+    {"edid": "MGRAppJzargo01", "optional": true},
+    {"edid": "MGRAppOnmund01", "optional": true},
+    {"edid": "MGRitual01", "optional": true},
+    {"edid": "MGRitual02", "optional": true},
+    {"edid": "MGRitual03", "optional": true},
+    {"edid": "MGRitual04", "optional": true},
+    {"edid": "MGRitual05", "optional": true}
+   ]
+  },
+  {
+   "id": "thieves-guild",
+   "title": "Thieves Guild",
+   "blurb": "'A Chance Arrangement' through 'Darkness Returns', then the four city-influence jobs on the road to Guild Master. Click 'Darkness Returns' to stop there, or 'Under New Management' for the whole arc.",
+   "quests": [
+    {"edid": "TG00"},
+    {"edid": "TG01"},
+    {"edid": "TG02B"},
+    {"edid": "TG02"},
+    {"edid": "TG03"},
+    {"edid": "TG04"},
+    {"edid": "TG05"},
+    {"edid": "TG06"},
+    {"edid": "TG07"},
+    {"edid": "TG08A"},
+    {"edid": "TG08B"},
+    {"edid": "TG09"},
+    {"edid": "TGTQ01", "note": "City influence job (Windhelm). Normally unlocked by radiant jobs. All four are needed to become Guild Master."},
+    {"edid": "TGTQ02", "note": "City influence job (Solitude)."},
+    {"edid": "TGTQ03", "note": "City influence job (Whiterun)."},
+    {"edid": "TGTQ04", "note": "City influence job (Markarth)."},
+    {"edid": "TGCrown", "optional": true, "note": "No Stone Unturned, Vex's Stones of Barenziah hunt."},
+    {"edid": "TGLeadership", "note": "Under New Management, the Guild Master capstone."}
+   ]
+  },
+  {
+   "id": "dark-brotherhood",
+   "title": "The Dark Brotherhood",
+   "blurb": "Innocence Lost through Hail Sithis! — or burn the whole thing down instead.",
+   "quests": [
+    {"edid": "DB01Misc", "optional": true, "note": "Delayed Burial, the Cicero wagon intro. Skippable."},
+    {"edid": "DB01"},
+    {"edid": "DB02"},
+    {"edid": "DB02a"},
+    {"edid": "DB03"},
+    {"edid": "DB04"},
+    {"edid": "DB04a"},
+    {"edid": "DB05"},
+    {"edid": "DB06"},
+    {"edid": "DB07"},
+    {"edid": "DB08"},
+    {"edid": "DB09"},
+    {"edid": "DB10"},
+    {"edid": "DB11"},
+    {"edid": "DBSideContract01", "optional": true, "note": "Nazir's twelve fixed side contracts. Sets of these quests normally pace the main questline."},
+    {"edid": "DBSideContract02", "optional": true},
+    {"edid": "DBSideContract03", "optional": true},
+    {"edid": "DBSideContract04", "optional": true},
+    {"edid": "DBSideContract05", "optional": true},
+    {"edid": "DBSideContract06", "optional": true},
+    {"edid": "DBSideContract07", "optional": true},
+    {"edid": "DBSideContract08", "optional": true},
+    {"edid": "DBSideContract09", "optional": true},
+    {"edid": "DBSideContract10", "optional": true},
+    {"edid": "DBSideContract11", "optional": true},
+    {"edid": "DBSideContract12", "optional": true},
+    {"edid": "DarkBrotherhoodSanctuaryRepair", "optional": true, "note": "Where You Hang Your Enemy's Head, the post-story sanctuary refurbish."},
+    {"edid": "DBDestroy", "optional": true, "note": "Destroy the Dark Brotherhood! is the alternative to joining. Mutually exclusive with everything above. Select this OR the main questline, not both."}
+   ]
+  },
+  {
+   "id": "daedric",
+   "title": "Daedric Quests",
+   "blurb": "Independent artifact quests, unordered, all optional.",
+   "quests": [
+    {"edid": "DA01", "optional": true, "note": "Azura."},
+    {"edid": "DA02", "optional": true, "note": "Boethiah."},
+    {"edid": "DA03", "optional": true, "note": "Clavicus Vile."},
+    {"edid": "DA04", "optional": true, "note": "Hermaeus Mora. Ties into the main quest's Elder Knowledge."},
+    {"edid": "DA05", "optional": true, "note": "Hircine."},
+    {"edid": "DA06", "optional": true, "note": "Malacath."},
+    {"edid": "DA07", "optional": true, "note": "Mehrunes Dagon."},
+    {"edid": "DA08", "optional": true, "note": "Mephala."},
+    {"edid": "DA09", "optional": true, "note": "Meridia."},
+    {"edid": "DA10", "optional": true, "note": "Molag Bal."},
+    {"edid": "DA11", "optional": true, "note": "Namira."},
+    {"edid": "DA13", "optional": true, "note": "Peryite."},
+    {"edid": "DA14", "optional": true, "note": "Sanguine."},
+    {"edid": "DA15", "optional": true, "note": "Sheogorath."},
+    {"edid": "DA16", "optional": true, "note": "Vaermina."}
+   ]
+  },
+  {
+   "id": "side-quests",
+   "title": "City Side Quests",
+   "blurb": "Standalone side quests, unordered, all optional.",
+   "quests": [
+    {"edid": "MS01", "optional": true, "note": "Leads into No One Escapes Cidhna Mine."},
+    {"edid": "MS02", "optional": true},
+    {"edid": "MS03", "optional": true},
+    {"edid": "MS04", "optional": true},
+    {"edid": "MS06Start", "optional": true, "note": "The Man Who Cried Wolf, part one of the Wolf Queen story."},
+    {"edid": "MS06", "optional": true, "note": "Part two; select The Man Who Cried Wolf as well."},
+    {"edid": "MS07", "optional": true},
+    {"edid": "MS08", "optional": true},
+    {"edid": "MS09", "optional": true},
+    {"edid": "MS10", "optional": true},
+    {"edid": "MS11", "optional": true},
+    {"edid": "MS11b", "optional": true, "note": "Part two of Blood on the Ice; select part one as well."},
+    {"edid": "MS12", "optional": true},
+    {"edid": "MS12b", "optional": true, "note": "Repairing the Phial follows The White Phial; select it as well."},
+    {"edid": "MS13", "optional": true},
+    {"edid": "MS14", "optional": true},
+    {"edid": "T01", "optional": true},
+    {"edid": "t02", "optional": true},
+    {"edid": "T03", "optional": true},
+    {"edid": "NN01", "optional": true},
+    {"edid": "VC01", "optional": true, "note": "Rising at Dawn, Falion's vampirism cure."}
+   ]
+  },
+  {
+   "id": "bards-college",
+   "title": "Bards College",
+   "blurb": "Tending the Flames makes you a Bard. The instrument hunts are independent extras.",
+   "quests": [
+    {"edid": "MS05"},
+    {"edid": "BardsCollegeLute", "optional": true},
+    {"edid": "BardsCollegeDrum", "optional": true},
+    {"edid": "BardsCollegeFlute", "optional": true},
+    {"edid": "BardsCollegePoeticEdda", "optional": true}
+   ]
+  },
+  {
+   "id": "dungeon-quests",
+   "title": "Dungeon Quests",
+   "blurb": "Self-contained dungeon quests, unordered, all optional.",
+   "quests": [
+    {"edid": "dunGauldursonQST", "optional": true, "note": "Forbidden Legend spans three dungeons and ends at the Gauldur amulet."},
+    {"edid": "dunForelhostQST", "optional": true},
+    {"edid": "dunFrostmereCryptQST", "optional": true},
+    {"edid": "dunDarklightQST", "optional": true},
+    {"edid": "dunValthumeQST", "optional": true},
+    {"edid": "dunVolunruudQST", "optional": true},
+    {"edid": "dunHunterQST", "optional": true},
+    {"edid": "dunHighGateRuinsQST", "optional": true},
+    {"edid": "dunHillgrundsTombQST", "optional": true},
+    {"edid": "dunNchuandZelQst", "optional": true},
+    {"edid": "dunNilheimQST", "optional": true},
+    {"edid": "dunShipwreck04QST", "optional": true},
+    {"edid": "dunTrevasWatchQST", "optional": true},
+    {"edid": "dunIronbindQST", "optional": true},
+    {"edid": "dunBlindCliffQST", "optional": true},
+    {"edid": "dunYngolBarrowQST", "optional": true},
+    {"edid": "dunBardsLeapSummitQST", "optional": true},
+    {"edid": "dunMidden01QST", "optional": true}
+   ]
+  }
+ ],
+ "prune": [
+  "MQ*", "TG*", "MG*", "C0*", "CR*", "CW*", "DB*", "DA*", "MS*", "dun*",
+  "WE*", "WI*", "Dialogue*", "Favor*", "Freeform*", "SolitudeFreeform*", "BQ*",
+  "Relationship*", "SolitudeOpening", "stables", "PerksQuest"
+ ],
+ "keepUncurated": true
+}
