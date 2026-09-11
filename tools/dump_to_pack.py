@@ -34,15 +34,28 @@ def main():
 
     # Load-order merge: later dumps override earlier ones per quest, matched
     # case-insensitively because editor IDs are (Update.esm ships 'weroad08'
-    # for Skyrim.esm's 'WERoad08').
+    # for Skyrim.esm's 'WERoad08'). The plugin that *introduced* a quest is
+    # its origin; overriding it later doesn't change where it came from.
     merged = {}
+    origin = {}
     plugins = []
     for dumpfile in args.dumps:
         dump = json.load(open(dumpfile, encoding='utf-8'))
-        plugins.append(dump.get('plugin', 'unknown.esp'))
+        plugin_name = dump.get('plugin', 'unknown.esp')
+        plugins.append(plugin_name)
         for q in dump.get('quests', []):
-            merged[q['edid'].lower()] = q
+            key = q['edid'].lower()
+            origin.setdefault(key, plugin_name)
+            merged[key] = q
     plugin = plugins[0]
+
+    # Display names for non-base origins ("dlc" on the quest entry).
+    DLC_NAMES = {'HearthFires.esm': 'Hearthfire'}
+    def dlc_of(q):
+        o = origin[q['edid'].lower()]
+        if o == plugin:
+            return None
+        return DLC_NAMES.get(o, o.rsplit('.', 1)[0])
 
     quests = []
     skipped_nameless = 0
@@ -58,6 +71,8 @@ def main():
             'name': q.get('name') or q['edid'],
             'stages': stages,
         }
+        if dlc_of(q):
+            entry['dlc'] = dlc_of(q)
         # If the plugin marks explicit completion stages, trim past the last one:
         # stages after the final "complete" flag are usually epilogue bookkeeping.
         completes = [s['i'] for s in q.get('stages', []) if s.get('complete')]

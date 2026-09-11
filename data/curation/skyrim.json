@@ -1,7 +1,7 @@
 {
  "id": "skyrim",
- "title": "Skyrim (vanilla)",
- "notes": "Stages from Skyrim.esm as patched by Update.esm, via xEdit. Questline grouping and order curated by hand against UESP. Verified 2026-09-11.",
+ "title": "Skyrim + official DLC",
+ "notes": "Stages from Skyrim.esm, Update.esm, Dawnguard.esm, HearthFires.esm, and Dragonborn.esm via xEdit, merged in load order. Questline grouping and order curated by hand against UESP. Verified 2026-09-11.",
  "lines": [
   {
    "id": "main-quest",
@@ -234,10 +234,99 @@
     {"edid": "dunBardsLeapSummitQST", "optional": true},
     {"edid": "dunMidden01QST", "optional": true}
    ]
+  },
+  {
+   "id": "dawnguard",
+   "title": "Dawnguard",
+   "blurb": "'Awakening' through 'Kindred Judgment'. At 'Bloodline' you pick a side: stay mortal with the Dawnguard, or take Harkon's gift and join the Volkihar. Click 'Kindred Judgment' to sweep the shared quests, then click your side's 'Prophet' to fill in the fork.",
+   "quests": [
+    {"edid": "DLC1VQ01MiscObjective", "note": "The 'Dawnguard' misc intro: word of the vampire attacks, and directions to Fort Dawnguard."},
+    {"edid": "DLC1VQ01"},
+    {"edid": "DLC1VQ02"},
+    {"edid": "DLC1HunterBaseIntro", "branch": "Dawnguard"},
+    {"edid": "DLC1VQ03Hunter", "branch": "Dawnguard"},
+    {"edid": "DLC1VampireBaseIntro", "branch": "Volkihar Vampires"},
+    {"edid": "DLC1VQ03Vampire", "branch": "Volkihar Vampires"},
+    {"edid": "DLC1VQElder"},
+    {"edid": "DLC1VQ04"},
+    {"edid": "DLC1VQ05"},
+    {"edid": "DLC1VQ06"},
+    {"edid": "DLC1VQ07"},
+    {"edid": "DLC1VQ08"}
+   ]
+  },
+  {
+   "id": "dawnguard-side",
+   "title": "Side Quests",
+   "blurb": "Optional extras. The Soul Cairn pair assumes the main line has reached 'Beyond Death'.",
+   "quests": [
+    {"edid": "DLC1LD", "optional": true, "note": "Lost to the Ages, the Aetherium Forge hunt. Independent of the main line."},
+    {"edid": "DLC1VQDragon", "optional": true, "note": "Durnehviir, in the Soul Cairn."},
+    {"edid": "DLC1VQSaint", "optional": true, "note": "Impatience of a Saint: Jiub's opus pages, in the Soul Cairn."}
+   ]
+  },
+  {
+   "id": "dragonborn",
+   "title": "Dragonborn",
+   "blurb": "Miraak's story, 'Dragonborn' through 'At the Summit of Apocrypha'.",
+   "quests": [
+    {"edid": "DLC2MQ01"},
+    {"edid": "DLC2MQ02"},
+    {"edid": "DLC2MQ03"},
+    {"edid": "DLC2MQ03B", "optional": true, "note": "Cleansing the Stones, the remaining All-Maker stones beyond the one 'The Fate of the Skaal' covers."},
+    {"edid": "DLC2MQ04"},
+    {"edid": "DLC2MQ05"},
+    {"edid": "DLC2MQ06"}
+   ]
+  },
+  {
+   "id": "black-books",
+   "title": "Black Books",
+   "blurb": "The five side Black Books; the two story books come with the main line. All optional.",
+   "quests": [
+    {"edid": "DLC2BlackBook03Quest", "optional": true},
+    {"edid": "DLC2BlackBook04Quest", "optional": true},
+    {"edid": "DLC2BlackBook05Quest", "optional": true},
+    {"edid": "DLC2BlackBook06Quest", "optional": true},
+    {"edid": "DLC2BlackBook07Quest", "optional": true}
+   ]
+  },
+  {
+   "id": "solstheim-side",
+   "title": "Solstheim Side Quests",
+   "blurb": "Raven Rock and the island, all optional — except Thirsk Mead Hall at the bottom, where you pick a side.",
+   "quests": [
+    {"edid": "DLC2RR01", "optional": true},
+    {"edid": "DLC2RR02", "optional": true},
+    {"edid": "DLC2RR03Intro", "optional": true, "note": "An Axe to Find leads into The Final Descent; select both."},
+    {"edid": "DLC2RR03", "optional": true},
+    {"edid": "DLC2dunHaknirTreasureQST", "optional": true, "note": "Deathbrand."},
+    {"edid": "DLC2dunKolbjornQST", "optional": true, "note": "Unearthed, the Kolbjorn Barrow excavation."},
+    {"edid": "DLC2KagrumezQST", "optional": true},
+    {"edid": "DLC2SV01", "optional": true},
+    {"edid": "DLC2SV02", "optional": true},
+    {"edid": "DLC2WB01", "optional": true},
+    {"edid": "DLC2TGQuest", "optional": true, "note": "Paid in Full, Glover Mallory's favor. Expects a Thieves Guild member."},
+    {"edid": "DLC2EbonyWarriorQuest", "optional": true, "note": "The Ebony Warrior only appears at level 80."},
+    {"edid": "DLC2MH01", "branch": "Retake Thirsk for the Nords"},
+    {"edid": "DLC2MH02", "branch": "Serve the Riekling Chief"}
+   ]
+  },
+  {
+   "id": "telvanni",
+   "title": "House Telvanni",
+   "blurb": "Neloth's chain in order, then Tel Mithryn's restoration favors.",
+   "quests": [
+    {"edid": "DLC2TT1"},
+    {"edid": "DLC2TT1b"},
+    {"edid": "DLC2TT2"},
+    {"edid": "DLC2TTF1", "optional": true},
+    {"edid": "DLC2TTF2", "optional": true}
+   ]
   }
  ],
  "prune": [
-  "MQ*", "TG*", "MG*", "C0*", "CR*", "CW*", "DB*", "DA*", "MS*", "dun*", "WE*", "WI*", "Dialogue*", "Favor*", "Freeform*", "SolitudeFreeform*", "BQ*", "Relationship*", "SolitudeOpening", "stables", "PerksQuest"
+  "MQ*", "TG*", "MG*", "C0*", "CR*", "CW*", "DB*", "DA*", "MS*", "dun*", "WE*", "WI*", "Dialogue*", "Favor*", "Freeform*", "SolitudeFreeform*", "BQ*", "Relationship*", "SolitudeOpening", "stables", "PerksQuest", "DLC*", "BYOH*"
  ],
  "keepUncurated": true
 }

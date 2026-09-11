@@ -17,7 +17,35 @@ const state = {
   pack: null,
   selected: new Set(),
   filter: '',
+  dlcHues: new Map(),
 };
+
+// Every plugin gets its own pill color: hues handed out in order of first
+// appearance in the pack, from a palette tuned for the dark theme (and
+// steering clear of the gold accent). Packs with more plugins than palette
+// entries continue around the wheel at the golden angle.
+const DLC_HUES = [210, 145, 280, 15, 330, 180, 80, 250];
+
+function assignDlcHues() {
+  state.dlcHues.clear();
+  for (const line of state.pack.lines) {
+    for (const quest of line.quests) {
+      if (quest.dlc && !state.dlcHues.has(quest.dlc)) {
+        const i = state.dlcHues.size;
+        const hue = i < DLC_HUES.length
+          ? DLC_HUES[i]
+          : Math.round((DLC_HUES[DLC_HUES.length - 1] + 137.508 * (i - DLC_HUES.length + 1)) % 360);
+        state.dlcHues.set(quest.dlc, hue);
+      }
+    }
+  }
+}
+
+function dlcPill(dlc, q) {
+  const hue = state.dlcHues.get(dlc) ?? 210;
+  return ' <span class="tag dlc" style="color:hsl(' + hue + ' 65% 75%);border-color:hsl(' + hue + ' 65% 75% / 0.35)">' +
+    highlight(dlc, q) + '</span>';
+}
 
 const $ = (sel) => document.querySelector(sel);
 
@@ -35,8 +63,21 @@ function highlight(s, q) {
   return out + esc(s.slice(i));
 }
 
+// A line whose quests all come from the same DLC wears that DLC's badge on
+// its title, so collapsed lines are spottable too. Mixed or base lines don't.
+function lineDlc(line) {
+  const dlcs = new Set(line.quests.map((quest) => quest.dlc || ''));
+  return dlcs.size === 1 ? [...dlcs][0] || null : null;
+}
+
+function lineLabel(line, q) {
+  const dlc = lineDlc(line);
+  return highlight(line.title, q) + (dlc ? dlcPill(dlc, q) : '');
+}
+
 function questLabel(quest, q) {
   return highlight(quest.name, q) + ' <span class="edid">' + highlight(quest.edid, q) + '</span>' +
+    (quest.dlc ? dlcPill(quest.dlc, q) : '') +
     (quest.optional ? ' <span class="tag">optional</span>' : '');
 }
 
@@ -44,6 +85,7 @@ async function load() {
   const manifest = await (await fetch('data/manifest.json')).json();
   const entry = manifest.packs.find(p => p.default) || manifest.packs[0];
   state.pack = await (await fetch('data/' + entry.file)).json();
+  assignDlcHues();
   $('#pack-title').textContent = state.pack.title;
   $('#source-note').textContent = state.pack.source.notes;
   render();
@@ -98,7 +140,7 @@ function render() {
     }
     const title = document.createElement('span');
     title.className = 'line-title';
-    title.textContent = line.title;
+    title.innerHTML = lineLabel(line, '');
     summary.appendChild(title);
     details.appendChild(summary);
 
@@ -130,7 +172,7 @@ function render() {
       const list = document.createElement('ul');
       for (const quest of group.quests) {
         const li = document.createElement('li');
-        li.dataset.search = (quest.name + ' ' + quest.edid + ' ' + (quest.note || '') + ' ' + line.title).toLowerCase();
+        li.dataset.search = (quest.name + ' ' + quest.edid + ' ' + (quest.note || '') + ' ' + (quest.dlc || '') + ' ' + line.title).toLowerCase();
         li._quest = quest; // for the filter's match highlighting
 
         const box = document.createElement('input');
@@ -213,7 +255,7 @@ function applyFilter() {
   let anyHit = false;
   for (const [i, d] of details.entries()) {
     const lineTitle = d.querySelector('.line-title');
-    lineTitle.innerHTML = highlight(state.pack.lines[i].title, filtering ? q : '');
+    lineTitle.innerHTML = lineLabel(state.pack.lines[i], filtering ? q : '');
     let lineHit = false;
     for (const li of d.querySelectorAll('li')) {
       const hit = !filtering || li.dataset.search.includes(q);

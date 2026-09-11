@@ -140,6 +140,9 @@ details.line .branch ul { margin: 0.2rem 0 0; }
   padding: 0.05em 0.55em;
   vertical-align: middle;
 }
+/* Per-plugin color comes inline from app.js (assignDlcHues); this is only
+   the fallback if a pill ever renders without one. */
+.tag.dlc { color: var(--link); border-color: #8ab4f84d; }
 .note { flex-basis: 100%; margin-left: 1.9rem; color: var(--dim); font-size: 0.85rem; }
 
 input[type="checkbox"] { accent-color: var(--accent); width: 1rem; height: 1rem; }

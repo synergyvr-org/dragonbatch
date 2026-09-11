@@ -1,11 +1,11 @@
 {
  "schema": 1,
  "id": "skyrim",
- "title": "Skyrim (vanilla)",
+ "title": "Skyrim + official DLC",
  "source": {
   "type": "xedit",
   "plugin": "Skyrim.esm",
-  "notes": "Stages from Skyrim.esm as patched by Update.esm, via xEdit. Questline grouping and order curated by hand against UESP. Verified 2026-09-11."
+  "notes": "Stages from Skyrim.esm, Update.esm, Dawnguard.esm, HearthFires.esm, and Dragonborn.esm via xEdit, merged in load order. Questline grouping and order curated by hand against UESP. Verified 2026-09-11."
  },
  "lines": [
   {
@@ -4540,6 +4540,1490 @@
     }
    ],
    "blurb": "Self-contained dungeon quests, unordered, all optional."
+  },
+  {
+   "id": "dawnguard",
+   "title": "Dawnguard",
+   "quests": [
+    {
+     "edid": "DLC1VQ01MiscObjective",
+     "name": "Dawnguard",
+     "stages": [
+      5,
+      10,
+      20,
+      50,
+      80,
+      100,
+      110,
+      115,
+      120,
+      130,
+      140,
+      150,
+      180
+     ],
+     "dlc": "Dawnguard",
+     "journal": [
+      10
+     ],
+     "note": "The 'Dawnguard' misc intro: word of the vampire attacks, and directions to Fort Dawnguard."
+    },
+    {
+     "edid": "DLC1VQ01",
+     "name": "Awakening",
+     "stages": [
+      0,
+      5,
+      10,
+      12,
+      15,
+      17,
+      18,
+      19,
+      20,
+      30,
+      40,
+      200
+     ],
+     "dlc": "Dawnguard",
+     "journal": [
+      10,
+      30,
+      40,
+      200
+     ]
+    },
+    {
+     "edid": "DLC1VQ02",
+     "name": "Bloodline",
+     "stages": [
+      0,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      15,
+      20,
+      25,
+      30,
+      40,
+      180,
+      190,
+      200
+     ],
+     "dlc": "Dawnguard",
+     "journal": [
+      5,
+      10,
+      20,
+      25,
+      30,
+      40,
+      180,
+      190
+     ]
+    },
+    {
+     "edid": "DLC1HunterBaseIntro",
+     "name": "A New Order",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      45,
+      50,
+      60,
+      70,
+      200
+     ],
+     "dlc": "Dawnguard",
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      45,
+      50,
+      60,
+      70,
+      200
+     ],
+     "branch": "Dawnguard"
+    },
+    {
+     "edid": "DLC1VQ03Hunter",
+     "name": "Prophet",
+     "stages": [
+      0,
+      5,
+      7,
+      10,
+      15,
+      17,
+      20,
+      30,
+      40,
+      45,
+      50,
+      52,
+      55,
+      57,
+      60,
+      61,
+      65,
+      66,
+      67,
+      70,
+      80,
+      90,
+      100,
+      200
+     ],
+     "dlc": "Dawnguard",
+     "journal": [
+      5,
+      7,
+      10,
+      15,
+      17,
+      20,
+      30,
+      40,
+      45,
+      50,
+      52,
+      55,
+      57,
+      60,
+      65,
+      66,
+      70,
+      80,
+      90,
+      100,
+      200
+     ],
+     "branch": "Dawnguard"
+    },
+    {
+     "edid": "DLC1VampireBaseIntro",
+     "name": "The Bloodstone Chalice",
+     "stages": [
+      0,
+      10,
+      15,
+      20,
+      30,
+      40,
+      50,
+      60,
+      200
+     ],
+     "dlc": "Dawnguard",
+     "journal": [
+      10,
+      15,
+      20,
+      30,
+      40,
+      50,
+      60,
+      200
+     ],
+     "branch": "Volkihar Vampires"
+    },
+    {
+     "edid": "DLC1VQ03Vampire",
+     "name": "Prophet",
+     "stages": [
+      0,
+      5,
+      10,
+      20,
+      30,
+      40,
+      45,
+      47,
+      50,
+      55,
+      57,
+      60,
+      61,
+      65,
+      66,
+      67,
+      68,
+      70,
+      80,
+      90,
+      100,
+      110,
+      120,
+      130,
+      200
+     ],
+     "dlc": "Dawnguard",
+     "journal": [
+      5,
+      10,
+      20,
+      30,
+      40,
+      45,
+      47,
+      50,
+      55,
+      57,
+      60,
+      65,
+      66,
+      67,
+      70,
+      80,
+      100,
+      130,
+      200
+     ],
+     "branch": "Volkihar Vampires"
+    },
+    {
+     "edid": "DLC1VQElder",
+     "name": "Seeking Disclosure",
+     "stages": [
+      1,
+      10,
+      20,
+      25,
+      30,
+      40,
+      200
+     ],
+     "dlc": "Dawnguard",
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      200
+     ]
+    },
+    {
+     "edid": "DLC1VQ04",
+     "name": "Chasing Echoes",
+     "stages": [
+      0,
+      1,
+      10,
+      20,
+      25,
+      30,
+      35,
+      40,
+      45,
+      50,
+      55,
+      60,
+      70,
+      75,
+      80,
+      90,
+      95,
+      100,
+      110,
+      111,
+      112,
+      115,
+      200
+     ],
+     "dlc": "Dawnguard",
+     "journal": [
+      10,
+      20,
+      30,
+      35,
+      40,
+      45,
+      50,
+      60,
+      70,
+      80,
+      90,
+      100,
+      110,
+      200
+     ]
+    },
+    {
+     "edid": "DLC1VQ05",
+     "name": "Beyond Death",
+     "stages": [
+      0,
+      10,
+      20,
+      25,
+      28,
+      29,
+      30,
+      40,
+      50,
+      70,
+      80,
+      110,
+      120,
+      130,
+      140,
+      200
+     ],
+     "dlc": "Dawnguard",
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      70,
+      80,
+      110,
+      120,
+      200
+     ]
+    },
+    {
+     "edid": "DLC1VQ06",
+     "name": "Unseen Visions",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      70,
+      200
+     ],
+     "dlc": "Dawnguard",
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      200
+     ]
+    },
+    {
+     "edid": "DLC1VQ07",
+     "name": "Touching the Sky",
+     "stages": [
+      0,
+      10,
+      30,
+      35,
+      36,
+      50,
+      55,
+      60,
+      65,
+      70,
+      80,
+      81,
+      82,
+      85,
+      86,
+      87,
+      90,
+      91,
+      92,
+      95,
+      96,
+      97,
+      100,
+      105,
+      110,
+      120,
+      130,
+      131,
+      132,
+      135,
+      140,
+      150,
+      200
+     ],
+     "dlc": "Dawnguard",
+     "journal": [
+      10,
+      30,
+      50,
+      70,
+      80,
+      90,
+      100,
+      110,
+      120,
+      130,
+      200
+     ]
+    },
+    {
+     "edid": "DLC1VQ08",
+     "name": "Kindred Judgment",
+     "stages": [
+      0,
+      10,
+      20,
+      25,
+      30,
+      40,
+      50,
+      55,
+      60,
+      200
+     ],
+     "dlc": "Dawnguard",
+     "journal": [
+      10,
+      20,
+      30,
+      40
+     ]
+    }
+   ],
+   "blurb": "'Awakening' through 'Kindred Judgment'. At 'Bloodline' you pick a side: stay mortal with the Dawnguard, or take Harkon's gift and join the Volkihar. Click 'Kindred Judgment' to sweep the shared quests, then click your side's 'Prophet' to fill in the fork."
+  },
+  {
+   "id": "dawnguard-side",
+   "title": "Side Quests",
+   "quests": [
+    {
+     "edid": "DLC1LD",
+     "name": "Lost to the Ages",
+     "stages": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      10,
+      20,
+      30,
+      40,
+      50,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      100,
+      110,
+      111,
+      112,
+      120,
+      125,
+      126,
+      130,
+      131,
+      135,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      150,
+      160,
+      170,
+      175,
+      176,
+      179,
+      180,
+      181,
+      182,
+      185,
+      186,
+      187,
+      190,
+      195,
+      196,
+      200,
+      205,
+      206,
+      210,
+      220,
+      221,
+      225,
+      255
+     ],
+     "dlc": "Dawnguard",
+     "journal": [
+      100,
+      110,
+      111,
+      112,
+      120,
+      125,
+      126,
+      130,
+      135,
+      150,
+      160,
+      170,
+      175,
+      180,
+      190,
+      195,
+      200,
+      205,
+      210,
+      220,
+      225
+     ],
+     "optional": true,
+     "note": "Lost to the Ages, the Aetherium Forge hunt. Independent of the main line."
+    },
+    {
+     "edid": "DLC1VQDragon",
+     "name": "Durnehviir",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      35,
+      40,
+      50,
+      60
+     ],
+     "dlc": "Dawnguard",
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      60
+     ],
+     "optional": true,
+     "note": "Durnehviir, in the Soul Cairn."
+    },
+    {
+     "edid": "DLC1VQSaint",
+     "name": "Impatience of a Saint",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      200
+     ],
+     "dlc": "Dawnguard",
+     "journal": [
+      10,
+      20,
+      30,
+      200
+     ],
+     "optional": true,
+     "note": "Impatience of a Saint: Jiub's opus pages, in the Soul Cairn."
+    }
+   ],
+   "blurb": "Optional extras. The Soul Cairn pair assumes the main line has reached 'Beyond Death'."
+  },
+  {
+   "id": "dragonborn",
+   "title": "Dragonborn",
+   "quests": [
+    {
+     "edid": "DLC2MQ01",
+     "name": "Dragonborn",
+     "stages": [
+      0,
+      5,
+      7,
+      10,
+      15,
+      20,
+      25,
+      30,
+      200
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      5,
+      7,
+      10,
+      20,
+      25,
+      30,
+      200
+     ]
+    },
+    {
+     "edid": "DLC2MQ02",
+     "name": "The Temple of Miraak",
+     "stages": [
+      0,
+      5,
+      10,
+      20,
+      22,
+      25,
+      30,
+      40,
+      50,
+      60,
+      200
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      5,
+      10,
+      20,
+      25,
+      30,
+      40,
+      50,
+      60,
+      200
+     ]
+    },
+    {
+     "edid": "DLC2MQ03",
+     "name": "The Fate of the Skaal",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      200
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70
+     ]
+    },
+    {
+     "edid": "DLC2MQ03B",
+     "name": "Cleansing the Stones",
+     "stages": [
+      0,
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40,
+      45,
+      200
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      5,
+      10,
+      20,
+      30,
+      40,
+      200
+     ],
+     "optional": true,
+     "note": "Cleansing the Stones, the remaining All-Maker stones beyond the one 'The Fate of the Skaal' covers."
+    },
+    {
+     "edid": "DLC2MQ04",
+     "name": "The Path of Knowledge",
+     "stages": [
+      0,
+      1,
+      10,
+      20,
+      50,
+      55,
+      60,
+      70,
+      100,
+      110,
+      120,
+      150,
+      200,
+      210,
+      230,
+      250,
+      255,
+      260,
+      265,
+      270,
+      280,
+      300,
+      320,
+      325,
+      330,
+      340,
+      350,
+      355,
+      360,
+      370,
+      375,
+      380,
+      390,
+      400,
+      410,
+      420,
+      430,
+      435,
+      440,
+      445,
+      450,
+      460,
+      500,
+      510,
+      520,
+      530,
+      550
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      10,
+      20,
+      50,
+      550
+     ]
+    },
+    {
+     "edid": "DLC2MQ05",
+     "name": "The Gardener of Men",
+     "stages": [
+      0,
+      1,
+      10,
+      100,
+      150,
+      200,
+      250,
+      290,
+      300,
+      310,
+      320,
+      325,
+      330,
+      340,
+      350,
+      355,
+      360,
+      370,
+      390,
+      400,
+      450,
+      500,
+      600,
+      610,
+      620,
+      630,
+      700,
+      750,
+      800,
+      1000
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      10,
+      340,
+      1000
+     ]
+    },
+    {
+     "edid": "DLC2MQ06",
+     "name": "At the Summit of Apocrypha",
+     "stages": [
+      0,
+      10,
+      100,
+      200,
+      220,
+      240,
+      250,
+      300,
+      330,
+      335,
+      340,
+      350,
+      400,
+      420,
+      440,
+      460,
+      500,
+      520,
+      550
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      10,
+      200,
+      400,
+      550
+     ]
+    }
+   ],
+   "blurb": "Miraak's story, 'Dragonborn' through 'At the Summit of Apocrypha'."
+  },
+  {
+   "id": "black-books",
+   "title": "Black Books",
+   "quests": [
+    {
+     "edid": "DLC2BlackBook03Quest",
+     "name": "Black Book: Untold Legends",
+     "stages": [
+      10,
+      20
+     ],
+     "dlc": "Dragonborn",
+     "optional": true
+    },
+    {
+     "edid": "DLC2BlackBook04Quest",
+     "name": "Black Book: The Winds of Change",
+     "stages": [
+      10,
+      20
+     ],
+     "dlc": "Dragonborn",
+     "optional": true
+    },
+    {
+     "edid": "DLC2BlackBook05Quest",
+     "name": "Black Book: The Sallow Regent",
+     "stages": [
+      10,
+      20
+     ],
+     "dlc": "Dragonborn",
+     "optional": true
+    },
+    {
+     "edid": "DLC2BlackBook06Quest",
+     "name": "Black Book: Filament and Filigree",
+     "stages": [
+      10,
+      20
+     ],
+     "dlc": "Dragonborn",
+     "optional": true
+    },
+    {
+     "edid": "DLC2BlackBook07Quest",
+     "name": "Black Book: The Hidden Twilight",
+     "stages": [
+      10,
+      20
+     ],
+     "dlc": "Dragonborn",
+     "optional": true
+    }
+   ],
+   "blurb": "The five side Black Books; the two story books come with the main line. All optional."
+  },
+  {
+   "id": "solstheim-side",
+   "title": "Solstheim Side Quests",
+   "quests": [
+    {
+     "edid": "DLC2RR01",
+     "name": "March of the Dead",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      45,
+      50,
+      60,
+      80,
+      90,
+      100,
+      110,
+      120,
+      130,
+      200
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      80,
+      90,
+      100,
+      110,
+      120,
+      200
+     ],
+     "optional": true
+    },
+    {
+     "edid": "DLC2RR02",
+     "name": "Served Cold",
+     "stages": [
+      0,
+      5,
+      10,
+      15,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      85,
+      90,
+      100,
+      110,
+      200
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      5,
+      10,
+      15,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      85,
+      90,
+      100,
+      200
+     ],
+     "optional": true
+    },
+    {
+     "edid": "DLC2RR03Intro",
+     "name": "An Axe to Find",
+     "stages": [
+      10,
+      15,
+      20,
+      25,
+      200
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      10,
+      20
+     ],
+     "optional": true,
+     "note": "An Axe to Find leads into The Final Descent; select both."
+    },
+    {
+     "edid": "DLC2RR03",
+     "name": "The Final Descent",
+     "stages": [
+      0,
+      10,
+      15,
+      20,
+      25,
+      30,
+      40,
+      50,
+      200
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      10,
+      15,
+      20,
+      30,
+      40,
+      50,
+      200
+     ],
+     "optional": true
+    },
+    {
+     "edid": "DLC2dunHaknirTreasureQST",
+     "name": "Deathbrand",
+     "stages": [
+      0,
+      1,
+      10,
+      20,
+      29,
+      30,
+      31,
+      40,
+      41,
+      42,
+      43,
+      45,
+      50,
+      51,
+      52,
+      53,
+      70,
+      80,
+      90,
+      100,
+      200
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      29,
+      30,
+      31,
+      70,
+      80,
+      90,
+      100
+     ],
+     "optional": true,
+     "note": "Deathbrand."
+    },
+    {
+     "edid": "DLC2dunKolbjornQST",
+     "name": "Unearthed",
+     "stages": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      40,
+      75,
+      98,
+      99,
+      100,
+      101,
+      110,
+      120,
+      130,
+      140,
+      150,
+      160,
+      175,
+      198,
+      199,
+      200,
+      210,
+      220,
+      230,
+      240,
+      241,
+      242,
+      250,
+      260,
+      275,
+      298,
+      299,
+      300,
+      310,
+      320,
+      330,
+      350,
+      358,
+      359,
+      360,
+      375,
+      398,
+      399,
+      400,
+      410,
+      440,
+      449,
+      450,
+      475,
+      476,
+      477,
+      478,
+      479,
+      480,
+      485,
+      490,
+      500,
+      550,
+      600
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      40,
+      75,
+      100,
+      110,
+      130,
+      140,
+      150,
+      160,
+      175,
+      200,
+      210,
+      230,
+      240,
+      250,
+      260,
+      275,
+      300,
+      310,
+      330,
+      350,
+      360,
+      375,
+      400,
+      410,
+      449,
+      450,
+      475,
+      480,
+      485,
+      490
+     ],
+     "optional": true,
+     "note": "Unearthed, the Kolbjorn Barrow excavation."
+    },
+    {
+     "edid": "DLC2KagrumezQST",
+     "name": "The Kagrumez Gauntlet",
+     "stages": [
+      0,
+      1,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      90,
+      100,
+      200,
+      250
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      10,
+      250
+     ],
+     "optional": true
+    },
+    {
+     "edid": "DLC2SV01",
+     "name": "Lost Legacy",
+     "stages": [
+      0,
+      5,
+      10,
+      20,
+      30,
+      40,
+      45,
+      50,
+      100,
+      200
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      45,
+      50,
+      200
+     ],
+     "optional": true
+    },
+    {
+     "edid": "DLC2SV02",
+     "name": "A New Source of Stalhrim",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50,
+      100,
+      110,
+      200
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      200
+     ],
+     "optional": true
+    },
+    {
+     "edid": "DLC2WB01",
+     "name": "Filial Bonds",
+     "stages": [
+      0,
+      10,
+      15,
+      20,
+      100
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      10,
+      15,
+      20,
+      100
+     ],
+     "optional": true
+    },
+    {
+     "edid": "DLC2TGQuest",
+     "name": "Paid in Full",
+     "stages": [
+      5,
+      10,
+      20,
+      200
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      10,
+      20
+     ],
+     "optional": true,
+     "note": "Paid in Full, Glover Mallory's favor. Expects a Thieves Guild member."
+    },
+    {
+     "edid": "DLC2EbonyWarriorQuest",
+     "name": "The Ebony Warrior",
+     "stages": [
+      5,
+      10,
+      100,
+      200
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      10,
+      100,
+      200
+     ],
+     "optional": true,
+     "note": "The Ebony Warrior only appears at level 80."
+    },
+    {
+     "edid": "DLC2MH01",
+     "name": "Retaking Thirsk",
+     "stages": [
+      0,
+      10,
+      20,
+      25,
+      27,
+      30,
+      40,
+      100,
+      200
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      10,
+      20,
+      25,
+      27,
+      30,
+      40,
+      200
+     ],
+     "branch": "Retake Thirsk for the Nords"
+    },
+    {
+     "edid": "DLC2MH02",
+     "name": "The Chief of Thirsk Hall",
+     "stages": [
+      0,
+      10,
+      15,
+      17,
+      20,
+      30,
+      35,
+      37,
+      40,
+      100,
+      200
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      10,
+      15,
+      17,
+      20,
+      30,
+      35,
+      37,
+      40,
+      200
+     ],
+     "branch": "Serve the Riekling Chief"
+    }
+   ],
+   "blurb": "Raven Rock and the island, all optional \u2014 except Thirsk Mead Hall at the bottom, where you pick a side."
+  },
+  {
+   "id": "telvanni",
+   "title": "House Telvanni",
+   "quests": [
+    {
+     "edid": "DLC2TT1",
+     "name": "Reluctant Steward",
+     "stages": [
+      0,
+      90,
+      100,
+      150,
+      170,
+      200,
+      210,
+      300,
+      310,
+      400,
+      500
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      150,
+      170,
+      200,
+      210,
+      300,
+      310,
+      400
+     ]
+    },
+    {
+     "edid": "DLC2TT1b",
+     "name": "A New Debt",
+     "stages": [
+      10,
+      50,
+      100,
+      200,
+      300,
+      310,
+      320
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      100,
+      200,
+      300,
+      310,
+      320
+     ]
+    },
+    {
+     "edid": "DLC2TT2",
+     "name": "Old Friends",
+     "stages": [
+      0,
+      5,
+      10,
+      100,
+      200,
+      250,
+      300,
+      310,
+      400,
+      500,
+      600
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      100,
+      200,
+      300,
+      400,
+      500
+     ]
+    },
+    {
+     "edid": "DLC2TTF1",
+     "name": "From the Ashes",
+     "stages": [
+      5,
+      7,
+      10,
+      30,
+      50,
+      100,
+      200,
+      300
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      100,
+      200,
+      300
+     ],
+     "optional": true
+    },
+    {
+     "edid": "DLC2TTF2",
+     "name": "Healing a House",
+     "stages": [
+      100,
+      200,
+      300,
+      400,
+      500
+     ],
+     "dlc": "Dragonborn",
+     "optional": true
+    }
+   ],
+   "blurb": "Neloth's chain in order, then Tel Mithryn's restoration favors."
   }
  ]
 }
