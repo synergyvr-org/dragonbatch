@@ -45,6 +45,8 @@ def main():
                 q['optional'] = True
             if cq.get('note'):
                 q['note'] = cq['note']
+            if cq.get('branch'):
+                q['branch'] = cq['branch']
             quests.append(q)
         line = {'id': cl['id'], 'title': cl['title'], 'quests': quests}
         if cl.get('blurb'):

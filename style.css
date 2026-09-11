@@ -73,6 +73,28 @@ details.line[open] summary::before { transform: rotate(90deg); }
 details.line ul { list-style: none; margin: 0.5rem 0 0.25rem 2.1rem; }
 details.line li { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.55rem; padding: 0.18rem 0; }
 
+/* Mutually exclusive alternatives within a line: labeled rails with an "or"
+   divider between them. */
+.branch {
+  border-left: 2px solid var(--accent-dim);
+  margin: 0.5rem 0 0.25rem 2.1rem;
+  padding: 0.15rem 0 0.15rem 0.85rem;
+}
+.branch-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+}
+details.line .branch ul { margin: 0.2rem 0 0; }
+.branch-or {
+  margin: 0.3rem 0 0.3rem 2.1rem;
+  color: var(--dim);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
 .quest-name {
   background: none; border: 0; padding: 0;
   color: var(--text);

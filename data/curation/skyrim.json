@@ -34,10 +34,10 @@
    "title": "Civil War",
    "blurb": "Pick ONE side here. For either side, 'Joining' and the 'Jagged Crown' are the only scriptable skips. The campaign battles beyond these reuse radiant quest records for every hold and both sides, so replaying their stages blind would corrupt the war's state. Play the campaign out, or sidestep the war with 'Season Unending' from the main quest.",
    "quests": [
-    {"edid": "CW01A", "optional": true, "note": "Imperial: Joining the Legion."},
-    {"edid": "CW02A", "optional": true, "note": "Imperial version of The Jagged Crown."},
-    {"edid": "CW01B", "optional": true, "note": "Stormcloak: Joining the Stormcloaks."},
-    {"edid": "CW02B", "optional": true, "note": "Stormcloak version of The Jagged Crown."}
+    {"edid": "CW01A", "branch": "Imperial Legion"},
+    {"edid": "CW02A", "branch": "Imperial Legion"},
+    {"edid": "CW01B", "branch": "Stormcloaks"},
+    {"edid": "CW02B", "branch": "Stormcloaks"}
    ]
   },
   {
@@ -118,34 +118,34 @@
    "title": "The Dark Brotherhood",
    "blurb": "Innocence Lost through Hail Sithis! — or burn the whole thing down instead.",
    "quests": [
-    {"edid": "DB01Misc", "optional": true, "note": "Delayed Burial, the Cicero wagon intro. Skippable."},
-    {"edid": "DB01"},
-    {"edid": "DB02"},
-    {"edid": "DB02a"},
-    {"edid": "DB03"},
-    {"edid": "DB04"},
-    {"edid": "DB04a"},
-    {"edid": "DB05"},
-    {"edid": "DB06"},
-    {"edid": "DB07"},
-    {"edid": "DB08"},
-    {"edid": "DB09"},
-    {"edid": "DB10"},
-    {"edid": "DB11"},
-    {"edid": "DBSideContract01", "optional": true, "note": "Nazir's twelve fixed side contracts. Sets of these quests normally pace the main questline."},
-    {"edid": "DBSideContract02", "optional": true},
-    {"edid": "DBSideContract03", "optional": true},
-    {"edid": "DBSideContract04", "optional": true},
-    {"edid": "DBSideContract05", "optional": true},
-    {"edid": "DBSideContract06", "optional": true},
-    {"edid": "DBSideContract07", "optional": true},
-    {"edid": "DBSideContract08", "optional": true},
-    {"edid": "DBSideContract09", "optional": true},
-    {"edid": "DBSideContract10", "optional": true},
-    {"edid": "DBSideContract11", "optional": true},
-    {"edid": "DBSideContract12", "optional": true},
-    {"edid": "DarkBrotherhoodSanctuaryRepair", "optional": true, "note": "Where You Hang Your Enemy's Head, the post-story sanctuary refurbish."},
-    {"edid": "DBDestroy", "optional": true, "note": "Destroy the Dark Brotherhood! is the alternative to joining. Mutually exclusive with everything above. Select this OR the main questline, not both."}
+    {"edid": "DB01Misc", "optional": true, "note": "Delayed Burial, the Cicero wagon intro. Skippable.", "branch": "Join the Dark Brotherhood"},
+    {"edid": "DB01", "branch": "Join the Dark Brotherhood"},
+    {"edid": "DB02", "branch": "Join the Dark Brotherhood"},
+    {"edid": "DB02a", "branch": "Join the Dark Brotherhood"},
+    {"edid": "DB03", "branch": "Join the Dark Brotherhood"},
+    {"edid": "DB04", "branch": "Join the Dark Brotherhood"},
+    {"edid": "DB04a", "branch": "Join the Dark Brotherhood"},
+    {"edid": "DB05", "branch": "Join the Dark Brotherhood"},
+    {"edid": "DB06", "branch": "Join the Dark Brotherhood"},
+    {"edid": "DB07", "branch": "Join the Dark Brotherhood"},
+    {"edid": "DB08", "branch": "Join the Dark Brotherhood"},
+    {"edid": "DB09", "branch": "Join the Dark Brotherhood"},
+    {"edid": "DB10", "branch": "Join the Dark Brotherhood"},
+    {"edid": "DB11", "branch": "Join the Dark Brotherhood"},
+    {"edid": "DBSideContract01", "optional": true, "note": "Nazir's twelve fixed side contracts. Sets of these quests normally pace the main questline.", "branch": "Join the Dark Brotherhood"},
+    {"edid": "DBSideContract02", "optional": true, "branch": "Join the Dark Brotherhood"},
+    {"edid": "DBSideContract03", "optional": true, "branch": "Join the Dark Brotherhood"},
+    {"edid": "DBSideContract04", "optional": true, "branch": "Join the Dark Brotherhood"},
+    {"edid": "DBSideContract05", "optional": true, "branch": "Join the Dark Brotherhood"},
+    {"edid": "DBSideContract06", "optional": true, "branch": "Join the Dark Brotherhood"},
+    {"edid": "DBSideContract07", "optional": true, "branch": "Join the Dark Brotherhood"},
+    {"edid": "DBSideContract08", "optional": true, "branch": "Join the Dark Brotherhood"},
+    {"edid": "DBSideContract09", "optional": true, "branch": "Join the Dark Brotherhood"},
+    {"edid": "DBSideContract10", "optional": true, "branch": "Join the Dark Brotherhood"},
+    {"edid": "DBSideContract11", "optional": true, "branch": "Join the Dark Brotherhood"},
+    {"edid": "DBSideContract12", "optional": true, "branch": "Join the Dark Brotherhood"},
+    {"edid": "DarkBrotherhoodSanctuaryRepair", "optional": true, "note": "Where You Hang Your Enemy's Head, the post-story sanctuary refurbish.", "branch": "Join the Dark Brotherhood"},
+    {"edid": "DBDestroy", "optional": true, "note": "Kill Astrid and wipe out the Sanctuary instead of joining.", "branch": "Destroy the Dark Brotherhood"}
    ]
   },
   {
@@ -237,9 +237,7 @@
   }
  ],
  "prune": [
-  "MQ*", "TG*", "MG*", "C0*", "CR*", "CW*", "DB*", "DA*", "MS*", "dun*",
-  "WE*", "WI*", "Dialogue*", "Favor*", "Freeform*", "SolitudeFreeform*", "BQ*",
-  "Relationship*", "SolitudeOpening", "stables", "PerksQuest"
+  "MQ*", "TG*", "MG*", "C0*", "CR*", "CW*", "DB*", "DA*", "MS*", "dun*", "WE*", "WI*", "Dialogue*", "Favor*", "Freeform*", "SolitudeFreeform*", "BQ*", "Relationship*", "SolitudeOpening", "stables", "PerksQuest"
  ],
  "keepUncurated": true
 }

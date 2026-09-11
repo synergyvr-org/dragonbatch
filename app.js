@@ -32,6 +32,28 @@ async function load() {
 
 function questsOf(line) { return line.quests; }
 
+// Selecting a quest that belongs to a mutually exclusive branch clears the
+// line's other branches — the "pick one" rule the branch labels advertise.
+// Unbranched quests in the same line are never touched.
+function selectQuest(line, quest) {
+  if (quest.branch) {
+    for (const q of questsOf(line)) {
+      if (q.branch && q.branch !== quest.branch) state.selected.delete(q.edid);
+    }
+  }
+  state.selected.add(quest.edid);
+}
+
+// What the line's select-all checkbox covers: every non-optional quest —
+// except that when two or more branches have non-optional quests, the choice
+// between them is the reader's, so all branched quests drop out. A line that
+// is nothing but such a choice has no targets, and no select-all checkbox.
+function selectAllTargets(line) {
+  const required = questsOf(line).filter(q => !q.optional);
+  const branches = new Set(required.filter(q => q.branch).map(q => q.branch));
+  return branches.size > 1 ? required.filter(q => !q.branch) : required;
+}
+
 function render() {
   const root = $('#lines');
   root.innerHTML = '';
@@ -41,17 +63,19 @@ function render() {
     details.addEventListener('toggle', updateToggleLines);
 
     const summary = document.createElement('summary');
-    const lineBox = document.createElement('input');
-    lineBox.type = 'checkbox';
-    lineBox.setAttribute('aria-label', 'Select all of ' + line.title);
-    lineBox.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const targets = questsOf(line).filter(q => !q.optional);
-      const allOn = targets.every(q => state.selected.has(q.edid));
-      for (const q of targets) allOn ? state.selected.delete(q.edid) : state.selected.add(q.edid);
-      update();
-    });
-    summary.appendChild(lineBox);
+    if (selectAllTargets(line).length) {
+      const lineBox = document.createElement('input');
+      lineBox.type = 'checkbox';
+      lineBox.setAttribute('aria-label', 'Select all of ' + line.title);
+      lineBox.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const targets = selectAllTargets(line);
+        const allOn = targets.every(q => state.selected.has(q.edid));
+        for (const q of targets) allOn ? state.selected.delete(q.edid) : selectQuest(line, q);
+        update();
+      });
+      summary.appendChild(lineBox);
+    }
     const title = document.createElement('span');
     title.className = 'line-title';
     title.textContent = line.title;
@@ -65,46 +89,83 @@ function render() {
       details.appendChild(blurb);
     }
 
-    const list = document.createElement('ul');
+    // Chunk the line's quests into runs sharing a `branch` label. Adjacent
+    // branch groups are mutually exclusive alternatives: each renders under
+    // its label, with an "or" divider between them. Purely presentational —
+    // sweep and select-all semantics come from `optional` alone.
+    const groups = [];
     for (const quest of questsOf(line)) {
-      const li = document.createElement('li');
-
-      const box = document.createElement('input');
-      box.type = 'checkbox';
-      box.id = 'q-' + quest.edid;
-      box.addEventListener('change', () => {
-        box.checked ? state.selected.add(quest.edid) : state.selected.delete(quest.edid);
-        update();
-      });
-      li.appendChild(box);
-
-      const name = document.createElement('button');
-      name.type = 'button';
-      name.className = 'quest-name';
-      name.title = 'Complete ' + line.title + ' through here';
-      name.innerHTML = quest.name + ' <span class="edid">' + quest.edid + '</span>' +
-        (quest.optional ? ' <span class="tag">optional</span>' : '');
-      name.addEventListener('click', () => {
-        // Through-here: this quest plus every earlier non-optional quest in
-        // the line. Never touches optional quests other than this one, and
-        // never *unchecks* anything, so fine-tuning survives.
-        for (const q of questsOf(line)) {
-          if (!q.optional) state.selected.add(q.edid);
-          if (q.edid === quest.edid) { state.selected.add(q.edid); break; }
-        }
-        update();
-      });
-      li.appendChild(name);
-
-      if (quest.note) {
-        const note = document.createElement('p');
-        note.className = 'note';
-        note.textContent = quest.note;
-        li.appendChild(note);
-      }
-      list.appendChild(li);
+      const branch = quest.branch || null;
+      if (!groups.length || groups[groups.length - 1].branch !== branch) groups.push({ branch, quests: [] });
+      groups[groups.length - 1].quests.push(quest);
     }
-    details.appendChild(list);
+
+    groups.forEach((group, gi) => {
+      if (gi > 0 && groups[gi - 1].branch && group.branch) {
+        const or = document.createElement('p');
+        or.className = 'branch-or';
+        or.textContent = 'or';
+        details.appendChild(or);
+      }
+      const list = document.createElement('ul');
+      for (const quest of group.quests) {
+        const li = document.createElement('li');
+
+        const box = document.createElement('input');
+        box.type = 'checkbox';
+        box.id = 'q-' + quest.edid;
+        box.addEventListener('change', () => {
+          box.checked ? selectQuest(line, quest) : state.selected.delete(quest.edid);
+          update();
+        });
+        li.appendChild(box);
+
+        const name = document.createElement('button');
+        name.type = 'button';
+        name.className = 'quest-name';
+        name.title = 'Complete ' + line.title + ' through here (click again to undo)';
+        name.innerHTML = quest.name + ' <span class="edid">' + quest.edid + '</span>' +
+          (quest.optional ? ' <span class="tag">optional</span>' : '');
+        name.addEventListener('click', () => {
+          // Through-here, as a toggle. Selecting sweeps in this quest plus
+          // every earlier non-optional quest in the line; clicking a quest
+          // that's already selected removes exactly that same set. Optional
+          // quests other than the clicked one are never touched either way,
+          // so fine-tuning survives. Rival branches are skipped on the way
+          // (and cleared by selectQuest when selecting), so sweeping
+          // "through" an alternative can't select both sides.
+          const removing = state.selected.has(quest.edid);
+          const apply = (q) => removing ? state.selected.delete(q.edid) : selectQuest(line, q);
+          for (const q of questsOf(line)) {
+            const sameSide = !q.branch || q.branch === quest.branch;
+            if (sameSide && !q.optional) apply(q);
+            if (q.edid === quest.edid) { apply(q); break; }
+          }
+          update();
+        });
+        li.appendChild(name);
+
+        if (quest.note) {
+          const note = document.createElement('p');
+          note.className = 'note';
+          note.textContent = quest.note;
+          li.appendChild(note);
+        }
+        list.appendChild(li);
+      }
+      if (group.branch) {
+        const wrap = document.createElement('div');
+        wrap.className = 'branch';
+        const label = document.createElement('p');
+        label.className = 'branch-label';
+        label.textContent = group.branch;
+        wrap.appendChild(label);
+        wrap.appendChild(list);
+        details.appendChild(wrap);
+      } else {
+        details.appendChild(list);
+      }
+    });
     root.appendChild(details);
   }
   updateToggleLines();
@@ -142,17 +203,17 @@ function generate() {
 function update() {
   // Reflect selection into the checkboxes and line tri-states.
   for (const line of state.pack.lines) {
-    let on = 0, required = 0, requiredOn = 0;
+    let on = 0;
     for (const quest of questsOf(line)) {
       const box = document.getElementById('q-' + quest.edid);
       const has = state.selected.has(quest.edid);
       if (box) box.checked = has;
       if (has) on++;
-      if (!quest.optional) { required++; if (has) requiredOn++; }
     }
     const lineBox = document.querySelector('#lines details:nth-child(' + (state.pack.lines.indexOf(line) + 1) + ') summary input');
     if (lineBox) {
-      lineBox.checked = required > 0 && requiredOn === required;
+      const targets = selectAllTargets(line);
+      lineBox.checked = targets.length > 0 && targets.every(q => state.selected.has(q.edid));
       lineBox.indeterminate = on > 0 && !lineBox.checked;
     }
   }
