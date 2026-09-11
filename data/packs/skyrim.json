@@ -5,7 +5,7 @@
  "source": {
   "type": "xedit",
   "plugin": "Skyrim.esm",
-  "notes": "Stages from Skyrim.esm via xEdit. Questline grouping and order curated by hand against UESP. Verified 2026-09-10."
+  "notes": "Stages from Skyrim.esm as patched by Update.esm, via xEdit. Questline grouping and order curated by hand against UESP. Verified 2026-09-11."
  },
  "lines": [
   {
@@ -2751,6 +2751,7 @@
       20,
       21,
       30,
+      31,
       40,
       41,
       50,

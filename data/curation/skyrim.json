@@ -1,7 +1,7 @@
 {
  "id": "skyrim",
  "title": "Skyrim (vanilla)",
- "notes": "Stages from Skyrim.esm via xEdit. Questline grouping and order curated by hand against UESP. Verified 2026-09-10.",
+ "notes": "Stages from Skyrim.esm as patched by Update.esm, via xEdit. Questline grouping and order curated by hand against UESP. Verified 2026-09-11.",
  "lines": [
   {
    "id": "main-quest",

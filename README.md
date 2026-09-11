@@ -48,7 +48,7 @@ The vanilla pack currently covers the **main quest line**, compiled from UESP's 
 
 1. Load the plugin(s) in SSEEdit/TES5VREdit — `Skyrim.esm`, the DLC masters, or any quest mod's plugin.
 2. Right-click → **Apply Script** → `tools/ExportQuestsJSON.pas`. One `<Plugin>.quests.json` lands next to the xEdit executable per plugin.
-3. `python3 tools/dump_to_pack.py Skyrim.esm.quests.json > skeleton.json` — turns the dump into an uncurated pack skeleton.
+3. `python3 tools/dump_to_pack.py Skyrim.esm.quests.json Update.esm.quests.json > skeleton.json` — turns the dumps into an uncurated pack skeleton. Pass dumps in load order: quests merge by editor ID and a later plugin's override wins, exactly as in-game (Update.esm patches vanilla quest stages, so the vanilla pack is built from both).
 4. Curate in `data/curation/<pack>.json`: group quests into ordered lines, mark optional branches, add blurbs and notes, and list prune patterns for the radiant/internal quests the name filter didn't catch. Curation lives in the overlay, not the pack, so re-dumping a plugin never loses it.
 5. `python3 tools/curate_pack.py skeleton.json data/curation/skyrim.json > data/packs/skyrim.json` — applies the overlay; anything unplaced and unpruned lands in a trailing "Uncurated" line, and a quest named in the overlay but missing from the skeleton fails the run loudly.
 6. Add the pack to `data/manifest.json`.

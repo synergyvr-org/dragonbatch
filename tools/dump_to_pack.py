@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
-"""Turn an xEdit quest dump into a Dragonbatch pack skeleton.
+"""Turn xEdit quest dumps into a Dragonbatch pack skeleton.
 
-    python3 dump_to_pack.py Skyrim.esm.quests.json > ../data/packs/new-pack.json
+    python3 dump_to_pack.py Skyrim.esm.quests.json Update.esm.quests.json > skeleton.json
+
+Pass dumps in load order: quests are merged by editor ID (case-insensitive)
+and a later plugin's override of a quest wins, exactly as it does in-game.
 
 The output is a *skeleton*: every player-facing quest lands in one
 "Uncurated" line, sorted by editor ID. Curation — grouping quests into
@@ -23,18 +26,27 @@ import argparse, json, re, sys
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument('dump')
+    ap.add_argument('dumps', nargs='+', metavar='dump')
     ap.add_argument('--include-nameless', action='store_true')
     ap.add_argument('--id')
     ap.add_argument('--title')
     args = ap.parse_args()
 
-    dump = json.load(open(args.dump, encoding='utf-8'))
-    plugin = dump.get('plugin', 'unknown.esp')
+    # Load-order merge: later dumps override earlier ones per quest, matched
+    # case-insensitively because editor IDs are (Update.esm ships 'weroad08'
+    # for Skyrim.esm's 'WERoad08').
+    merged = {}
+    plugins = []
+    for dumpfile in args.dumps:
+        dump = json.load(open(dumpfile, encoding='utf-8'))
+        plugins.append(dump.get('plugin', 'unknown.esp'))
+        for q in dump.get('quests', []):
+            merged[q['edid'].lower()] = q
+    plugin = plugins[0]
 
     quests = []
     skipped_nameless = 0
-    for q in dump.get('quests', []):
+    for q in merged.values():
         if not q.get('name') and not args.include_nameless:
             skipped_nameless += 1
             continue
@@ -74,7 +86,7 @@ def main():
         'source': {
             'type': 'xedit',
             'plugin': plugin,
-            'notes': f'Generated from {plugin} by dump_to_pack.py; uncurated.',
+            'notes': f'Generated from {", ".join(plugins)} by dump_to_pack.py (load order, last override wins); uncurated.',
         },
         'lines': [{
             'id': 'uncurated',
