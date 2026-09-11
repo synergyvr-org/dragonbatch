@@ -185,6 +185,13 @@ function render() {
         update();
       });
       summary.appendChild(lineBox);
+    } else {
+      // No select-all here (all-optional line, or a pure either/or choice),
+      // but reserve the checkbox's space so every title aligns.
+      const spacer = document.createElement('span');
+      spacer.className = 'box-spacer';
+      spacer.setAttribute('aria-hidden', 'true');
+      summary.appendChild(spacer);
     }
     const title = document.createElement('span');
     title.className = 'line-title';

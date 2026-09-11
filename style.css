@@ -164,6 +164,7 @@ details.line .branch ul { margin: 0.2rem 0 0; }
 .note { margin-left: 1.9rem; color: var(--dim); font-size: 0.85rem; }
 
 input[type="checkbox"] { accent-color: var(--accent); width: 1rem; height: 1rem; }
+.box-spacer { width: 1rem; flex: none; }
 
 button {
   background: #ffffff10;
