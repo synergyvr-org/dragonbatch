@@ -57,6 +57,27 @@ h2 { font-weight: 400; font-size: 1.15rem; margin-bottom: 0.75rem; }
 .picker-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
 .hint { color: var(--dim); font-size: 0.9rem; margin: 0.5rem 0 1rem; }
 
+#filter {
+  width: 100%;
+  background: #ffffff08 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a7abb4' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m21 21-4.3-4.3'/%3E%3C/svg%3E") no-repeat 0.75rem center / 0.9rem;
+  color: var(--text);
+  border: 1px solid var(--edge);
+  border-radius: 999px;
+  padding: 0.35rem 1rem 0.35rem 2.2rem;
+  font: inherit;
+  font-size: 0.9rem;
+  margin-bottom: 0.9rem;
+}
+#filter::placeholder { color: var(--dim); }
+#filter:focus { outline: none; border-color: var(--accent-dim); background-color: #00000033; }
+
+mark {
+  background: var(--accent);
+  color: #1a1508;
+  border-radius: 0.15em;
+  padding: 0 0.08em;
+}
+
 details.line { border-top: 1px solid var(--edge); padding: 0.6rem 0; }
 details.line summary {
   cursor: pointer;

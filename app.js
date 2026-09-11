@@ -16,9 +16,29 @@
 const state = {
   pack: null,
   selected: new Set(),
+  filter: '',
 };
 
 const $ = (sel) => document.querySelector(sel);
+
+const esc = (s) => s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+// Escaped HTML with <mark> around each case-insensitive occurrence of q.
+function highlight(s, q) {
+  if (!q) return esc(s);
+  const lower = s.toLowerCase();
+  let out = '', i = 0;
+  for (let idx = lower.indexOf(q); idx !== -1; idx = lower.indexOf(q, i)) {
+    out += esc(s.slice(i, idx)) + '<mark>' + esc(s.slice(idx, idx + q.length)) + '</mark>';
+    i = idx + q.length;
+  }
+  return out + esc(s.slice(i));
+}
+
+function questLabel(quest, q) {
+  return highlight(quest.name, q) + ' <span class="edid">' + highlight(quest.edid, q) + '</span>' +
+    (quest.optional ? ' <span class="tag">optional</span>' : '');
+}
 
 async function load() {
   const manifest = await (await fetch('data/manifest.json')).json();
@@ -110,6 +130,8 @@ function render() {
       const list = document.createElement('ul');
       for (const quest of group.quests) {
         const li = document.createElement('li');
+        li.dataset.search = (quest.name + ' ' + quest.edid + ' ' + (quest.note || '') + ' ' + line.title).toLowerCase();
+        li._quest = quest; // for the filter's match highlighting
 
         const box = document.createElement('input');
         box.type = 'checkbox';
@@ -124,8 +146,7 @@ function render() {
         name.type = 'button';
         name.className = 'quest-name';
         name.title = 'Complete ' + line.title + ' through here (click again to undo)';
-        name.innerHTML = quest.name + ' <span class="edid">' + quest.edid + '</span>' +
-          (quest.optional ? ' <span class="tag">optional</span>' : '');
+        name.innerHTML = questLabel(quest, '');
         name.addEventListener('click', () => {
           // Through-here, as a toggle. Selecting sweeps in this quest plus
           // every earlier non-optional quest in the line; clicking a quest
@@ -169,6 +190,50 @@ function render() {
     root.appendChild(details);
   }
   updateToggleLines();
+  applyFilter();
+}
+
+// Live filter. Matches against each quest's name, editor ID, note, and line
+// title (so "brotherhood" surfaces the whole line, and "Azura" finds The
+// Black Star via its note). While a filter is active, lines with hits are
+// forced open showing only the hits and everything else hides; blurbs and
+// "or" dividers get out of the way. Clearing the filter restores whatever
+// open/closed state the reader had before.
+let openBeforeFilter = null;
+
+function applyFilter() {
+  const q = state.filter.trim().toLowerCase();
+  const filtering = q !== '';
+  const details = Array.from(document.querySelectorAll('#lines details.line'));
+  if (filtering && openBeforeFilter === null) openBeforeFilter = details.map(d => d.open);
+  if (!filtering && openBeforeFilter !== null) {
+    details.forEach((d, i) => { d.open = openBeforeFilter[i]; });
+    openBeforeFilter = null;
+  }
+  let anyHit = false;
+  for (const [i, d] of details.entries()) {
+    const lineTitle = d.querySelector('.line-title');
+    lineTitle.innerHTML = highlight(state.pack.lines[i].title, filtering ? q : '');
+    let lineHit = false;
+    for (const li of d.querySelectorAll('li')) {
+      const hit = !filtering || li.dataset.search.includes(q);
+      li.hidden = !hit;
+      if (hit) lineHit = true;
+      // Re-render the row's text with (or without) match highlighting.
+      const mq = hit && filtering ? q : '';
+      li.querySelector('.quest-name').innerHTML = questLabel(li._quest, mq);
+      const note = li.querySelector('.note');
+      if (note) note.innerHTML = highlight(li._quest.note, mq);
+    }
+    for (const branch of d.querySelectorAll('.branch')) {
+      branch.hidden = filtering && !Array.from(branch.querySelectorAll('li')).some(li => !li.hidden);
+    }
+    for (const el of d.querySelectorAll('.branch-or, .blurb')) el.hidden = filtering;
+    d.hidden = filtering && !lineHit;
+    if (filtering && lineHit) d.open = true;
+    if (lineHit) anyHit = true;
+  }
+  $('#no-matches').hidden = !filtering || anyHit;
 }
 
 // The button expands when everything is collapsed, collapses otherwise, and
@@ -256,6 +321,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const anyOpen = Array.from(details).some(d => d.open);
     details.forEach(d => { d.open = !anyOpen; });
     updateToggleLines();
+  });
+  $('#filter').addEventListener('input', (e) => { state.filter = e.target.value; applyFilter(); });
+  $('#filter').addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') { e.target.value = ''; state.filter = ''; applyFilter(); }
   });
   $('#comments').addEventListener('change', update);
   $('#download').addEventListener('click', download);

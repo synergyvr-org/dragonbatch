@@ -23,7 +23,9 @@
         </div>
       </div>
       <p class="hint">Click a <strong>quest name</strong> to complete the line through that quest (everything before it comes along); click it again to undo. Use the <strong>checkboxes</strong> to fine-tune individual quests. Optional side quests stay out of the through-here sweep, so check those yourself.</p>
+      <input type="search" id="filter" placeholder="Filter quests… (name, ID, or note)" spellcheck="false" aria-label="Filter quests">
       <div id="lines"></div>
+      <p class="hint" id="no-matches" hidden>Nothing matches that filter.</p>
     </section>
 
     <section class="output">
