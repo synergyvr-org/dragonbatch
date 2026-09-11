@@ -2,6 +2,7 @@
  "id": "mgo",
  "title": "Mad God's Overhaul",
  "extends": "skyrim.json",
+ "mo2Only": true,
  "notes": "Skyrim + DLC plus MGO's quest mods, via xEdit in load order. Vigilant and Wyrmstooth ordering compiled from the mods' quest numbering — verify against a playthrough before relying on it. Verified (vanilla portion) 2026-09-11.",
  "lines": [
   {

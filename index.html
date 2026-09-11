@@ -46,15 +46,30 @@
       <pre id="preview" aria-live="polite"></pre>
       <p class="fine-print" id="internal-note" hidden>Dimmed lines are internal stages: they never show in the journal, but they carry script fragments the quest needs, so the batch runs them too.</p>
 
-      <h2>How to use it</h2>
-      <ol class="howto">
-        <li>Put the downloaded file in your Skyrim VR <code>Data</code> folder (the one with all the plugins). The console also finds batch files next to <code>SkyrimVR.exe</code>, but <code>Data</code> keeps the game's root folder clean.
+      <h2>Get the file in place</h2>
+      <ol class="howto" id="howto-file-vanilla">
+        <li>Pick your quests above and hit <strong>Download</strong>.</li>
+        <li>Put the file in your Skyrim VR <code>Data</code> folder (the one with all the plugins). The console also finds batch files next to <code>SkyrimVR.exe</code>, but <code>Data</code> keeps the game's root folder clean.
           <details class="aside">
             <summary>Using Mod Organizer 2? Keep it out of the game folder entirely.</summary>
             <p>In MO2's left pane, right-click → <strong>All Mods → Create empty mod</strong>, name it something like <em>Dragonbatch batch files</em>, then right-click the new mod → <strong>Open in Explorer</strong> and drop the <code>.txt</code> in at the top level. Enable the mod and launch the game through MO2 as usual: its virtual file system merges the mod into <code>Data</code>, so <code>bat</code> finds the file without anything touching your actual install. MO2 may flag the mod as containing no valid game data — that's fine, plain text files just aren't on its checklist.</p>
           </details>
         </li>
-        <li>Start a <strong>new game</strong>. Finish character creation, and if your mod list configures itself on first launch (MCM recorders and the like), let it finish first.</li>
+      </ol>
+      <ol class="howto" id="howto-file-mo2" hidden>
+        <li>Pick your quests above and hit <strong>Download</strong>.</li>
+        <li>In MO2's left pane, right-click → <strong>All Mods → Create empty mod</strong>, and name it something like <em>Dragonbatch batch files</em>. The file lives in MO2, <strong>never in the game's own folders</strong> — your mod list expects those to stay untouched.</li>
+        <li>Right-click the new mod → <strong>Open in Explorer</strong>, and drop the <code>.txt</code> in at the top level.</li>
+        <li>Enable the mod. MO2 may flag it as containing no valid game data — that's fine, plain text files just aren't on its checklist. Its virtual file system merges the mod into <code>Data</code>, so <code>bat</code> will find the file.</li>
+      </ol>
+
+      <h2>In the game</h2>
+      <ol class="howto">
+        <li>
+          <span id="launch-vanilla">Launch as usual (through MO2 if that's how your setup runs) and start a <strong>new game</strong>.</span>
+          <span id="launch-mo2" hidden>Launch through MO2 and start a <strong>new game</strong>.</span>
+        </li>
+        <li>Finish character creation, and if your mod list configures itself on first launch (MCM recorders and the like), let it finish first.</li>
         <li><strong>Save.</strong> There is no undo for what comes next.</li>
         <li>Open the console and run <code>bat startquests</code> (or whatever you named the file).</li>
         <li>Give it a moment to churn through the stages, then get on with your new life.</li>

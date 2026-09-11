@@ -130,6 +130,12 @@ async function loadPack(entry) {
   assignDlcHues();
   $('#pack-title').textContent = state.pack.title;
   $('#source-note').textContent = state.pack.source.notes;
+  // Mod-list packs get MO2-only file instructions: their installs are
+  // sacrosanct, so the Data-folder route isn't offered at all.
+  $('#howto-file-vanilla').hidden = !!state.pack.mo2Only;
+  $('#howto-file-mo2').hidden = !state.pack.mo2Only;
+  $('#launch-vanilla').hidden = !!state.pack.mo2Only;
+  $('#launch-mo2').hidden = !state.pack.mo2Only;
   render();
   update();
 }

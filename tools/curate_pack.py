@@ -88,6 +88,10 @@ def main():
         'source': source,
         'lines': lines,
     }
+    # Mod-list packs: players must never touch the game's own folders, so the
+    # GUI shows only the MO2 file instructions.
+    if cur.get('mo2Only'):
+        pack['mo2Only'] = True
     json.dump(pack, sys.stdout, indent=1)
     print()
 
