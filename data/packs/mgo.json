@@ -1,0 +1,9254 @@
+{
+ "schema": 1,
+ "id": "mgo",
+ "title": "Mad God's Overhaul",
+ "source": {
+  "type": "xedit",
+  "plugin": "Skyrim.esm",
+  "notes": "Skyrim + DLC plus MGO's quest mods, via xEdit in load order. Vigilant and Wyrmstooth ordering compiled from the mods' quest numbering \u2014 verify against a playthrough before relying on it. Verified (vanilla portion) 2026-09-11."
+ },
+ "lines": [
+  {
+   "id": "main-quest",
+   "title": "Main Quest",
+   "quests": [
+    {
+     "edid": "MQ101",
+     "name": "Unbound",
+     "stages": [
+      0,
+      2,
+      3,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      12,
+      14,
+      15,
+      20,
+      22,
+      25,
+      26,
+      27,
+      28,
+      30,
+      32,
+      35,
+      37,
+      39,
+      40,
+      41,
+      42,
+      43,
+      45,
+      46,
+      50,
+      52,
+      54,
+      56,
+      58,
+      60,
+      62,
+      64,
+      65,
+      67,
+      70,
+      75,
+      80,
+      81,
+      82,
+      84,
+      85,
+      90,
+      95,
+      97,
+      98,
+      99,
+      100,
+      120,
+      130,
+      140,
+      145,
+      150,
+      160,
+      180,
+      190,
+      195,
+      200,
+      202,
+      210,
+      220,
+      240,
+      250,
+      252,
+      255,
+      256,
+      257,
+      258,
+      260,
+      265,
+      267,
+      268,
+      270,
+      272,
+      275,
+      280,
+      285,
+      290,
+      292,
+      300,
+      305,
+      310,
+      315,
+      317,
+      318,
+      320,
+      340,
+      350,
+      360,
+      365,
+      368,
+      370,
+      380,
+      390,
+      395,
+      400,
+      450,
+      460,
+      470,
+      480,
+      485,
+      490,
+      500,
+      550,
+      560,
+      600,
+      630,
+      650,
+      700,
+      705,
+      710,
+      720,
+      725,
+      730,
+      750,
+      760,
+      780,
+      800,
+      900
+     ],
+     "journal": [
+      30,
+      50,
+      60,
+      65,
+      70,
+      75,
+      100,
+      150,
+      180,
+      900
+     ]
+    },
+    {
+     "edid": "MQ102",
+     "name": "Before the Storm",
+     "stages": [
+      0,
+      1,
+      2,
+      5,
+      10,
+      12,
+      14,
+      15,
+      17,
+      20,
+      22,
+      23,
+      25,
+      26,
+      30,
+      50,
+      60,
+      75,
+      80,
+      82,
+      85,
+      90,
+      100,
+      110,
+      150,
+      160
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      100,
+      110,
+      160
+     ]
+    },
+    {
+     "edid": "MQ103",
+     "name": "Bleak Falls Barrow",
+     "stages": [
+      0,
+      1,
+      5,
+      8,
+      10,
+      15,
+      20,
+      50,
+      55,
+      60,
+      80,
+      90,
+      100,
+      180,
+      182,
+      185,
+      190
+     ],
+     "journal": [
+      10,
+      50,
+      80,
+      190
+     ]
+    },
+    {
+     "edid": "MQ104",
+     "name": "Dragon Rising",
+     "stages": [
+      0,
+      1,
+      10,
+      12,
+      13,
+      15,
+      20,
+      30,
+      40,
+      45,
+      46,
+      48,
+      50,
+      52,
+      55,
+      60,
+      65,
+      70,
+      80,
+      85,
+      90,
+      92,
+      95,
+      100,
+      105,
+      108,
+      110,
+      120,
+      130,
+      150,
+      160
+     ],
+     "journal": [
+      10,
+      13,
+      15,
+      20,
+      30,
+      40,
+      50,
+      80,
+      90,
+      160
+     ]
+    },
+    {
+     "edid": "MQ105",
+     "name": "The Way of the Voice",
+     "stages": [
+      0,
+      1,
+      5,
+      8,
+      10,
+      12,
+      15,
+      20,
+      25,
+      30,
+      50,
+      55,
+      56,
+      58,
+      59,
+      60,
+      70,
+      75,
+      76,
+      80,
+      82,
+      85,
+      90,
+      100,
+      103,
+      105,
+      110,
+      115,
+      120,
+      125,
+      127,
+      130,
+      140,
+      150,
+      160
+     ],
+     "journal": [
+      10,
+      20,
+      25,
+      30,
+      50,
+      60,
+      70,
+      160
+     ]
+    },
+    {
+     "edid": "MQ105Ustengrav",
+     "name": "The Horn of Jurgen Windcaller",
+     "stages": [
+      10,
+      15,
+      20,
+      30,
+      40,
+      50,
+      60
+     ]
+    },
+    {
+     "edid": "MQ106",
+     "name": "A Blade in the Dark",
+     "stages": [
+      0,
+      1,
+      5,
+      10,
+      20,
+      25,
+      30,
+      32,
+      35,
+      40,
+      42,
+      45,
+      47,
+      48,
+      50,
+      55,
+      58,
+      60,
+      65,
+      70,
+      72,
+      75,
+      80,
+      90,
+      100,
+      102,
+      105,
+      110,
+      120,
+      150,
+      155,
+      160,
+      170,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      150,
+      200
+     ]
+    },
+    {
+     "edid": "MQ201",
+     "name": "Diplomatic Immunity",
+     "stages": [
+      0,
+      1,
+      10,
+      15,
+      20,
+      30,
+      35,
+      40,
+      50,
+      70,
+      90,
+      95,
+      98,
+      100,
+      102,
+      105,
+      108,
+      110,
+      120,
+      130,
+      140,
+      150,
+      160,
+      165,
+      170,
+      180,
+      185,
+      190,
+      200,
+      202,
+      205,
+      208,
+      210,
+      215,
+      220,
+      222,
+      223,
+      225,
+      227,
+      230,
+      240,
+      250,
+      255
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      70,
+      90,
+      100,
+      140,
+      210,
+      250
+     ]
+    },
+    {
+     "edid": "MQ202",
+     "name": "A Cornered Rat",
+     "stages": [
+      0,
+      1,
+      5,
+      10,
+      20,
+      50,
+      55,
+      56,
+      60,
+      65,
+      70,
+      100,
+      130,
+      140,
+      145,
+      150,
+      160,
+      170,
+      175,
+      180
+     ],
+     "journal": [
+      10,
+      20,
+      50,
+      150,
+      180
+     ]
+    },
+    {
+     "edid": "MQ203",
+     "name": "Alduin's Wall",
+     "stages": [
+      0,
+      1,
+      5,
+      6,
+      10,
+      20,
+      25,
+      30,
+      40,
+      48,
+      50,
+      60,
+      65,
+      70,
+      75,
+      80,
+      100,
+      110,
+      120,
+      140,
+      150,
+      180,
+      185,
+      200,
+      210,
+      230,
+      250,
+      260,
+      280
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      60,
+      280
+     ]
+    },
+    {
+     "edid": "MQ204",
+     "name": "The Throat of the World",
+     "stages": [
+      0,
+      1,
+      10,
+      20,
+      30,
+      35,
+      40,
+      50,
+      55,
+      60,
+      65,
+      66,
+      67,
+      70,
+      71,
+      72,
+      80,
+      81,
+      82,
+      83,
+      85,
+      86,
+      90,
+      95,
+      100,
+      110,
+      120,
+      125,
+      130,
+      135,
+      140,
+      150,
+      180,
+      190,
+      195,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      100,
+      200
+     ]
+    },
+    {
+     "edid": "MQ205",
+     "name": "Elder Knowledge",
+     "stages": [
+      0,
+      1,
+      10,
+      20,
+      30,
+      40,
+      45,
+      50,
+      60,
+      80,
+      100
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      50,
+      60,
+      100
+     ]
+    },
+    {
+     "edid": "MQ206",
+     "name": "Alduin's Bane",
+     "stages": [
+      0,
+      1,
+      5,
+      10,
+      15,
+      20,
+      30,
+      32,
+      33,
+      35,
+      40,
+      42,
+      48,
+      50,
+      52,
+      60,
+      70,
+      75,
+      80,
+      82,
+      85,
+      87,
+      88,
+      89,
+      90,
+      100,
+      120,
+      140,
+      160,
+      180,
+      200,
+      220
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      100,
+      220
+     ]
+    },
+    {
+     "edid": "MQ301",
+     "name": "The Fallen",
+     "stages": [
+      0,
+      1,
+      10,
+      15,
+      18,
+      20,
+      21,
+      22,
+      25,
+      27,
+      30,
+      40,
+      50,
+      70,
+      120,
+      125,
+      150,
+      180,
+      200,
+      220
+     ],
+     "journal": [
+      10,
+      20,
+      25,
+      30,
+      40,
+      50,
+      70,
+      200,
+      220
+     ]
+    },
+    {
+     "edid": "MQ302",
+     "name": "Season Unending",
+     "stages": [
+      0,
+      1,
+      5,
+      6,
+      7,
+      8,
+      10,
+      15,
+      20,
+      30,
+      40,
+      50,
+      52,
+      55,
+      60,
+      70,
+      80,
+      81,
+      82,
+      85,
+      90,
+      100,
+      105,
+      110,
+      120,
+      130,
+      140,
+      141,
+      142,
+      143,
+      150,
+      151,
+      152,
+      160,
+      170,
+      180,
+      181,
+      182,
+      190,
+      191,
+      192,
+      195,
+      196,
+      199,
+      200,
+      201,
+      202,
+      205,
+      206,
+      209,
+      210,
+      260,
+      265,
+      280,
+      281,
+      282,
+      285,
+      290,
+      300,
+      310,
+      320,
+      340,
+      350
+     ],
+     "journal": [
+      10,
+      15,
+      20,
+      30,
+      40,
+      50,
+      60,
+      300
+     ],
+     "optional": true,
+     "note": "Season Unending is the peace-council quest, and the game skips it on its own if the civil war is far enough along. Selecting it records the truce as brokered."
+    },
+    {
+     "edid": "MQPaarthurnax",
+     "name": "Paarthurnax",
+     "stages": [
+      10,
+      15,
+      20,
+      30,
+      50,
+      100
+     ],
+     "journal": [
+      10,
+      20,
+      50
+     ],
+     "optional": true,
+     "note": "Completing this quest means Paarthurnax dies. If you'd rather he lived, leave this unchecked; the main quest completes fine without it."
+    },
+    {
+     "edid": "MQ303",
+     "name": "The World-Eater's Eyrie",
+     "stages": [
+      0,
+      1,
+      5,
+      10,
+      15,
+      20,
+      30,
+      40,
+      45,
+      50,
+      55,
+      60,
+      100,
+      120,
+      160,
+      180,
+      200,
+      220,
+      240,
+      300
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      100,
+      300
+     ]
+    },
+    {
+     "edid": "MQ304",
+     "name": "Sovngarde",
+     "stages": [
+      0,
+      1,
+      5,
+      10,
+      20,
+      30,
+      50,
+      60,
+      65,
+      70,
+      75,
+      80,
+      85,
+      90,
+      95,
+      100,
+      105,
+      110,
+      130,
+      135,
+      140,
+      150,
+      160,
+      170,
+      180,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      50,
+      200
+     ]
+    },
+    {
+     "edid": "MQ305",
+     "name": "Dragonslayer",
+     "stages": [
+      0,
+      1,
+      5,
+      10,
+      12,
+      15,
+      20,
+      30,
+      60,
+      80,
+      100,
+      120,
+      140,
+      190,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      120,
+      200
+     ]
+    }
+   ],
+   "blurb": "Alduin, the Greybeards, all of it. Complete it all, or stop partway and start your game as a mid-story Dragonborn."
+  },
+  {
+   "id": "civil-war",
+   "title": "Civil War",
+   "quests": [
+    {
+     "edid": "CW01A",
+     "name": "Joining the Legion",
+     "stages": [
+      0,
+      1,
+      100,
+      150,
+      160,
+      200
+     ],
+     "journal": [
+      1,
+      100,
+      160
+     ],
+     "branch": "Imperial Legion"
+    },
+    {
+     "edid": "CW02A",
+     "name": "The Jagged Crown",
+     "stages": [
+      0,
+      1,
+      7,
+      10,
+      20,
+      30,
+      40,
+      42,
+      43,
+      45,
+      50,
+      54,
+      60,
+      61,
+      62,
+      63,
+      65,
+      70,
+      78,
+      80,
+      81,
+      100,
+      102,
+      103,
+      105,
+      110,
+      120,
+      130,
+      135,
+      140,
+      150,
+      160,
+      162,
+      170,
+      171,
+      172,
+      174,
+      175,
+      176,
+      178,
+      180,
+      190,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      45,
+      50,
+      60,
+      65,
+      70,
+      80
+     ],
+     "branch": "Imperial Legion"
+    },
+    {
+     "edid": "CW01B",
+     "name": "Joining the Stormcloaks",
+     "stages": [
+      0,
+      1,
+      100,
+      150,
+      160,
+      200
+     ],
+     "journal": [
+      1,
+      100,
+      160
+     ],
+     "branch": "Stormcloaks"
+    },
+    {
+     "edid": "CW02B",
+     "name": "The Jagged Crown",
+     "stages": [
+      0,
+      1,
+      7,
+      10,
+      20,
+      30,
+      40,
+      42,
+      43,
+      45,
+      50,
+      54,
+      60,
+      61,
+      62,
+      63,
+      65,
+      70,
+      78,
+      80,
+      81,
+      100,
+      102,
+      103,
+      105,
+      110,
+      120,
+      130,
+      135,
+      140,
+      150,
+      160,
+      162,
+      170,
+      171,
+      172,
+      174,
+      175,
+      176,
+      178,
+      180,
+      190,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      80
+     ],
+     "branch": "Stormcloaks"
+    }
+   ],
+   "blurb": "Pick ONE side here. For either side, 'Joining' and the 'Jagged Crown' are the only scriptable skips. The campaign battles beyond these reuse radiant quest records for every hold and both sides, so replaying their stages blind would corrupt the war's state. Play the campaign out, or sidestep the war with 'Season Unending' from the main quest."
+  },
+  {
+   "id": "companions",
+   "title": "The Companions",
+   "quests": [
+    {
+     "edid": "C00",
+     "name": "Take Up Arms",
+     "stages": [
+      0,
+      1,
+      10,
+      20,
+      30,
+      40,
+      50,
+      100
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      100
+     ]
+    },
+    {
+     "edid": "C01",
+     "name": "Proving Honor",
+     "stages": [
+      0,
+      1,
+      10,
+      20,
+      30,
+      40,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      200
+     ]
+    },
+    {
+     "edid": "C02",
+     "name": "Brotherhood",
+     "stages": [
+      0,
+      1,
+      10,
+      20,
+      200
+     ],
+     "journal": [
+      10,
+      200
+     ]
+    },
+    {
+     "edid": "C03",
+     "name": "The Silver Hand",
+     "stages": [
+      0,
+      1,
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      200
+     ],
+     "journal": [
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      200
+     ]
+    },
+    {
+     "edid": "C04",
+     "name": "Blood's Honor",
+     "stages": [
+      0,
+      1,
+      10,
+      20,
+      30,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      200
+     ]
+    },
+    {
+     "edid": "C05",
+     "name": "Purity of Revenge",
+     "stages": [
+      0,
+      1,
+      10,
+      20,
+      200
+     ],
+     "journal": [
+      10,
+      20
+     ]
+    },
+    {
+     "edid": "C06",
+     "name": "Glory of the Dead",
+     "stages": [
+      0,
+      1,
+      10,
+      15,
+      17,
+      18,
+      20,
+      30,
+      35,
+      40,
+      50,
+      60,
+      65,
+      70,
+      200
+     ],
+     "journal": [
+      10,
+      15,
+      17,
+      18,
+      20,
+      30,
+      35,
+      40,
+      50,
+      60,
+      65,
+      70,
+      200
+     ]
+    }
+   ],
+   "blurb": "The Jorrvaskr line, 'Take Up Arms' through 'Glory of the Dead'. You end up Harbinger. Oh, and a werewolf."
+  },
+  {
+   "id": "college",
+   "title": "College of Winterhold",
+   "quests": [
+    {
+     "edid": "MG01",
+     "name": "First Lessons",
+     "stages": [
+      0,
+      3,
+      10,
+      20,
+      21,
+      22,
+      23,
+      24,
+      30,
+      40,
+      50,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      21,
+      22,
+      23,
+      24,
+      30,
+      40,
+      50,
+      200
+     ]
+    },
+    {
+     "edid": "MG02",
+     "name": "Under Saarthal",
+     "stages": [
+      0,
+      10,
+      11,
+      20,
+      25,
+      30,
+      40,
+      50,
+      60,
+      70,
+      200
+     ],
+     "journal": [
+      0,
+      10,
+      20,
+      25,
+      30,
+      40,
+      50,
+      60,
+      70,
+      200
+     ]
+    },
+    {
+     "edid": "MG03",
+     "name": "Hitting the Books",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      50,
+      55,
+      60,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      50,
+      55,
+      60,
+      200
+     ]
+    },
+    {
+     "edid": "MG04",
+     "name": "Good Intentions",
+     "stages": [
+      0,
+      10,
+      15,
+      20,
+      30,
+      40,
+      45,
+      50,
+      60,
+      200
+     ],
+     "journal": [
+      10,
+      15,
+      20,
+      30,
+      40,
+      45,
+      50,
+      200
+     ]
+    },
+    {
+     "edid": "mg06",
+     "name": "Revealing the Unseen",
+     "stages": [
+      0,
+      10,
+      20,
+      25,
+      30,
+      32,
+      35,
+      37,
+      40,
+      50,
+      55,
+      60,
+      70,
+      99,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      25,
+      30,
+      32,
+      35,
+      37,
+      40,
+      50,
+      55,
+      60,
+      70,
+      200
+     ],
+     "note": "'Revealing the Unseen' plays before 'Containment' despite the editor IDs."
+    },
+    {
+     "edid": "MG05",
+     "name": "Containment",
+     "stages": [
+      0,
+      1,
+      10,
+      20,
+      25,
+      30,
+      40,
+      50,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      200
+     ]
+    },
+    {
+     "edid": "MG07",
+     "name": "The Staff of Magnus",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      200
+     ]
+    },
+    {
+     "edid": "MG08",
+     "name": "The Eye of Magnus",
+     "stages": [
+      0,
+      1,
+      10,
+      20,
+      30,
+      40,
+      50,
+      200
+     ],
+     "journal": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50,
+      200
+     ]
+    }
+   ],
+   "blurb": "'First Lessons' through 'The Eye of Magnus'. You end up Arch-Mage."
+  },
+  {
+   "id": "college-side",
+   "title": "College of Winterhold \u2014 Side Quests",
+   "quests": [
+    {
+     "edid": "MGRArniel01",
+     "name": "Arniel's Endeavor",
+     "stages": [
+      10,
+      200
+     ],
+     "note": "Part one of four."
+    },
+    {
+     "edid": "MGRArniel02",
+     "name": "Arniel's Endeavor",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      200
+     ]
+    },
+    {
+     "edid": "MGRArniel03",
+     "name": "Arniel's Endeavor",
+     "stages": [
+      10,
+      20,
+      30,
+      40,
+      200
+     ]
+    },
+    {
+     "edid": "MGRArniel04",
+     "name": "Arniel's Endeavor",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      200
+     ]
+    },
+    {
+     "edid": "MGRAppBrelyna01",
+     "name": "Brelyna's Practice",
+     "stages": [
+      10,
+      20,
+      30,
+      200
+     ],
+     "journal": [
+      20,
+      30,
+      200
+     ],
+     "optional": true
+    },
+    {
+     "edid": "MGRAppJzargo01",
+     "name": "J'zargo's Experiment",
+     "stages": [
+      10,
+      20,
+      30,
+      200
+     ],
+     "journal": [
+      20,
+      30,
+      200
+     ],
+     "optional": true
+    },
+    {
+     "edid": "MGRAppOnmund01",
+     "name": "Onmund's Request",
+     "stages": [
+      10,
+      20,
+      30,
+      40,
+      200
+     ],
+     "optional": true
+    },
+    {
+     "edid": "MGRitual01",
+     "name": "Destruction Ritual Spell",
+     "stages": [
+      10,
+      200
+     ],
+     "optional": true
+    },
+    {
+     "edid": "MGRitual02",
+     "name": "Illusion Ritual Spell",
+     "stages": [
+      10,
+      20,
+      200
+     ],
+     "journal": [
+      10,
+      200
+     ],
+     "optional": true
+    },
+    {
+     "edid": "MGRitual03",
+     "name": "Conjuration Ritual Spell",
+     "stages": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      70,
+      200
+     ],
+     "optional": true
+    },
+    {
+     "edid": "MGRitual04",
+     "name": "Restoration Ritual Spell",
+     "stages": [
+      10,
+      20,
+      30,
+      40,
+      200
+     ],
+     "journal": [
+      10,
+      200
+     ],
+     "optional": true
+    },
+    {
+     "edid": "MGRitual05",
+     "name": "Alteration Ritual Spell",
+     "stages": [
+      10,
+      20,
+      30,
+      40,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      200
+     ],
+     "optional": true
+    }
+   ],
+   "blurb": "Arniel's Endeavor is a four-part series, in order. The apprentices' favors and the master-spell rituals are independent, so they're optional. The rituals normally unlock at skill 90 in their school."
+  },
+  {
+   "id": "thieves-guild",
+   "title": "Thieves Guild",
+   "quests": [
+    {
+     "edid": "TG00",
+     "name": "A Chance Arrangement",
+     "stages": [
+      0,
+      5,
+      8,
+      10,
+      20,
+      30,
+      35,
+      40,
+      200
+     ],
+     "journal": [
+      8,
+      10,
+      20,
+      30,
+      200
+     ]
+    },
+    {
+     "edid": "TG01",
+     "name": "Taking Care of Business",
+     "stages": [
+      0,
+      10,
+      12,
+      20,
+      30,
+      35,
+      40,
+      42,
+      45,
+      47,
+      50,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      200
+     ]
+    },
+    {
+     "edid": "TG02B",
+     "name": "Meet the Family",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      200
+     ]
+    },
+    {
+     "edid": "TG02",
+     "name": "Loud and Clear",
+     "stages": [
+      0,
+      10,
+      15,
+      20,
+      30,
+      35,
+      40,
+      45,
+      50,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      45,
+      50,
+      200
+     ]
+    },
+    {
+     "edid": "TG03",
+     "name": "Dampened Spirits",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      45,
+      55,
+      60,
+      70,
+      80,
+      90,
+      100,
+      110,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      45,
+      60,
+      70,
+      80,
+      90,
+      100,
+      110,
+      200
+     ]
+    },
+    {
+     "edid": "TG04",
+     "name": "Scoundrel's Folly",
+     "stages": [
+      0,
+      1,
+      10,
+      20,
+      30,
+      35,
+      36,
+      37,
+      40,
+      42,
+      45,
+      50,
+      60,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      35,
+      37,
+      40,
+      50,
+      60,
+      200
+     ]
+    },
+    {
+     "edid": "TG05",
+     "name": "Speaking With Silence",
+     "stages": [
+      0,
+      1,
+      10,
+      20,
+      30,
+      35,
+      40,
+      45,
+      50,
+      60,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      35,
+      50,
+      200
+     ]
+    },
+    {
+     "edid": "TG06",
+     "name": "Hard Answers",
+     "stages": [
+      0,
+      10,
+      20,
+      25,
+      27,
+      30,
+      40,
+      50,
+      55,
+      60,
+      70,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      25,
+      27,
+      30,
+      40,
+      50,
+      60,
+      70,
+      200
+     ]
+    },
+    {
+     "edid": "TG07",
+     "name": "The Pursuit",
+     "stages": [
+      0,
+      10,
+      20,
+      25,
+      30,
+      40,
+      42,
+      45,
+      48,
+      49,
+      50,
+      60,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      42,
+      50,
+      60,
+      200
+     ]
+    },
+    {
+     "edid": "TG08A",
+     "name": "Trinity Restored",
+     "stages": [
+      0,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40,
+      42,
+      45,
+      47,
+      50,
+      52,
+      55,
+      57,
+      60,
+      70,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      42,
+      45,
+      50,
+      57,
+      60,
+      70,
+      200
+     ]
+    },
+    {
+     "edid": "TG08B",
+     "name": "Blindsighted",
+     "stages": [
+      0,
+      1,
+      10,
+      20,
+      30,
+      32,
+      33,
+      35,
+      37,
+      40,
+      41,
+      45,
+      47,
+      50,
+      60,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      45,
+      50,
+      60,
+      200
+     ]
+    },
+    {
+     "edid": "TG09",
+     "name": "Darkness Returns",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      45,
+      50,
+      60,
+      70,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      200
+     ]
+    },
+    {
+     "edid": "TGTQ01",
+     "name": "Silver Lining",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      200
+     ],
+     "note": "City influence job (Windhelm). Normally unlocked by radiant jobs. All four are needed to become Guild Master."
+    },
+    {
+     "edid": "TGTQ02",
+     "name": "The Dainty Sload",
+     "stages": [
+      0,
+      10,
+      20,
+      25,
+      30,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      200
+     ],
+     "note": "City influence job (Solitude)."
+    },
+    {
+     "edid": "TGTQ03",
+     "name": "Imitation Amnesty",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      45,
+      50,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      200
+     ],
+     "note": "City influence job (Whiterun)."
+    },
+    {
+     "edid": "TGTQ04",
+     "name": "Summerset Shadows",
+     "stages": [
+      0,
+      10,
+      20,
+      25,
+      30,
+      35,
+      40,
+      50,
+      55,
+      60,
+      65,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      200
+     ],
+     "note": "City influence job (Markarth)."
+    },
+    {
+     "edid": "TGCrown",
+     "name": "No Stone Unturned",
+     "stages": [
+      0,
+      5,
+      10,
+      20,
+      30,
+      40,
+      50,
+      200
+     ],
+     "journal": [
+      5,
+      10,
+      20,
+      30,
+      40,
+      50,
+      200
+     ],
+     "optional": true,
+     "note": "No Stone Unturned, Vex's Stones of Barenziah hunt."
+    },
+    {
+     "edid": "TGLeadership",
+     "name": "Under New Management",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      200
+     ],
+     "note": "Under New Management, the Guild Master capstone."
+    }
+   ],
+   "blurb": "'A Chance Arrangement' through 'Darkness Returns', then the four city-influence jobs on the road to Guild Master. Click 'Darkness Returns' to stop there, or 'Under New Management' for the whole arc."
+  },
+  {
+   "id": "dark-brotherhood",
+   "title": "The Dark Brotherhood",
+   "quests": [
+    {
+     "edid": "DB01Misc",
+     "name": "Delayed Burial",
+     "stages": [
+      0,
+      5,
+      10,
+      20,
+      30,
+      40,
+      50,
+      200
+     ],
+     "journal": [
+      5,
+      10,
+      20,
+      30,
+      40,
+      50,
+      200
+     ],
+     "optional": true,
+     "note": "Delayed Burial, the Cicero wagon intro. Skippable.",
+     "branch": "Join the Dark Brotherhood"
+    },
+    {
+     "edid": "DB01",
+     "name": "Innocence Lost",
+     "stages": [
+      0,
+      5,
+      20,
+      30,
+      200
+     ],
+     "journal": [
+      5,
+      20,
+      30,
+      200
+     ],
+     "branch": "Join the Dark Brotherhood"
+    },
+    {
+     "edid": "DB02",
+     "name": "With Friends Like These...",
+     "stages": [
+      0,
+      10,
+      30,
+      40,
+      50,
+      200
+     ],
+     "branch": "Join the Dark Brotherhood"
+    },
+    {
+     "edid": "DB02a",
+     "name": "Sanctuary",
+     "stages": [
+      0,
+      10,
+      20,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      200
+     ],
+     "branch": "Join the Dark Brotherhood"
+    },
+    {
+     "edid": "DB03",
+     "name": "Mourning Never Comes",
+     "stages": [
+      0,
+      5,
+      10,
+      20,
+      25,
+      30,
+      31,
+      35,
+      40,
+      50,
+      200
+     ],
+     "journal": [
+      5,
+      10,
+      20,
+      30,
+      40,
+      50,
+      200
+     ],
+     "branch": "Join the Dark Brotherhood"
+    },
+    {
+     "edid": "DB04",
+     "name": "Whispers in the Dark",
+     "stages": [
+      0,
+      1,
+      10,
+      20,
+      30,
+      40,
+      50,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      200
+     ],
+     "branch": "Join the Dark Brotherhood"
+    },
+    {
+     "edid": "DB04a",
+     "name": "The Silence Has Been Broken",
+     "stages": [
+      0,
+      5,
+      10,
+      15,
+      20,
+      30,
+      40,
+      200
+     ],
+     "journal": [
+      5,
+      10,
+      15,
+      20,
+      30,
+      40,
+      200
+     ],
+     "branch": "Join the Dark Brotherhood"
+    },
+    {
+     "edid": "DB05",
+     "name": "Bound Until Death",
+     "stages": [
+      0,
+      10,
+      20,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      200
+     ],
+     "branch": "Join the Dark Brotherhood"
+    },
+    {
+     "edid": "DB06",
+     "name": "Breaching Security",
+     "stages": [
+      0,
+      5,
+      10,
+      20,
+      30,
+      200
+     ],
+     "journal": [
+      5,
+      10,
+      20,
+      30,
+      200
+     ],
+     "branch": "Join the Dark Brotherhood"
+    },
+    {
+     "edid": "DB07",
+     "name": "The Cure for Madness",
+     "stages": [
+      0,
+      10,
+      15,
+      17,
+      19,
+      20,
+      25,
+      30,
+      40,
+      50,
+      60,
+      200
+     ],
+     "journal": [
+      10,
+      15,
+      17,
+      19,
+      20,
+      25,
+      30,
+      40,
+      50,
+      60,
+      200
+     ],
+     "branch": "Join the Dark Brotherhood"
+    },
+    {
+     "edid": "DB08",
+     "name": "Recipe for Disaster",
+     "stages": [
+      0,
+      2,
+      4,
+      6,
+      10,
+      20,
+      30,
+      200
+     ],
+     "journal": [
+      2,
+      4,
+      6,
+      10,
+      20,
+      30,
+      200
+     ],
+     "branch": "Join the Dark Brotherhood"
+    },
+    {
+     "edid": "DB09",
+     "name": "To Kill an Empire",
+     "stages": [
+      0,
+      5,
+      10,
+      20,
+      25,
+      30,
+      40,
+      50,
+      60,
+      70,
+      75,
+      200
+     ],
+     "journal": [
+      5,
+      10,
+      20,
+      25,
+      30,
+      40,
+      50,
+      60,
+      70,
+      200
+     ],
+     "branch": "Join the Dark Brotherhood"
+    },
+    {
+     "edid": "DB10",
+     "name": "Death Incarnate",
+     "stages": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      7,
+      10,
+      15,
+      20,
+      30,
+      35,
+      40,
+      50,
+      55,
+      60,
+      70,
+      80,
+      200
+     ],
+     "journal": [
+      10,
+      15,
+      20,
+      30,
+      35,
+      40,
+      50,
+      60,
+      70,
+      80,
+      200
+     ],
+     "branch": "Join the Dark Brotherhood"
+    },
+    {
+     "edid": "DB11",
+     "name": "Hail Sithis!",
+     "stages": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      10,
+      15,
+      20,
+      40,
+      50,
+      60,
+      70,
+      80,
+      200
+     ],
+     "journal": [
+      5,
+      10,
+      15,
+      20,
+      40,
+      50,
+      60,
+      70,
+      80,
+      200
+     ],
+     "branch": "Join the Dark Brotherhood"
+    },
+    {
+     "edid": "DBSideContract01",
+     "name": "Contract: Kill Narfi",
+     "stages": [
+      0,
+      10,
+      20,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      200
+     ],
+     "optional": true,
+     "note": "Nazir's twelve fixed side contracts. Sets of these quests normally pace the main questline.",
+     "branch": "Join the Dark Brotherhood"
+    },
+    {
+     "edid": "DBSideContract02",
+     "name": "Contract: Kill Ennodius Papius",
+     "stages": [
+      0,
+      10,
+      20,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      200
+     ],
+     "optional": true,
+     "branch": "Join the Dark Brotherhood"
+    },
+    {
+     "edid": "DBSideContract03",
+     "name": "Contract: Kill Beitild",
+     "stages": [
+      0,
+      10,
+      20,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      200
+     ],
+     "optional": true,
+     "branch": "Join the Dark Brotherhood"
+    },
+    {
+     "edid": "DBSideContract04",
+     "name": "Contract: Kill Hern",
+     "stages": [
+      0,
+      10,
+      20,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      200
+     ],
+     "optional": true,
+     "branch": "Join the Dark Brotherhood"
+    },
+    {
+     "edid": "DBSideContract05",
+     "name": "Contract: Kill Lurbuk",
+     "stages": [
+      0,
+      10,
+      20,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      200
+     ],
+     "optional": true,
+     "branch": "Join the Dark Brotherhood"
+    },
+    {
+     "edid": "DBSideContract06",
+     "name": "Contract: Kill Deekus",
+     "stages": [
+      0,
+      10,
+      20,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      200
+     ],
+     "optional": true,
+     "branch": "Join the Dark Brotherhood"
+    },
+    {
+     "edid": "DBSideContract07",
+     "name": "Contract: Kill Ma'randru-jo",
+     "stages": [
+      0,
+      10,
+      20,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      200
+     ],
+     "optional": true,
+     "branch": "Join the Dark Brotherhood"
+    },
+    {
+     "edid": "DBSideContract08",
+     "name": "Contract: Kill Anoriath",
+     "stages": [
+      0,
+      10,
+      20,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      200
+     ],
+     "optional": true,
+     "branch": "Join the Dark Brotherhood"
+    },
+    {
+     "edid": "DBSideContract09",
+     "name": "Contract: Kill Agnis",
+     "stages": [
+      0,
+      10,
+      20,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      200
+     ],
+     "optional": true,
+     "branch": "Join the Dark Brotherhood"
+    },
+    {
+     "edid": "DBSideContract10",
+     "name": "Contract: Kill Maluril",
+     "stages": [
+      0,
+      10,
+      20,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      200
+     ],
+     "optional": true,
+     "branch": "Join the Dark Brotherhood"
+    },
+    {
+     "edid": "DBSideContract11",
+     "name": "Contract: Kill Helvard",
+     "stages": [
+      0,
+      10,
+      20,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      200
+     ],
+     "optional": true,
+     "branch": "Join the Dark Brotherhood"
+    },
+    {
+     "edid": "DBSideContract12",
+     "name": "Contract: Kill Safia",
+     "stages": [
+      0,
+      10,
+      20,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      200
+     ],
+     "optional": true,
+     "branch": "Join the Dark Brotherhood"
+    },
+    {
+     "edid": "DarkBrotherhoodSanctuaryRepair",
+     "name": "Where You Hang Your Enemy's Head...",
+     "stages": [
+      0,
+      10,
+      200
+     ],
+     "journal": [
+      10,
+      200
+     ],
+     "optional": true,
+     "note": "Where You Hang Your Enemy's Head, the post-story sanctuary refurbish.",
+     "branch": "Join the Dark Brotherhood"
+    },
+    {
+     "edid": "DBDestroy",
+     "name": "Destroy the Dark Brotherhood!",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      35,
+      40,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      200
+     ],
+     "optional": true,
+     "note": "Kill Astrid and wipe out the Sanctuary instead of joining.",
+     "branch": "Destroy the Dark Brotherhood"
+    }
+   ],
+   "blurb": "Innocence Lost through Hail Sithis! \u2014 or burn the whole thing down instead."
+  },
+  {
+   "id": "daedric",
+   "title": "Daedric Quests",
+   "quests": [
+    {
+     "edid": "DA01",
+     "name": "The Black Star",
+     "stages": [
+      0,
+      10,
+      20,
+      25,
+      30,
+      50,
+      57,
+      58,
+      60,
+      61,
+      62,
+      65,
+      70,
+      75,
+      80,
+      85,
+      90,
+      95,
+      100,
+      110
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      50,
+      60,
+      62,
+      65,
+      70,
+      75,
+      80,
+      100,
+      110
+     ],
+     "optional": true,
+     "note": "Azura."
+    },
+    {
+     "edid": "DA02",
+     "name": "Boethiah's Calling",
+     "stages": [
+      0,
+      1,
+      4,
+      5,
+      6,
+      7,
+      9,
+      10,
+      11,
+      12,
+      15,
+      17,
+      20,
+      21,
+      30,
+      31,
+      40,
+      41,
+      50,
+      60,
+      70,
+      80,
+      81,
+      100
+     ],
+     "journal": [
+      1,
+      5,
+      10,
+      15,
+      20,
+      30,
+      40,
+      50,
+      100
+     ],
+     "optional": true,
+     "note": "Boethiah."
+    },
+    {
+     "edid": "DA03",
+     "name": "A Daedra's Best Friend",
+     "stages": [
+      0,
+      5,
+      7,
+      10,
+      15,
+      20,
+      25,
+      27,
+      50,
+      60,
+      70,
+      75,
+      77,
+      90,
+      100,
+      105,
+      107,
+      110,
+      150,
+      151,
+      152,
+      155,
+      200,
+      205
+     ],
+     "journal": [
+      20,
+      25,
+      50,
+      70,
+      75,
+      100,
+      105,
+      110,
+      150,
+      155,
+      200
+     ],
+     "optional": true,
+     "note": "Clavicus Vile."
+    },
+    {
+     "edid": "DA04",
+     "name": "Discerning the Transmundane",
+     "stages": [
+      1,
+      5,
+      10,
+      20,
+      30,
+      35,
+      40,
+      50,
+      55,
+      60,
+      100
+     ],
+     "journal": [
+      5,
+      10,
+      20,
+      30,
+      35,
+      40,
+      50,
+      55,
+      100
+     ],
+     "optional": true,
+     "note": "Hermaeus Mora. Ties into the main quest's Elder Knowledge."
+    },
+    {
+     "edid": "DA05",
+     "name": "Ill Met By Moonlight",
+     "stages": [
+      0,
+      10,
+      20,
+      50,
+      55,
+      60,
+      61,
+      65,
+      70,
+      80,
+      100,
+      105
+     ],
+     "journal": [
+      10,
+      20,
+      50,
+      55,
+      60,
+      61,
+      65,
+      70,
+      80,
+      100,
+      105
+     ],
+     "optional": true,
+     "note": "Hircine."
+    },
+    {
+     "edid": "DA06",
+     "name": "The Cursed Tribe",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      90,
+      100,
+      110,
+      120,
+      200
+     ],
+     "journal": [
+      10,
+      50,
+      60,
+      70,
+      80,
+      90,
+      100,
+      110,
+      120,
+      200
+     ],
+     "optional": true,
+     "note": "Malacath."
+    },
+    {
+     "edid": "DA07",
+     "name": "Pieces of the Past",
+     "stages": [
+      5,
+      10,
+      11,
+      13,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40,
+      45,
+      50,
+      52,
+      53,
+      55,
+      60,
+      65,
+      70,
+      75,
+      80,
+      90,
+      95,
+      100,
+      150
+     ],
+     "journal": [
+      10,
+      11,
+      13,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      75,
+      80,
+      90,
+      100,
+      150
+     ],
+     "optional": true,
+     "note": "Mehrunes Dagon."
+    },
+    {
+     "edid": "DA08",
+     "name": "The Whispering Door",
+     "stages": [
+      0,
+      1,
+      10,
+      20,
+      25,
+      30,
+      40,
+      50,
+      51,
+      60
+     ],
+     "journal": [
+      10,
+      20,
+      25,
+      30,
+      40,
+      50,
+      60
+     ],
+     "optional": true,
+     "note": "Mephala."
+    },
+    {
+     "edid": "DA09",
+     "name": "The Break of Dawn",
+     "stages": [
+      0,
+      1,
+      50,
+      100,
+      150,
+      200,
+      300,
+      350,
+      400,
+      410,
+      450,
+      500
+     ],
+     "journal": [
+      50,
+      100,
+      300,
+      500
+     ],
+     "optional": true,
+     "note": "Meridia."
+    },
+    {
+     "edid": "DA10",
+     "name": "The House of Horrors",
+     "stages": [
+      0,
+      3,
+      10,
+      15,
+      17,
+      20,
+      25,
+      30,
+      32,
+      35,
+      36,
+      37,
+      38,
+      40,
+      45,
+      65,
+      70,
+      72,
+      74,
+      76,
+      80,
+      85,
+      90,
+      92,
+      95,
+      100,
+      110,
+      120,
+      130,
+      140,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      35,
+      40,
+      70,
+      80,
+      200
+     ],
+     "optional": true,
+     "note": "Molag Bal."
+    },
+    {
+     "edid": "DA11",
+     "name": "The Taste of Death",
+     "stages": [
+      0,
+      5,
+      10,
+      15,
+      20,
+      30,
+      40,
+      45,
+      50,
+      60,
+      70,
+      100
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      100
+     ],
+     "optional": true,
+     "note": "Namira."
+    },
+    {
+     "edid": "DA13",
+     "name": "The Only Cure",
+     "stages": [
+      0,
+      1,
+      5,
+      10,
+      11,
+      15,
+      20,
+      21,
+      30,
+      31,
+      40,
+      45,
+      50,
+      75,
+      80,
+      81,
+      100
+     ],
+     "journal": [
+      10,
+      11,
+      15,
+      20,
+      21,
+      40,
+      75
+     ],
+     "optional": true,
+     "note": "Peryite."
+    },
+    {
+     "edid": "DA14",
+     "name": "A Night To Remember",
+     "stages": [
+      0,
+      5,
+      10,
+      20,
+      30,
+      40,
+      50,
+      75,
+      84,
+      85,
+      100,
+      110,
+      115,
+      125,
+      130,
+      135,
+      150,
+      165,
+      175,
+      185,
+      200
+     ],
+     "journal": [
+      5,
+      10,
+      20,
+      30,
+      40,
+      50,
+      75,
+      85,
+      100,
+      115,
+      125,
+      135,
+      150,
+      200
+     ],
+     "optional": true,
+     "note": "Sanguine."
+    },
+    {
+     "edid": "DA15",
+     "name": "The Mind of Madness",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      45,
+      50,
+      55,
+      90,
+      95,
+      100,
+      150,
+      190,
+      200
+     ],
+     "journal": [
+      10,
+      45,
+      50,
+      100,
+      150,
+      200
+     ],
+     "optional": true,
+     "note": "Sheogorath."
+    },
+    {
+     "edid": "DA16",
+     "name": "Waking Nightmare",
+     "stages": [
+      0,
+      5,
+      10,
+      20,
+      22,
+      25,
+      28,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      90,
+      100,
+      110,
+      120,
+      140,
+      145,
+      148,
+      150,
+      155,
+      160,
+      170,
+      180,
+      190,
+      191,
+      192,
+      195,
+      196,
+      197,
+      198,
+      199,
+      200
+     ],
+     "journal": [
+      20,
+      25,
+      28,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      90,
+      100,
+      110,
+      120,
+      140,
+      150,
+      160,
+      170,
+      180,
+      190,
+      197,
+      200
+     ],
+     "optional": true,
+     "note": "Vaermina."
+    }
+   ],
+   "blurb": "Independent artifact quests, unordered, all optional."
+  },
+  {
+   "id": "side-quests",
+   "title": "City Side Quests",
+   "quests": [
+    {
+     "edid": "MS01",
+     "name": "The Forsworn Conspiracy",
+     "stages": [
+      0,
+      10,
+      12,
+      13,
+      15,
+      20,
+      30,
+      32,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      52,
+      54,
+      55,
+      57,
+      60,
+      61,
+      66,
+      70,
+      72,
+      74,
+      76,
+      80,
+      82,
+      90,
+      95,
+      100
+     ],
+     "journal": [
+      10,
+      15,
+      20,
+      30,
+      35,
+      40,
+      50,
+      55,
+      60,
+      70,
+      95,
+      100
+     ],
+     "optional": true,
+     "note": "Leads into No One Escapes Cidhna Mine."
+    },
+    {
+     "edid": "MS02",
+     "name": "No One Escapes Cidhna Mine",
+     "stages": [
+      0,
+      5,
+      10,
+      20,
+      25,
+      30,
+      40,
+      50,
+      55,
+      60,
+      70,
+      75,
+      77,
+      80,
+      100,
+      200,
+      210,
+      220,
+      230,
+      250
+     ],
+     "journal": [
+      5,
+      10,
+      20,
+      25,
+      30,
+      40,
+      50,
+      60,
+      70,
+      100,
+      200,
+      210,
+      220,
+      250
+     ],
+     "optional": true
+    },
+    {
+     "edid": "MS03",
+     "name": "Promises to Keep",
+     "stages": [
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      50,
+      200,
+      225,
+      250,
+      275
+     ],
+     "journal": [
+      5,
+      10,
+      20,
+      25,
+      30,
+      50,
+      200,
+      225
+     ],
+     "optional": true
+    },
+    {
+     "edid": "MS04",
+     "name": "Unfathomable Depths",
+     "stages": [
+      0,
+      10,
+      100,
+      140,
+      150,
+      160,
+      190,
+      200,
+      210,
+      240,
+      250,
+      260,
+      290,
+      300,
+      310,
+      340,
+      350,
+      360,
+      390,
+      400,
+      410,
+      440,
+      450,
+      460,
+      490,
+      500,
+      510,
+      540,
+      550,
+      560,
+      590,
+      600,
+      610,
+      640,
+      650,
+      660,
+      690,
+      700,
+      710,
+      740,
+      750,
+      760,
+      800,
+      850,
+      900,
+      1000
+     ],
+     "journal": [
+      10,
+      100,
+      900
+     ],
+     "optional": true
+    },
+    {
+     "edid": "MS06Start",
+     "name": "The Man Who Cried Wolf",
+     "stages": [
+      0,
+      5,
+      10,
+      15,
+      50,
+      60,
+      65,
+      70,
+      75,
+      80,
+      83,
+      85,
+      90,
+      100,
+      105,
+      110,
+      115,
+      250
+     ],
+     "journal": [
+      15,
+      50,
+      100
+     ],
+     "optional": true,
+     "note": "The Man Who Cried Wolf, part one of the Wolf Queen story."
+    },
+    {
+     "edid": "MS06",
+     "name": "The Wolf Queen Awakened",
+     "stages": [
+      0,
+      5,
+      10,
+      50,
+      60,
+      100,
+      125,
+      150,
+      160,
+      170,
+      190,
+      250
+     ],
+     "journal": [
+      50,
+      100,
+      125,
+      150,
+      250
+     ],
+     "optional": true,
+     "note": "Part two; select The Man Who Cried Wolf as well."
+    },
+    {
+     "edid": "MS07",
+     "name": "Lights Out!",
+     "stages": [
+      0,
+      3,
+      5,
+      8,
+      10,
+      50,
+      100,
+      125,
+      150,
+      175,
+      200,
+      225,
+      250
+     ],
+     "journal": [
+      10,
+      50,
+      100,
+      125,
+      150,
+      175,
+      200,
+      225,
+      250
+     ],
+     "optional": true
+    },
+    {
+     "edid": "MS08",
+     "name": "In My Time Of Need",
+     "stages": [
+      0,
+      10,
+      20,
+      25,
+      50,
+      75,
+      100,
+      101,
+      125,
+      130,
+      150,
+      160,
+      175,
+      199,
+      200,
+      201
+     ],
+     "journal": [
+      10,
+      20,
+      25,
+      50,
+      75,
+      100,
+      101,
+      125,
+      130,
+      160,
+      175,
+      199,
+      200,
+      201
+     ],
+     "optional": true
+    },
+    {
+     "edid": "MS09",
+     "name": "Missing In Action",
+     "stages": [
+      0,
+      10,
+      20,
+      25,
+      30,
+      40,
+      50,
+      55,
+      60,
+      100,
+      110,
+      200,
+      201
+     ],
+     "journal": [
+      10,
+      20,
+      25,
+      30,
+      40,
+      50,
+      55,
+      60,
+      100,
+      110,
+      200,
+      201
+     ],
+     "optional": true
+    },
+    {
+     "edid": "MS10",
+     "name": "Rise in the East",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      41,
+      42,
+      60,
+      70,
+      75,
+      80,
+      100
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      41,
+      42,
+      60,
+      70,
+      75,
+      80,
+      100
+     ],
+     "optional": true
+    },
+    {
+     "edid": "MS11",
+     "name": "Blood on the Ice",
+     "stages": [
+      0,
+      1,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      76,
+      80,
+      90,
+      100,
+      105,
+      110,
+      120,
+      130,
+      150,
+      200,
+      205,
+      250
+     ],
+     "journal": [
+      1,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      76,
+      80,
+      90,
+      100,
+      120,
+      130,
+      150,
+      250
+     ],
+     "optional": true
+    },
+    {
+     "edid": "MS11b",
+     "name": "Blood on the Ice",
+     "stages": [
+      0,
+      10,
+      15,
+      20
+     ],
+     "journal": [
+      15,
+      20
+     ],
+     "optional": true,
+     "note": "Part two of Blood on the Ice; select part one as well."
+    },
+    {
+     "edid": "MS12",
+     "name": "The White Phial",
+     "stages": [
+      0,
+      10,
+      20,
+      21,
+      100
+     ],
+     "journal": [
+      10,
+      20,
+      21,
+      100
+     ],
+     "optional": true
+    },
+    {
+     "edid": "MS12b",
+     "name": "Repairing the Phial",
+     "stages": [
+      0,
+      10,
+      30,
+      60,
+      100
+     ],
+     "journal": [
+      10,
+      30,
+      60,
+      100
+     ],
+     "optional": true,
+     "note": "Repairing the Phial follows The White Phial; select it as well."
+    },
+    {
+     "edid": "MS13",
+     "name": "The Golden Claw",
+     "stages": [
+      5,
+      6,
+      7,
+      8,
+      10,
+      12,
+      13,
+      15,
+      20,
+      30,
+      35,
+      37,
+      40,
+      50,
+      60,
+      100,
+      110
+     ],
+     "journal": [
+      10,
+      12,
+      15,
+      30,
+      35,
+      40,
+      100,
+      110
+     ],
+     "optional": true
+    },
+    {
+     "edid": "MS14",
+     "name": "Laid to Rest",
+     "stages": [
+      1,
+      5,
+      6,
+      7,
+      9,
+      10,
+      20,
+      25,
+      30,
+      35,
+      40,
+      50,
+      60,
+      70,
+      80,
+      90,
+      95,
+      97,
+      100,
+      110,
+      120,
+      130,
+      200
+     ],
+     "journal": [
+      20,
+      30,
+      35,
+      40,
+      50,
+      60,
+      70,
+      95,
+      100,
+      120,
+      200
+     ],
+     "optional": true
+    },
+    {
+     "edid": "T01",
+     "name": "The Heart of Dibella",
+     "stages": [
+      0,
+      60,
+      70,
+      80,
+      100,
+      200,
+      205
+     ],
+     "journal": [
+      60,
+      70,
+      80,
+      100,
+      200,
+      205
+     ],
+     "optional": true
+    },
+    {
+     "edid": "t02",
+     "name": "The Book of Love",
+     "stages": [
+      10,
+      20,
+      25,
+      30,
+      40,
+      45,
+      50,
+      55,
+      70,
+      80,
+      90,
+      95,
+      100,
+      200
+     ],
+     "journal": [
+      10,
+      20,
+      25,
+      30,
+      40,
+      45,
+      50,
+      55,
+      70,
+      80,
+      90,
+      95,
+      100
+     ],
+     "optional": true
+    },
+    {
+     "edid": "T03",
+     "name": "The Blessings of Nature",
+     "stages": [
+      5,
+      20,
+      30,
+      40,
+      50,
+      55,
+      70,
+      75,
+      100,
+      105
+     ],
+     "journal": [
+      20,
+      30,
+      40,
+      50,
+      55,
+      70,
+      75,
+      100,
+      105
+     ],
+     "optional": true
+    },
+    {
+     "edid": "NN01",
+     "name": "A Return To Your Roots",
+     "stages": [
+      10,
+      15,
+      20,
+      200
+     ],
+     "optional": true
+    },
+    {
+     "edid": "VC01",
+     "name": "Rising at Dawn",
+     "stages": [
+      0,
+      25,
+      50,
+      100,
+      125,
+      150,
+      175,
+      185,
+      195,
+      200
+     ],
+     "journal": [
+      50,
+      100,
+      150,
+      175,
+      185,
+      200
+     ],
+     "optional": true,
+     "note": "Rising at Dawn, Falion's vampirism cure."
+    }
+   ],
+   "blurb": "Standalone side quests, unordered, all optional."
+  },
+  {
+   "id": "bards-college",
+   "title": "Bards College",
+   "quests": [
+    {
+     "edid": "MS05",
+     "name": "Tending the Flames",
+     "stages": [
+      0,
+      10,
+      75,
+      90,
+      100,
+      125,
+      135,
+      145,
+      150,
+      175,
+      200,
+      225,
+      250,
+      253,
+      254,
+      255,
+      260,
+      265,
+      290,
+      300
+     ],
+     "journal": [
+      75,
+      90,
+      100,
+      125,
+      135,
+      150,
+      175,
+      200,
+      225,
+      250,
+      253,
+      254,
+      255,
+      260,
+      300
+     ]
+    },
+    {
+     "edid": "BardsCollegeLute",
+     "name": "Finn's Lute",
+     "stages": [
+      0,
+      15,
+      20,
+      40,
+      200
+     ],
+     "journal": [
+      20,
+      40
+     ],
+     "optional": true
+    },
+    {
+     "edid": "BardsCollegeDrum",
+     "name": "Rjorn's Drum",
+     "stages": [
+      0,
+      15,
+      20,
+      40,
+      200
+     ],
+     "journal": [
+      20,
+      40
+     ],
+     "optional": true
+    },
+    {
+     "edid": "BardsCollegeFlute",
+     "name": "Pantea's Flute",
+     "stages": [
+      0,
+      15,
+      20,
+      40,
+      200
+     ],
+     "journal": [
+      20,
+      40
+     ],
+     "optional": true
+    },
+    {
+     "edid": "BardsCollegePoeticEdda",
+     "name": "Collecting the Edda",
+     "stages": [
+      0,
+      10,
+      200
+     ],
+     "journal": [
+      10
+     ],
+     "optional": true
+    }
+   ],
+   "blurb": "Tending the Flames makes you a Bard. The instrument hunts are independent extras."
+  },
+  {
+   "id": "dungeon-quests",
+   "title": "Dungeon Quests",
+   "quests": [
+    {
+     "edid": "dunGauldursonQST",
+     "name": "Forbidden Legend",
+     "stages": [
+      0,
+      1,
+      6,
+      7,
+      8,
+      9,
+      10,
+      20,
+      21,
+      30,
+      31,
+      32,
+      33,
+      100,
+      101,
+      102,
+      103,
+      105,
+      110,
+      111,
+      119,
+      120,
+      121,
+      129,
+      130,
+      131,
+      139,
+      140,
+      150,
+      255
+     ],
+     "journal": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      20,
+      21,
+      30,
+      31,
+      32,
+      33,
+      100,
+      105,
+      150
+     ],
+     "optional": true,
+     "note": "Forbidden Legend spans three dungeons and ends at the Gauldur amulet."
+    },
+    {
+     "edid": "dunForelhostQST",
+     "name": "Siege on the Dragon Cult",
+     "stages": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      10,
+      15,
+      20,
+      25,
+      26,
+      30,
+      40,
+      50,
+      60,
+      64,
+      65,
+      70,
+      100,
+      110
+     ],
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70
+     ],
+     "optional": true
+    },
+    {
+     "edid": "dunFrostmereCryptQST",
+     "name": "The Pale Lady",
+     "stages": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      7,
+      8,
+      9,
+      10,
+      15,
+      16,
+      19,
+      20,
+      21,
+      30,
+      31,
+      40,
+      41,
+      50,
+      55,
+      60,
+      70,
+      75,
+      76,
+      85,
+      90,
+      91,
+      100
+     ],
+     "journal": [
+      1,
+      2,
+      3,
+      4,
+      7,
+      8,
+      9,
+      90,
+      91
+     ],
+     "optional": true
+    },
+    {
+     "edid": "dunDarklightQST",
+     "name": "Repentance",
+     "stages": [
+      0,
+      1,
+      5,
+      8,
+      9,
+      10,
+      12,
+      14,
+      15,
+      16,
+      18,
+      20,
+      25,
+      30,
+      35,
+      40,
+      50
+     ],
+     "journal": [
+      10,
+      20,
+      40
+     ],
+     "optional": true
+    },
+    {
+     "edid": "dunValthumeQST",
+     "name": "Evil in Waiting",
+     "stages": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      10,
+      15,
+      20,
+      30,
+      40,
+      50,
+      60
+     ],
+     "journal": [
+      0,
+      3,
+      5,
+      10,
+      15,
+      50,
+      60
+     ],
+     "optional": true
+    },
+    {
+     "edid": "dunVolunruudQST",
+     "name": "Silenced Tongues",
+     "stages": [
+      0,
+      10,
+      13,
+      14,
+      20,
+      30,
+      100
+     ],
+     "journal": [
+      10,
+      13,
+      14,
+      20,
+      30,
+      100
+     ],
+     "optional": true
+    },
+    {
+     "edid": "dunHunterQST",
+     "name": "Kyne's Sacred Trials",
+     "stages": [
+      10,
+      15,
+      20,
+      21,
+      30,
+      31,
+      32,
+      50,
+      51,
+      60,
+      61,
+      62,
+      70,
+      71,
+      80,
+      100
+     ],
+     "journal": [
+      20,
+      21,
+      30,
+      31,
+      32,
+      50,
+      51,
+      60,
+      61,
+      62,
+      70,
+      71,
+      80,
+      100
+     ],
+     "optional": true
+    },
+    {
+     "edid": "dunHighGateRuinsQST",
+     "name": "A Scroll For Anska",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      80,
+      90,
+      100
+     ],
+     "journal": [
+      10,
+      20,
+      90,
+      100
+     ],
+     "optional": true
+    },
+    {
+     "edid": "dunHillgrundsTombQST",
+     "name": "Ancestral Worship",
+     "stages": [
+      0,
+      1,
+      2,
+      5,
+      10,
+      15,
+      20,
+      30,
+      35,
+      36,
+      38,
+      40,
+      45,
+      50,
+      80,
+      81,
+      90,
+      95,
+      100
+     ],
+     "journal": [
+      5,
+      10,
+      35,
+      90
+     ],
+     "optional": true
+    },
+    {
+     "edid": "dunNchuandZelQst",
+     "name": "The Lost Expedition",
+     "stages": [
+      0,
+      10,
+      20,
+      50,
+      100,
+      110
+     ],
+     "journal": [
+      10,
+      20,
+      50,
+      100,
+      110
+     ],
+     "optional": true
+    },
+    {
+     "edid": "dunNilheimQST",
+     "name": "Telrav's Request",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      100
+     ],
+     "optional": true
+    },
+    {
+     "edid": "dunShipwreck04QST",
+     "name": "Trius' Trinket",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50,
+      100
+     ],
+     "journal": [
+      10,
+      20,
+      100
+     ],
+     "optional": true
+    },
+    {
+     "edid": "dunTrevasWatchQST",
+     "name": "Infiltration",
+     "stages": [
+      1,
+      10,
+      20,
+      60,
+      100
+     ],
+     "journal": [
+      10,
+      20,
+      60,
+      100
+     ],
+     "optional": true
+    },
+    {
+     "edid": "dunIronbindQST",
+     "name": "Coming of Age",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      45,
+      50,
+      60,
+      70,
+      79,
+      80,
+      81,
+      90,
+      100,
+      200
+     ],
+     "optional": true
+    },
+    {
+     "edid": "dunBlindCliffQST",
+     "name": "The Affairs of Hagravens",
+     "stages": [
+      10,
+      11,
+      15,
+      20,
+      30,
+      40,
+      45,
+      50,
+      60,
+      100
+     ],
+     "journal": [
+      15
+     ],
+     "optional": true
+    },
+    {
+     "edid": "dunYngolBarrowQST",
+     "name": "Yngol's Barrow",
+     "stages": [
+      10,
+      15,
+      49,
+      50,
+      100
+     ],
+     "journal": [
+      50
+     ],
+     "optional": true
+    },
+    {
+     "edid": "dunBardsLeapSummitQST",
+     "name": "The Lost Verse",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      100
+     ],
+     "optional": true
+    },
+    {
+     "edid": "dunMidden01QST",
+     "name": "Forgotten Names",
+     "stages": [
+      0,
+      10,
+      40,
+      50,
+      75,
+      80,
+      100
+     ],
+     "optional": true
+    }
+   ],
+   "blurb": "Self-contained dungeon quests, unordered, all optional."
+  },
+  {
+   "id": "dawnguard",
+   "title": "Dawnguard",
+   "quests": [
+    {
+     "edid": "DLC1VQ01MiscObjective",
+     "name": "Dawnguard",
+     "stages": [
+      5,
+      10,
+      20,
+      50,
+      80,
+      100,
+      110,
+      115,
+      120,
+      130,
+      140,
+      150,
+      180
+     ],
+     "dlc": "Dawnguard",
+     "journal": [
+      10
+     ],
+     "note": "The 'Dawnguard' misc intro: word of the vampire attacks, and directions to Fort Dawnguard."
+    },
+    {
+     "edid": "DLC1VQ01",
+     "name": "Awakening",
+     "stages": [
+      0,
+      5,
+      10,
+      12,
+      15,
+      17,
+      18,
+      19,
+      20,
+      30,
+      40,
+      200
+     ],
+     "dlc": "Dawnguard",
+     "journal": [
+      10,
+      30,
+      40,
+      200
+     ]
+    },
+    {
+     "edid": "DLC1VQ02",
+     "name": "Bloodline",
+     "stages": [
+      0,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      15,
+      20,
+      25,
+      30,
+      40,
+      180,
+      190,
+      200
+     ],
+     "dlc": "Dawnguard",
+     "journal": [
+      5,
+      10,
+      20,
+      25,
+      30,
+      40,
+      180,
+      190
+     ]
+    },
+    {
+     "edid": "DLC1HunterBaseIntro",
+     "name": "A New Order",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      45,
+      50,
+      60,
+      70,
+      200
+     ],
+     "dlc": "Dawnguard",
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      45,
+      50,
+      60,
+      70,
+      200
+     ],
+     "branch": "Dawnguard"
+    },
+    {
+     "edid": "DLC1VQ03Hunter",
+     "name": "Prophet",
+     "stages": [
+      0,
+      5,
+      7,
+      10,
+      15,
+      17,
+      20,
+      30,
+      40,
+      45,
+      50,
+      52,
+      55,
+      57,
+      60,
+      61,
+      65,
+      66,
+      67,
+      70,
+      80,
+      90,
+      100,
+      200
+     ],
+     "dlc": "Dawnguard",
+     "journal": [
+      5,
+      7,
+      10,
+      15,
+      17,
+      20,
+      30,
+      40,
+      45,
+      50,
+      52,
+      55,
+      57,
+      60,
+      65,
+      66,
+      70,
+      80,
+      90,
+      100,
+      200
+     ],
+     "branch": "Dawnguard"
+    },
+    {
+     "edid": "DLC1VampireBaseIntro",
+     "name": "The Bloodstone Chalice",
+     "stages": [
+      0,
+      10,
+      15,
+      20,
+      30,
+      40,
+      50,
+      60,
+      200
+     ],
+     "dlc": "Dawnguard",
+     "journal": [
+      10,
+      15,
+      20,
+      30,
+      40,
+      50,
+      60,
+      200
+     ],
+     "branch": "Volkihar Vampires"
+    },
+    {
+     "edid": "DLC1VQ03Vampire",
+     "name": "Prophet",
+     "stages": [
+      0,
+      5,
+      10,
+      20,
+      30,
+      40,
+      45,
+      47,
+      50,
+      55,
+      57,
+      60,
+      61,
+      65,
+      66,
+      67,
+      68,
+      70,
+      80,
+      90,
+      100,
+      110,
+      120,
+      130,
+      200
+     ],
+     "dlc": "Dawnguard",
+     "journal": [
+      5,
+      10,
+      20,
+      30,
+      40,
+      45,
+      47,
+      50,
+      55,
+      57,
+      60,
+      65,
+      66,
+      67,
+      70,
+      80,
+      100,
+      130,
+      200
+     ],
+     "branch": "Volkihar Vampires"
+    },
+    {
+     "edid": "DLC1VQElder",
+     "name": "Seeking Disclosure",
+     "stages": [
+      1,
+      10,
+      20,
+      25,
+      30,
+      40,
+      200
+     ],
+     "dlc": "Dawnguard",
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      200
+     ]
+    },
+    {
+     "edid": "DLC1VQ04",
+     "name": "Chasing Echoes",
+     "stages": [
+      0,
+      1,
+      10,
+      20,
+      25,
+      30,
+      35,
+      40,
+      45,
+      50,
+      55,
+      60,
+      70,
+      75,
+      80,
+      90,
+      95,
+      100,
+      110,
+      111,
+      112,
+      115,
+      200
+     ],
+     "dlc": "Dawnguard",
+     "journal": [
+      10,
+      20,
+      30,
+      35,
+      40,
+      45,
+      50,
+      60,
+      70,
+      80,
+      90,
+      100,
+      110,
+      200
+     ]
+    },
+    {
+     "edid": "DLC1VQ05",
+     "name": "Beyond Death",
+     "stages": [
+      0,
+      10,
+      20,
+      25,
+      28,
+      29,
+      30,
+      40,
+      50,
+      70,
+      80,
+      110,
+      120,
+      130,
+      140,
+      200
+     ],
+     "dlc": "Dawnguard",
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      70,
+      80,
+      110,
+      120,
+      200
+     ]
+    },
+    {
+     "edid": "DLC1VQ06",
+     "name": "Unseen Visions",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      70,
+      200
+     ],
+     "dlc": "Dawnguard",
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      200
+     ]
+    },
+    {
+     "edid": "DLC1VQ07",
+     "name": "Touching the Sky",
+     "stages": [
+      0,
+      10,
+      30,
+      35,
+      36,
+      50,
+      55,
+      60,
+      65,
+      70,
+      80,
+      81,
+      82,
+      85,
+      86,
+      87,
+      90,
+      91,
+      92,
+      95,
+      96,
+      97,
+      100,
+      105,
+      110,
+      120,
+      130,
+      131,
+      132,
+      135,
+      140,
+      150,
+      200
+     ],
+     "dlc": "Dawnguard",
+     "journal": [
+      10,
+      30,
+      50,
+      70,
+      80,
+      90,
+      100,
+      110,
+      120,
+      130,
+      200
+     ]
+    },
+    {
+     "edid": "DLC1VQ08",
+     "name": "Kindred Judgment",
+     "stages": [
+      0,
+      10,
+      20,
+      25,
+      30,
+      40,
+      50,
+      55,
+      60,
+      200
+     ],
+     "dlc": "Dawnguard",
+     "journal": [
+      10,
+      20,
+      30,
+      40
+     ]
+    }
+   ],
+   "blurb": "'Awakening' through 'Kindred Judgment'. At 'Bloodline' you pick a side: stay mortal with the Dawnguard, or take Harkon's gift and join the Volkihar. Click 'Kindred Judgment' to sweep the shared quests, then click your side's 'Prophet' to fill in the fork."
+  },
+  {
+   "id": "dawnguard-side",
+   "title": "Side Quests",
+   "quests": [
+    {
+     "edid": "DLC1LD",
+     "name": "Lost to the Ages",
+     "stages": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      10,
+      20,
+      30,
+      40,
+      50,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      100,
+      110,
+      111,
+      112,
+      120,
+      125,
+      126,
+      130,
+      131,
+      135,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      150,
+      160,
+      170,
+      175,
+      176,
+      179,
+      180,
+      181,
+      182,
+      185,
+      186,
+      187,
+      190,
+      195,
+      196,
+      200,
+      205,
+      206,
+      210,
+      220,
+      221,
+      225,
+      255
+     ],
+     "dlc": "Dawnguard",
+     "journal": [
+      100,
+      110,
+      111,
+      112,
+      120,
+      125,
+      126,
+      130,
+      135,
+      150,
+      160,
+      170,
+      175,
+      180,
+      190,
+      195,
+      200,
+      205,
+      210,
+      220,
+      225
+     ],
+     "optional": true,
+     "note": "Lost to the Ages, the Aetherium Forge hunt. Independent of the main line."
+    },
+    {
+     "edid": "DLC1VQDragon",
+     "name": "Durnehviir",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      35,
+      40,
+      50,
+      60
+     ],
+     "dlc": "Dawnguard",
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      60
+     ],
+     "optional": true,
+     "note": "Durnehviir, in the Soul Cairn."
+    },
+    {
+     "edid": "DLC1VQSaint",
+     "name": "Impatience of a Saint",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      200
+     ],
+     "dlc": "Dawnguard",
+     "journal": [
+      10,
+      20,
+      30,
+      200
+     ],
+     "optional": true,
+     "note": "Impatience of a Saint: Jiub's opus pages, in the Soul Cairn."
+    }
+   ],
+   "blurb": "Optional extras. The Soul Cairn pair assumes the main line has reached 'Beyond Death'."
+  },
+  {
+   "id": "dragonborn",
+   "title": "Dragonborn",
+   "quests": [
+    {
+     "edid": "DLC2MQ01",
+     "name": "Dragonborn",
+     "stages": [
+      0,
+      5,
+      7,
+      10,
+      15,
+      20,
+      25,
+      30,
+      200
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      5,
+      7,
+      10,
+      20,
+      25,
+      30,
+      200
+     ]
+    },
+    {
+     "edid": "DLC2MQ02",
+     "name": "The Temple of Miraak",
+     "stages": [
+      0,
+      5,
+      10,
+      20,
+      22,
+      25,
+      30,
+      40,
+      50,
+      60,
+      200
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      5,
+      10,
+      20,
+      25,
+      30,
+      40,
+      50,
+      60,
+      200
+     ]
+    },
+    {
+     "edid": "DLC2MQ03",
+     "name": "The Fate of the Skaal",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      200
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70
+     ]
+    },
+    {
+     "edid": "DLC2MQ03B",
+     "name": "Cleansing the Stones",
+     "stages": [
+      0,
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40,
+      45,
+      200
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      5,
+      10,
+      20,
+      30,
+      40,
+      200
+     ],
+     "optional": true,
+     "note": "Cleansing the Stones, the remaining All-Maker stones beyond the one 'The Fate of the Skaal' covers."
+    },
+    {
+     "edid": "DLC2MQ04",
+     "name": "The Path of Knowledge",
+     "stages": [
+      0,
+      1,
+      10,
+      20,
+      50,
+      55,
+      60,
+      70,
+      100,
+      110,
+      120,
+      150,
+      200,
+      210,
+      230,
+      250,
+      255,
+      260,
+      265,
+      270,
+      280,
+      300,
+      320,
+      325,
+      330,
+      340,
+      350,
+      355,
+      360,
+      370,
+      375,
+      380,
+      390,
+      400,
+      410,
+      420,
+      430,
+      435,
+      440,
+      445,
+      450,
+      460,
+      500,
+      510,
+      520,
+      530,
+      550
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      10,
+      20,
+      50,
+      550
+     ]
+    },
+    {
+     "edid": "DLC2MQ05",
+     "name": "The Gardener of Men",
+     "stages": [
+      0,
+      1,
+      10,
+      100,
+      150,
+      200,
+      250,
+      290,
+      300,
+      310,
+      320,
+      325,
+      330,
+      340,
+      350,
+      355,
+      360,
+      370,
+      390,
+      400,
+      450,
+      500,
+      600,
+      610,
+      620,
+      630,
+      700,
+      750,
+      800,
+      1000
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      10,
+      340,
+      1000
+     ]
+    },
+    {
+     "edid": "DLC2MQ06",
+     "name": "At the Summit of Apocrypha",
+     "stages": [
+      0,
+      10,
+      100,
+      200,
+      220,
+      240,
+      250,
+      300,
+      330,
+      335,
+      340,
+      350,
+      400,
+      420,
+      440,
+      460,
+      500,
+      520,
+      550
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      10,
+      200,
+      400,
+      550
+     ]
+    }
+   ],
+   "blurb": "Miraak's story, 'Dragonborn' through 'At the Summit of Apocrypha'."
+  },
+  {
+   "id": "black-books",
+   "title": "Black Books",
+   "quests": [
+    {
+     "edid": "DLC2BlackBook03Quest",
+     "name": "Black Book: Untold Legends",
+     "stages": [
+      10,
+      20
+     ],
+     "dlc": "Dragonborn",
+     "optional": true
+    },
+    {
+     "edid": "DLC2BlackBook04Quest",
+     "name": "Black Book: The Winds of Change",
+     "stages": [
+      10,
+      20
+     ],
+     "dlc": "Dragonborn",
+     "optional": true
+    },
+    {
+     "edid": "DLC2BlackBook05Quest",
+     "name": "Black Book: The Sallow Regent",
+     "stages": [
+      10,
+      20
+     ],
+     "dlc": "Dragonborn",
+     "optional": true
+    },
+    {
+     "edid": "DLC2BlackBook06Quest",
+     "name": "Black Book: Filament and Filigree",
+     "stages": [
+      10,
+      20
+     ],
+     "dlc": "Dragonborn",
+     "optional": true
+    },
+    {
+     "edid": "DLC2BlackBook07Quest",
+     "name": "Black Book: The Hidden Twilight",
+     "stages": [
+      10,
+      20
+     ],
+     "dlc": "Dragonborn",
+     "optional": true
+    }
+   ],
+   "blurb": "The five side Black Books; the two story books come with the main line. All optional."
+  },
+  {
+   "id": "solstheim-side",
+   "title": "Solstheim Side Quests",
+   "quests": [
+    {
+     "edid": "DLC2RR01",
+     "name": "March of the Dead",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      45,
+      50,
+      60,
+      80,
+      90,
+      100,
+      110,
+      120,
+      130,
+      200
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      80,
+      90,
+      100,
+      110,
+      120,
+      200
+     ],
+     "optional": true
+    },
+    {
+     "edid": "DLC2RR02",
+     "name": "Served Cold",
+     "stages": [
+      0,
+      5,
+      10,
+      15,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      85,
+      90,
+      100,
+      110,
+      200
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      5,
+      10,
+      15,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      85,
+      90,
+      100,
+      200
+     ],
+     "optional": true
+    },
+    {
+     "edid": "DLC2RR03Intro",
+     "name": "An Axe to Find",
+     "stages": [
+      10,
+      15,
+      20,
+      25,
+      200
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      10,
+      20
+     ],
+     "optional": true,
+     "note": "An Axe to Find leads into The Final Descent; select both."
+    },
+    {
+     "edid": "DLC2RR03",
+     "name": "The Final Descent",
+     "stages": [
+      0,
+      10,
+      15,
+      20,
+      25,
+      30,
+      40,
+      50,
+      200
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      10,
+      15,
+      20,
+      30,
+      40,
+      50,
+      200
+     ],
+     "optional": true
+    },
+    {
+     "edid": "DLC2dunHaknirTreasureQST",
+     "name": "Deathbrand",
+     "stages": [
+      0,
+      1,
+      10,
+      20,
+      29,
+      30,
+      31,
+      40,
+      41,
+      42,
+      43,
+      45,
+      50,
+      51,
+      52,
+      53,
+      70,
+      80,
+      90,
+      100,
+      200
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      29,
+      30,
+      31,
+      70,
+      80,
+      90,
+      100
+     ],
+     "optional": true,
+     "note": "Deathbrand."
+    },
+    {
+     "edid": "DLC2dunKolbjornQST",
+     "name": "Unearthed",
+     "stages": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      40,
+      75,
+      98,
+      99,
+      100,
+      101,
+      110,
+      120,
+      130,
+      140,
+      150,
+      160,
+      175,
+      198,
+      199,
+      200,
+      210,
+      220,
+      230,
+      240,
+      241,
+      242,
+      250,
+      260,
+      275,
+      298,
+      299,
+      300,
+      310,
+      320,
+      330,
+      350,
+      358,
+      359,
+      360,
+      375,
+      398,
+      399,
+      400,
+      410,
+      440,
+      449,
+      450,
+      475,
+      476,
+      477,
+      478,
+      479,
+      480,
+      485,
+      490,
+      500,
+      550,
+      600
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      40,
+      75,
+      100,
+      110,
+      130,
+      140,
+      150,
+      160,
+      175,
+      200,
+      210,
+      230,
+      240,
+      250,
+      260,
+      275,
+      300,
+      310,
+      330,
+      350,
+      360,
+      375,
+      400,
+      410,
+      449,
+      450,
+      475,
+      480,
+      485,
+      490
+     ],
+     "optional": true,
+     "note": "Unearthed, the Kolbjorn Barrow excavation."
+    },
+    {
+     "edid": "DLC2KagrumezQST",
+     "name": "The Kagrumez Gauntlet",
+     "stages": [
+      0,
+      1,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      90,
+      100,
+      200,
+      250
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      10,
+      250
+     ],
+     "optional": true
+    },
+    {
+     "edid": "DLC2SV01",
+     "name": "Lost Legacy",
+     "stages": [
+      0,
+      5,
+      10,
+      20,
+      30,
+      40,
+      45,
+      50,
+      100,
+      200
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      45,
+      50,
+      200
+     ],
+     "optional": true
+    },
+    {
+     "edid": "DLC2SV02",
+     "name": "A New Source of Stalhrim",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50,
+      100,
+      110,
+      200
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      200
+     ],
+     "optional": true
+    },
+    {
+     "edid": "DLC2WB01",
+     "name": "Filial Bonds",
+     "stages": [
+      0,
+      10,
+      15,
+      20,
+      100
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      10,
+      15,
+      20,
+      100
+     ],
+     "optional": true
+    },
+    {
+     "edid": "DLC2TGQuest",
+     "name": "Paid in Full",
+     "stages": [
+      5,
+      10,
+      20,
+      200
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      10,
+      20
+     ],
+     "optional": true,
+     "note": "Paid in Full, Glover Mallory's favor. Expects a Thieves Guild member."
+    },
+    {
+     "edid": "DLC2EbonyWarriorQuest",
+     "name": "The Ebony Warrior",
+     "stages": [
+      5,
+      10,
+      100,
+      200
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      10,
+      100,
+      200
+     ],
+     "optional": true,
+     "note": "The Ebony Warrior only appears at level 80."
+    },
+    {
+     "edid": "DLC2MH01",
+     "name": "Retaking Thirsk",
+     "stages": [
+      0,
+      10,
+      20,
+      25,
+      27,
+      30,
+      40,
+      100,
+      200
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      10,
+      20,
+      25,
+      27,
+      30,
+      40,
+      200
+     ],
+     "branch": "Retake Thirsk for the Nords"
+    },
+    {
+     "edid": "DLC2MH02",
+     "name": "The Chief of Thirsk Hall",
+     "stages": [
+      0,
+      10,
+      15,
+      17,
+      20,
+      30,
+      35,
+      37,
+      40,
+      100,
+      200
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      10,
+      15,
+      17,
+      20,
+      30,
+      35,
+      37,
+      40,
+      200
+     ],
+     "branch": "Serve the Riekling Chief"
+    }
+   ],
+   "blurb": "Raven Rock and the island, all optional \u2014 except Thirsk Mead Hall at the bottom, where you pick a side."
+  },
+  {
+   "id": "telvanni",
+   "title": "House Telvanni",
+   "quests": [
+    {
+     "edid": "DLC2TT1",
+     "name": "Reluctant Steward",
+     "stages": [
+      0,
+      90,
+      100,
+      150,
+      170,
+      200,
+      210,
+      300,
+      310,
+      400,
+      500
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      150,
+      170,
+      200,
+      210,
+      300,
+      310,
+      400
+     ]
+    },
+    {
+     "edid": "DLC2TT1b",
+     "name": "A New Debt",
+     "stages": [
+      10,
+      50,
+      100,
+      200,
+      300,
+      310,
+      320
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      100,
+      200,
+      300,
+      310,
+      320
+     ]
+    },
+    {
+     "edid": "DLC2TT2",
+     "name": "Old Friends",
+     "stages": [
+      0,
+      5,
+      10,
+      100,
+      200,
+      250,
+      300,
+      310,
+      400,
+      500,
+      600
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      100,
+      200,
+      300,
+      400,
+      500
+     ]
+    },
+    {
+     "edid": "DLC2TTF1",
+     "name": "From the Ashes",
+     "stages": [
+      5,
+      7,
+      10,
+      30,
+      50,
+      100,
+      200,
+      300
+     ],
+     "dlc": "Dragonborn",
+     "journal": [
+      100,
+      200,
+      300
+     ],
+     "optional": true
+    },
+    {
+     "edid": "DLC2TTF2",
+     "name": "Healing a House",
+     "stages": [
+      100,
+      200,
+      300,
+      400,
+      500
+     ],
+     "dlc": "Dragonborn",
+     "optional": true
+    }
+   ],
+   "blurb": "Neloth's chain in order, then Tel Mithryn's restoration favors."
+  },
+  {
+   "id": "vigilant",
+   "title": "Vigilant",
+   "quests": [
+    {
+     "edid": "zzzAoMMq00",
+     "name": "Vigilant of Stendarr",
+     "stages": [
+      0,
+      5,
+      10,
+      15,
+      20,
+      30,
+      40,
+      999,
+      9999
+     ],
+     "dlc": "Vigilant",
+     "journal": [
+      5,
+      10,
+      15,
+      20,
+      30
+     ]
+    },
+    {
+     "edid": "zzzAoMMq01",
+     "name": "Bloodsucker",
+     "stages": [
+      0,
+      10,
+      11,
+      15,
+      20,
+      30,
+      40,
+      50,
+      255,
+      9999
+     ],
+     "dlc": "Vigilant",
+     "journal": [
+      0,
+      10,
+      15,
+      20,
+      30,
+      40
+     ]
+    },
+    {
+     "edid": "zzzAoMMq02",
+     "name": "He Who Cannot Be Touched",
+     "stages": [
+      0,
+      10,
+      13,
+      15,
+      17,
+      20,
+      30,
+      255,
+      9999
+     ],
+     "dlc": "Vigilant",
+     "journal": [
+      0,
+      10,
+      20
+     ]
+    },
+    {
+     "edid": "zzzAoMMq03",
+     "name": "Lazy Afternoon",
+     "stages": [
+      0,
+      10,
+      11,
+      15,
+      20,
+      23,
+      25,
+      30,
+      40,
+      255,
+      9999
+     ],
+     "dlc": "Vigilant",
+     "journal": [
+      0,
+      10,
+      15,
+      20,
+      30
+     ]
+    },
+    {
+     "edid": "zzzAoMMq04",
+     "name": "The Eye of Madness",
+     "stages": [
+      0,
+      10,
+      15,
+      20,
+      21,
+      22,
+      30,
+      35,
+      38,
+      39,
+      40,
+      50,
+      255,
+      9999
+     ],
+     "dlc": "Vigilant",
+     "journal": [
+      0,
+      10,
+      20,
+      21,
+      30,
+      40
+     ]
+    },
+    {
+     "edid": "zzzAoMMq05",
+     "name": "Dine and Dash",
+     "stages": [
+      0,
+      10,
+      11,
+      20,
+      21,
+      22,
+      23,
+      25,
+      30,
+      40,
+      45,
+      50,
+      60,
+      255,
+      9999
+     ],
+     "dlc": "Vigilant",
+     "journal": [
+      0,
+      10,
+      20,
+      25,
+      30,
+      40,
+      50
+     ]
+    },
+    {
+     "edid": "zzzAoMMq06",
+     "name": "Thus Spoke Khajiit",
+     "stages": [
+      0,
+      10,
+      11,
+      20,
+      21,
+      22,
+      25,
+      30,
+      35,
+      40,
+      50,
+      60,
+      65,
+      70,
+      79,
+      80,
+      90,
+      255,
+      9999
+     ],
+     "dlc": "Vigilant",
+     "journal": [
+      0,
+      10,
+      20,
+      21,
+      25,
+      50,
+      60,
+      70,
+      80,
+      90
+     ]
+    },
+    {
+     "edid": "zzzAoMMq07",
+     "name": "Old Regrets",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      33,
+      35,
+      36,
+      37,
+      38,
+      40,
+      50,
+      60,
+      70,
+      75,
+      80,
+      255,
+      9999
+     ],
+     "dlc": "Vigilant",
+     "journal": [
+      0,
+      10,
+      33,
+      40,
+      60,
+      70
+     ]
+    },
+    {
+     "edid": "zzzAoMMq08",
+     "name": "No Mercy",
+     "stages": [
+      0,
+      10,
+      15,
+      18,
+      20,
+      30,
+      200,
+      210,
+      220,
+      230,
+      300,
+      310,
+      999,
+      9999
+     ],
+     "dlc": "Vigilant",
+     "journal": [
+      0,
+      200,
+      210,
+      300
+     ]
+    },
+    {
+     "edid": "zzzAoMMq09",
+     "name": "The Endless Fall",
+     "stages": [
+      0,
+      10,
+      15,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      30,
+      32,
+      33,
+      34,
+      35,
+      40,
+      50,
+      255,
+      999,
+      9999
+     ],
+     "dlc": "Vigilant",
+     "journal": [
+      0,
+      10,
+      15,
+      20,
+      40
+     ]
+    },
+    {
+     "edid": "zzzAoMMq10",
+     "name": "The Landing",
+     "stages": [
+      0,
+      5,
+      10,
+      20,
+      30,
+      39,
+      40,
+      50,
+      255,
+      999,
+      9999
+     ],
+     "dlc": "Vigilant",
+     "journal": [
+      0,
+      10,
+      30
+     ]
+    },
+    {
+     "edid": "zzzAoMMqGoodEnd",
+     "name": "Art of Mercy",
+     "stages": [
+      0,
+      10,
+      20,
+      29,
+      30,
+      35,
+      40,
+      50,
+      60,
+      65,
+      70,
+      100,
+      110,
+      120,
+      130,
+      255,
+      9999
+     ],
+     "dlc": "Vigilant",
+     "journal": [
+      0,
+      10,
+      20,
+      29,
+      30,
+      110
+     ],
+     "note": "Art of Mercy, the act's good ending."
+    },
+    {
+     "edid": "zzzCOMq01",
+     "name": "Child of Oblivion",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      45,
+      50,
+      60,
+      70,
+      80,
+      90,
+      100,
+      200,
+      999,
+      9999
+     ],
+     "dlc": "Vigilant",
+     "journal": [
+      0,
+      20,
+      30,
+      60,
+      70,
+      80
+     ]
+    },
+    {
+     "edid": "zzzBMMq01",
+     "name": "Empty Cells",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      100,
+      110,
+      255,
+      999,
+      9999
+     ],
+     "dlc": "Vigilant",
+     "journal": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      100
+     ]
+    },
+    {
+     "edid": "zzzBMMq02",
+     "name": "Remnants",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      65,
+      70,
+      80,
+      90,
+      100,
+      9999
+     ],
+     "dlc": "Vigilant",
+     "journal": [
+      10,
+      30,
+      50,
+      60,
+      70,
+      90
+     ]
+    },
+    {
+     "edid": "zzzBMMq03",
+     "name": "The Blood Matron",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      90,
+      100,
+      200,
+      210,
+      220,
+      9999
+     ],
+     "dlc": "Vigilant",
+     "journal": [
+      60,
+      90
+     ]
+    },
+    {
+     "edid": "zzzCHMQ00",
+     "name": "Coldharbour",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50,
+      55,
+      57,
+      58,
+      60,
+      70,
+      80,
+      90,
+      100,
+      110,
+      115,
+      120
+     ],
+     "dlc": "Vigilant"
+    },
+    {
+     "edid": "zzzCHMQ01",
+     "name": "Aetherius",
+     "stages": [
+      0,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      150,
+      160,
+      170,
+      175,
+      180,
+      255
+     ],
+     "dlc": "Vigilant"
+    },
+    {
+     "edid": "zzzCHGreymarchQuest",
+     "name": "Greymarch",
+     "stages": [
+      0,
+      10,
+      20
+     ],
+     "dlc": "Vigilant"
+    },
+    {
+     "edid": "zzzCHMQ02",
+     "name": "Exsultate Jubilate",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40
+     ],
+     "dlc": "Vigilant"
+    },
+    {
+     "edid": "zzzCHEpilogueQuest01",
+     "name": "A Million Cats",
+     "stages": [
+      0,
+      10
+     ],
+     "dlc": "Vigilant",
+     "optional": true,
+     "note": "A Million Cats, the epilogue."
+    }
+   ],
+   "blurb": "Vicn's four acts: the Stendarr cases, 'Child of Oblivion', the Blood Matron hunt, then Coldharbour. Heavily scripted \u2014 skip with care and keep a save. Order compiled from quest numbering; treat late-act order as approximate."
+  },
+  {
+   "id": "vigilant-side",
+   "title": "Vigilant \u2014 Side Quests",
+   "quests": [
+    {
+     "edid": "zzzAoMSubQ01",
+     "name": "The Witch of Ivarstead",
+     "stages": [
+      0,
+      5,
+      10,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30,
+      40,
+      50,
+      200,
+      210,
+      220,
+      230,
+      300
+     ],
+     "dlc": "Vigilant",
+     "optional": true
+    },
+    {
+     "edid": "zzzAoMSubQ02",
+     "name": "Sacred Anatomancer",
+     "stages": [
+      0,
+      1,
+      10,
+      20,
+      30,
+      40,
+      50,
+      55,
+      60,
+      70,
+      80,
+      100,
+      110,
+      120,
+      130,
+      200,
+      210,
+      220,
+      300,
+      310,
+      999,
+      9999
+     ],
+     "dlc": "Vigilant",
+     "journal": [
+      0,
+      1,
+      10,
+      20,
+      30,
+      40,
+      50,
+      55,
+      60,
+      70,
+      200,
+      210,
+      300
+     ],
+     "optional": true
+    },
+    {
+     "edid": "zzzAoMSubQ03",
+     "name": "Legacy of Belharza",
+     "stages": [
+      0,
+      1,
+      5,
+      10,
+      20,
+      30
+     ],
+     "dlc": "Vigilant",
+     "journal": [
+      1,
+      10
+     ],
+     "optional": true
+    },
+    {
+     "edid": "zzzAoMqOwl",
+     "name": "Spinner's Needle 1",
+     "stages": [
+      0,
+      5,
+      7,
+      10,
+      20,
+      30,
+      40
+     ],
+     "dlc": "Vigilant",
+     "journal": [
+      5,
+      10,
+      20,
+      30
+     ],
+     "optional": true
+    },
+    {
+     "edid": "zzzCOSubQ01",
+     "name": "Successor",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      9999
+     ],
+     "dlc": "Vigilant",
+     "journal": [
+      20,
+      30,
+      40
+     ],
+     "optional": true
+    },
+    {
+     "edid": "zzzCOqOwl",
+     "name": "Spinner's Needle 2",
+     "stages": [
+      0,
+      5,
+      10,
+      20,
+      30,
+      40
+     ],
+     "dlc": "Vigilant",
+     "journal": [
+      5,
+      10,
+      20,
+      30
+     ],
+     "optional": true
+    },
+    {
+     "edid": "zzzCHqSAExile",
+     "name": "Maggot",
+     "stages": [
+      0,
+      10,
+      999,
+      1000,
+      9999
+     ],
+     "dlc": "Vigilant",
+     "journal": [
+      0
+     ],
+     "optional": true
+    },
+    {
+     "edid": "zzzCHSubQuest01",
+     "name": "More Skooma",
+     "stages": [
+      0,
+      10,
+      20
+     ],
+     "dlc": "Vigilant",
+     "optional": true
+    },
+    {
+     "edid": "zzzCHSubQuest02",
+     "name": "Archer of Kyne",
+     "stages": [
+      0,
+      10,
+      20,
+      30
+     ],
+     "dlc": "Vigilant",
+     "optional": true
+    },
+    {
+     "edid": "zzzCHSubQuest03",
+     "name": "The Black Worm",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50,
+      255
+     ],
+     "dlc": "Vigilant",
+     "optional": true
+    },
+    {
+     "edid": "zzzCHSubQuest04",
+     "name": "Funeral",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50
+     ],
+     "dlc": "Vigilant",
+     "optional": true
+    },
+    {
+     "edid": "zzzCHSubQuest05",
+     "name": "Madness",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50
+     ],
+     "dlc": "Vigilant",
+     "optional": true
+    },
+    {
+     "edid": "zzzCHSubQuest06",
+     "name": "Pitier",
+     "stages": [
+      0,
+      5,
+      10,
+      20,
+      30,
+      40
+     ],
+     "dlc": "Vigilant",
+     "optional": true
+    },
+    {
+     "edid": "zzzCHSubQuest07",
+     "name": "Knight of Julianos",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      85,
+      90,
+      100
+     ],
+     "dlc": "Vigilant",
+     "optional": true
+    },
+    {
+     "edid": "zzzCHSubQuest08",
+     "name": "Knight of Zenithar",
+     "stages": [
+      0,
+      5,
+      10,
+      15,
+      20,
+      30,
+      40
+     ],
+     "dlc": "Vigilant",
+     "optional": true
+    },
+    {
+     "edid": "zzzCHSubQuest09",
+     "name": "Paladin Melus",
+     "stages": [
+      0,
+      5,
+      7,
+      10,
+      20,
+      30
+     ],
+     "dlc": "Vigilant",
+     "optional": true
+    },
+    {
+     "edid": "zzzCHSubQuest10",
+     "name": "Knight of Arkay",
+     "stages": [
+      0,
+      5,
+      7,
+      10,
+      20
+     ],
+     "dlc": "Vigilant",
+     "optional": true
+    },
+    {
+     "edid": "zzzCHSubQuest11",
+     "name": "Kyne's Dragon",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      45,
+      50,
+      60
+     ],
+     "dlc": "Vigilant",
+     "optional": true
+    },
+    {
+     "edid": "zzzCHSubQuest12",
+     "name": "Knight of Kynareth",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      45,
+      50
+     ],
+     "dlc": "Vigilant",
+     "optional": true
+    },
+    {
+     "edid": "zzzCHSubQuest13",
+     "name": "Broken Horns",
+     "stages": [
+      0,
+      1,
+      2,
+      5,
+      10,
+      20,
+      30,
+      40,
+      45,
+      46,
+      50,
+      60,
+      255,
+      999
+     ],
+     "dlc": "Vigilant",
+     "journal": [
+      0
+     ],
+     "optional": true
+    },
+    {
+     "edid": "zzzCHSubQuest14",
+     "name": "Bald Man-Ape",
+     "stages": [
+      0,
+      5,
+      10,
+      20,
+      30,
+      40,
+      50,
+      255,
+      999
+     ],
+     "dlc": "Vigilant",
+     "optional": true
+    },
+    {
+     "edid": "zzzChSubQuest15",
+     "name": "The Saint's Corpse",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      100,
+      110,
+      112,
+      115,
+      120,
+      130,
+      140
+     ],
+     "dlc": "Vigilant",
+     "optional": true
+    }
+   ],
+   "blurb": "Sub-quests across the acts, unordered. All optional."
+  },
+  {
+   "id": "vigilant-memories",
+   "title": "Vigilant \u2014 Memories",
+   "quests": [
+    {
+     "edid": "zzzCHMemoryQuest01",
+     "name": "The Grand Inquisitor",
+     "stages": [
+      0,
+      1,
+      10,
+      20,
+      30,
+      40,
+      100
+     ],
+     "dlc": "Vigilant",
+     "journal": [
+      0
+     ],
+     "optional": true
+    },
+    {
+     "edid": "zzzCHMemoryQuest02",
+     "name": "The Mad King",
+     "stages": [
+      0,
+      10,
+      20,
+      25,
+      30,
+      40,
+      125,
+      130
+     ],
+     "dlc": "Vigilant",
+     "journal": [
+      0
+     ],
+     "optional": true
+    },
+    {
+     "edid": "zzzCHMemoryQuest03",
+     "name": "Knight of Hounds",
+     "stages": [
+      0,
+      1,
+      10,
+      20,
+      30,
+      40,
+      100,
+      105,
+      110,
+      120,
+      130
+     ],
+     "dlc": "Vigilant",
+     "journal": [
+      0
+     ],
+     "optional": true
+    },
+    {
+     "edid": "zzzCHMemoryQuest04",
+     "name": "Johan the Fool",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      95,
+      100
+     ],
+     "dlc": "Vigilant",
+     "journal": [
+      0
+     ],
+     "optional": true
+    },
+    {
+     "edid": "zzzCHMemoryQuest05",
+     "name": "Adabal",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      45,
+      50,
+      60,
+      120
+     ],
+     "dlc": "Vigilant",
+     "journal": [
+      0
+     ],
+     "optional": true
+    },
+    {
+     "edid": "zzzCHMemoryQuest06",
+     "name": "Remains of the Miracle",
+     "stages": [
+      0,
+      10,
+      20,
+      30
+     ],
+     "dlc": "Vigilant",
+     "journal": [
+      0
+     ],
+     "optional": true
+    },
+    {
+     "edid": "zzzCHMemoryQuest07",
+     "name": "Temptation of Marukh",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      150
+     ],
+     "dlc": "Vigilant",
+     "journal": [
+      0
+     ],
+     "optional": true
+    },
+    {
+     "edid": "zzzCHMemoryQuest08",
+     "name": "The Nameless Bard",
+     "stages": [
+      0,
+      10,
+      20,
+      25,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      90,
+      100,
+      200,
+      210,
+      220,
+      230,
+      240,
+      300,
+      310,
+      320,
+      330,
+      340,
+      350,
+      360,
+      370,
+      999
+     ],
+     "dlc": "Vigilant",
+     "journal": [
+      0
+     ],
+     "optional": true
+    },
+    {
+     "edid": "zzzCHMemoryQuest09",
+     "name": "Beyond the Shores of Madness",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50,
+      100,
+      110,
+      120,
+      130,
+      140,
+      150,
+      200,
+      999
+     ],
+     "dlc": "Vigilant",
+     "journal": [
+      0
+     ],
+     "optional": true
+    },
+    {
+     "edid": "zzzCHMemoryQuest10",
+     "name": "Pelinal the Bloody",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      32,
+      34,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      50,
+      60,
+      62,
+      64,
+      70,
+      80,
+      90,
+      100,
+      105,
+      110,
+      115,
+      120,
+      130,
+      140,
+      150,
+      160,
+      170,
+      175,
+      180,
+      190,
+      300
+     ],
+     "dlc": "Vigilant",
+     "optional": true
+    },
+    {
+     "edid": "zzzCHMemoryQuest11",
+     "name": "After the Storm",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      300,
+      305,
+      310,
+      315,
+      320,
+      330,
+      340
+     ],
+     "dlc": "Vigilant",
+     "optional": true
+    },
+    {
+     "edid": "zzzCHMemoryQuest12",
+     "name": "The Final Night",
+     "stages": [
+      0,
+      5,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      300,
+      310
+     ],
+     "dlc": "Vigilant",
+     "optional": true
+    },
+    {
+     "edid": "zzzCHMemoryQuest13",
+     "name": "Paravania the Man-Bull",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      255,
+      999
+     ],
+     "dlc": "Vigilant",
+     "optional": true
+    }
+   ],
+   "blurb": "Coldharbour's memory trials, unordered. All optional."
+  },
+  {
+   "id": "wyrmstooth",
+   "title": "Wyrmstooth",
+   "quests": [
+    {
+     "edid": "WTDragonHunt",
+     "name": "Wyrmstooth",
+     "stages": [
+      0,
+      10,
+      20,
+      100,
+      110,
+      120,
+      130
+     ],
+     "dlc": "Wyrmstooth",
+     "journal": [
+      10,
+      20,
+      100,
+      110,
+      120
+     ]
+    },
+    {
+     "edid": "WTBarrowOfTheWyrm",
+     "name": "Barrow of the Wyrm",
+     "stages": [
+      0,
+      10,
+      50,
+      60,
+      70,
+      80,
+      90,
+      100,
+      110,
+      120,
+      130,
+      135,
+      140,
+      150,
+      160,
+      170,
+      180,
+      190,
+      191,
+      200,
+      201,
+      202,
+      203,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      220,
+      230,
+      240,
+      250,
+      260,
+      270
+     ],
+     "dlc": "Wyrmstooth",
+     "journal": [
+      10,
+      50,
+      60,
+      70,
+      90,
+      100,
+      110,
+      120,
+      135,
+      150,
+      160,
+      180,
+      230,
+      260
+     ]
+    },
+    {
+     "edid": "WTPricelessCommodity",
+     "name": "A Priceless Commodity",
+     "stages": [
+      0,
+      1,
+      10,
+      15,
+      20,
+      30,
+      40,
+      45,
+      46,
+      47,
+      50,
+      60
+     ],
+     "dlc": "Wyrmstooth",
+     "journal": [
+      1,
+      10,
+      15,
+      20,
+      30,
+      40,
+      45,
+      46,
+      47,
+      50,
+      60
+     ],
+     "optional": true
+    },
+    {
+     "edid": "WTPlayerHome",
+     "name": "Reclaiming the Past",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40
+     ],
+     "dlc": "Wyrmstooth",
+     "journal": [
+      10,
+      20
+     ],
+     "optional": true
+    },
+    {
+     "edid": "WTKillThalmor",
+     "name": "Unwanted Guests",
+     "stages": [
+      0,
+      10,
+      20,
+      30
+     ],
+     "dlc": "Wyrmstooth",
+     "journal": [
+      10,
+      20,
+      30
+     ],
+     "optional": true
+    },
+    {
+     "edid": "WTTheNakedNord",
+     "name": "The Naked Nord",
+     "stages": [
+      0,
+      1,
+      5,
+      10,
+      20,
+      21,
+      30,
+      35,
+      40,
+      50,
+      55,
+      56,
+      60,
+      65,
+      70,
+      75,
+      76,
+      77,
+      78,
+      79,
+      254,
+      1000
+     ],
+     "dlc": "Wyrmstooth",
+     "journal": [
+      1,
+      10,
+      20,
+      21,
+      30,
+      35,
+      40,
+      50,
+      55,
+      56,
+      65,
+      70,
+      75,
+      76,
+      77,
+      78,
+      79,
+      254
+     ],
+     "optional": true
+    },
+    {
+     "edid": "WTUberEncounter",
+     "name": "Someone with Backbone",
+     "stages": [
+      0,
+      5,
+      10,
+      15,
+      20,
+      30,
+      40,
+      50
+     ],
+     "dlc": "Wyrmstooth",
+     "journal": [
+      5,
+      10,
+      15,
+      20,
+      30,
+      40,
+      50
+     ],
+     "optional": true
+    },
+    {
+     "edid": "WTWolfFollower",
+     "name": "A Howl Load of Trouble",
+     "stages": [
+      0,
+      1,
+      5,
+      10,
+      20,
+      30,
+      40
+     ],
+     "dlc": "Wyrmstooth",
+     "journal": [
+      1,
+      10,
+      20,
+      30,
+      40
+     ],
+     "optional": true
+    },
+    {
+     "edid": "WTWrapMeUp",
+     "name": "Wrap Me Up",
+     "stages": [
+      0,
+      10,
+      20,
+      30
+     ],
+     "dlc": "Wyrmstooth",
+     "journal": [
+      10,
+      20,
+      30
+     ],
+     "optional": true
+    },
+    {
+     "edid": "WTBlindRobbersCache",
+     "name": "Blind Robber's Cache",
+     "stages": [
+      0,
+      10,
+      20,
+      30
+     ],
+     "dlc": "Wyrmstooth",
+     "journal": [
+      10,
+      20,
+      30
+     ],
+     "optional": true
+    },
+    {
+     "edid": "WTAthirFavor",
+     "name": "Retrieving Embersunder",
+     "stages": [
+      0,
+      10,
+      20,
+      30
+     ],
+     "dlc": "Wyrmstooth",
+     "journal": [
+      10,
+      20,
+      30
+     ],
+     "optional": true
+    },
+    {
+     "edid": "WTDaenlitFavor",
+     "name": "Robbed Blind",
+     "stages": [
+      0,
+      10,
+      20,
+      30
+     ],
+     "dlc": "Wyrmstooth",
+     "journal": [
+      10,
+      20,
+      30
+     ],
+     "optional": true
+    },
+    {
+     "edid": "WTElmeraFavor",
+     "name": "Stickler in the Mud",
+     "stages": [
+      0,
+      10,
+      20,
+      30
+     ],
+     "dlc": "Wyrmstooth",
+     "journal": [
+      10,
+      20,
+      30
+     ],
+     "optional": true
+    },
+    {
+     "edid": "WTShargamFavor",
+     "name": "Repaying a Debt",
+     "stages": [
+      0,
+      10,
+      15,
+      20,
+      30
+     ],
+     "dlc": "Wyrmstooth",
+     "journal": [
+      10,
+      15,
+      20,
+      30
+     ],
+     "optional": true
+    },
+    {
+     "edid": "WTSignyFavor",
+     "name": "A Debt Unpaid",
+     "stages": [
+      0,
+      10,
+      20,
+      30
+     ],
+     "dlc": "Wyrmstooth",
+     "journal": [
+      10,
+      20,
+      30
+     ],
+     "optional": true
+    }
+   ],
+   "blurb": "The island expedition: 'Wyrmstooth' into 'Barrow of the Wyrm', plus the island's side quests and favors."
+  },
+  {
+   "id": "college-expansion",
+   "title": "College Classes",
+   "quests": [
+    {
+     "edid": "COW_CentralQuest",
+     "name": "College Curriculum",
+     "stages": [
+      0,
+      5,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      50
+     ],
+     "dlc": "CoW Quest Expansion",
+     "optional": true,
+     "note": "The attendance tracker."
+    },
+    {
+     "edid": "Cow_Breathing",
+     "name": "Rapture of the Deep",
+     "stages": [
+      1,
+      5,
+      10,
+      20,
+      30,
+      40,
+      50
+     ],
+     "dlc": "CoW Quest Expansion",
+     "optional": true
+    },
+    {
+     "edid": "Cow_Conjuration",
+     "name": "I Choose You, Familiar",
+     "stages": [
+      0,
+      5,
+      10,
+      15,
+      20,
+      25
+     ],
+     "dlc": "CoW Quest Expansion",
+     "journal": [
+      5,
+      10,
+      15,
+      20,
+      25
+     ],
+     "optional": true
+    },
+    {
+     "edid": "Cow_Destruction",
+     "name": "A Test of Ice and Fire",
+     "stages": [
+      0,
+      5,
+      10,
+      15,
+      20
+     ],
+     "dlc": "CoW Quest Expansion",
+     "journal": [
+      5,
+      10,
+      15,
+      20
+     ],
+     "optional": true
+    },
+    {
+     "edid": "Cow_enchantment",
+     "name": "Enchanted To Meet You",
+     "stages": [
+      0,
+      10,
+      15,
+      20,
+      25,
+      30,
+      32,
+      35,
+      40,
+      43,
+      45,
+      50,
+      55,
+      60,
+      70
+     ],
+     "dlc": "CoW Quest Expansion",
+     "journal": [
+      10,
+      15,
+      20,
+      25,
+      30,
+      32,
+      35,
+      40,
+      43,
+      45,
+      50,
+      55,
+      60,
+      70
+     ],
+     "optional": true
+    },
+    {
+     "edid": "Cow_illusion",
+     "name": "Back-Stabbing Rodents",
+     "stages": [
+      0,
+      10,
+      15,
+      20,
+      25
+     ],
+     "dlc": "CoW Quest Expansion",
+     "journal": [
+      10,
+      15,
+      20,
+      25
+     ],
+     "optional": true
+    },
+    {
+     "edid": "Cow_Reading",
+     "name": "Reading Comprehension 101",
+     "stages": [
+      0,
+      10,
+      15,
+      20,
+      25
+     ],
+     "dlc": "CoW Quest Expansion",
+     "journal": [
+      10,
+      15,
+      20,
+      25
+     ],
+     "optional": true
+    },
+    {
+     "edid": "Cow_restoration",
+     "name": "None Escape The Light",
+     "stages": [
+      0,
+      5,
+      10,
+      15,
+      20,
+      25
+     ],
+     "dlc": "CoW Quest Expansion",
+     "journal": [
+      5,
+      10,
+      15,
+      20,
+      25
+     ],
+     "optional": true
+    }
+   ],
+   "blurb": "JaySerpa's Quest Expansion classes \u2014 attend any, in any order. 'College Curriculum' is the tracker that completes once the classes are done. All optional."
+  },
+  {
+   "id": "amorous",
+   "title": "Amorous Adventures",
+   "quests": [
+    {
+     "edid": "SexLabAmorousAdventuresAela",
+     "name": "Hunting The Huntress",
+     "stages": [
+      0,
+      5,
+      10,
+      20,
+      30,
+      40,
+      50,
+      200,
+      300
+     ],
+     "dlc": "Amorous Adventures",
+     "journal": [
+      10,
+      20,
+      40,
+      50,
+      300
+     ],
+     "optional": true,
+     "note": "Aela the Huntress."
+    },
+    {
+     "edid": "SexLabAmorousAdventuresAerin",
+     "name": "Love And Death In Riften",
+     "stages": [
+      0,
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      31,
+      32,
+      34,
+      35,
+      40,
+      50,
+      51,
+      60,
+      65,
+      67,
+      70,
+      72,
+      75,
+      80,
+      85,
+      90,
+      95,
+      100,
+      102,
+      105,
+      110,
+      200,
+      400
+     ],
+     "dlc": "Amorous Adventures",
+     "journal": [
+      10,
+      15,
+      20,
+      30,
+      34,
+      40,
+      50,
+      60,
+      65,
+      67,
+      70,
+      75,
+      80,
+      85,
+      90,
+      95,
+      100,
+      105
+     ],
+     "optional": true,
+     "note": "Mjoll the Lioness, Ingun Black-Briar, Sapphire, and Illia."
+    },
+    {
+     "edid": "SexLabAmorousAdventuresAnnekke",
+     "name": "Annekke's Release",
+     "stages": [
+      0,
+      5,
+      10,
+      20,
+      30,
+      31,
+      32,
+      40,
+      50,
+      60,
+      70,
+      80,
+      200,
+      300
+     ],
+     "dlc": "Amorous Adventures",
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      300
+     ],
+     "optional": true,
+     "note": "Annekke Crag-Jumper."
+    },
+    {
+     "edid": "SexLabAmorousAdventuresBear",
+     "name": "Loaded For Bear",
+     "stages": [
+      0,
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40,
+      45,
+      50,
+      55,
+      60,
+      65,
+      70,
+      75,
+      80,
+      85,
+      90,
+      95,
+      100,
+      105,
+      110,
+      115,
+      120,
+      125,
+      130,
+      200,
+      300
+     ],
+     "dlc": "Amorous Adventures",
+     "journal": [
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40,
+      45,
+      50,
+      55,
+      65,
+      70,
+      75,
+      80,
+      90,
+      95,
+      100,
+      110,
+      120,
+      125,
+      300
+     ],
+     "optional": true,
+     "note": "Ria, Temba Wide-Arm, and Lynly Star-Sung."
+    },
+    {
+     "edid": "SexLabAmorousAdventuresBrelyna",
+     "name": "Spellbound",
+     "stages": [
+      0,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40,
+      45,
+      50,
+      60,
+      70,
+      80,
+      90,
+      100,
+      110,
+      120,
+      130,
+      140,
+      150,
+      160,
+      170,
+      180,
+      200,
+      300
+     ],
+     "dlc": "Amorous Adventures",
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      45,
+      50,
+      60,
+      70,
+      80,
+      90,
+      100,
+      110,
+      120,
+      130,
+      140,
+      150,
+      160,
+      170,
+      300
+     ],
+     "optional": true,
+     "note": "Brelyna Maryon, Nirya, and Faralda."
+    },
+    {
+     "edid": "SexLabAmorousAdventuresCamilla",
+     "name": "The Suitors Of Camilla Valerius",
+     "stages": [
+      0,
+      5,
+      10,
+      15,
+      20,
+      30,
+      31,
+      35,
+      40,
+      41,
+      42,
+      50,
+      51,
+      52,
+      60,
+      61,
+      62,
+      70,
+      100,
+      110,
+      200,
+      300
+     ],
+     "dlc": "Amorous Adventures",
+     "journal": [
+      10,
+      20,
+      40,
+      41,
+      50,
+      51,
+      52,
+      60,
+      70,
+      300
+     ],
+     "optional": true,
+     "note": "Camilla Valerius."
+    },
+    {
+     "edid": "SexLabAmorousAdventuresCarlotta",
+     "name": "A Key To Her Heart",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      75,
+      80,
+      90,
+      100,
+      200,
+      300
+     ],
+     "dlc": "Amorous Adventures",
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      75,
+      80,
+      90,
+      300
+     ],
+     "optional": true,
+     "note": "Carlotta Valentia."
+    },
+    {
+     "edid": "SexLabAmorousAdventuresDanica",
+     "name": "A Passionate Priestess",
+     "stages": [
+      0,
+      10,
+      30,
+      50,
+      70,
+      100,
+      300
+     ],
+     "dlc": "Amorous Adventures",
+     "journal": [
+      10,
+      30,
+      50,
+      70
+     ],
+     "optional": true,
+     "note": "Danica Pure-Spring."
+    },
+    {
+     "edid": "SexLabAmorousAdventuresEbony",
+     "name": "New, New Malacath Blues",
+     "stages": [
+      0,
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40,
+      45,
+      50,
+      55,
+      60,
+      65,
+      70,
+      75,
+      80,
+      85,
+      90,
+      95,
+      100,
+      105,
+      200,
+      300
+     ],
+     "dlc": "Amorous Adventures",
+     "journal": [
+      5,
+      10,
+      15,
+      20,
+      30,
+      35,
+      40,
+      45,
+      50,
+      55,
+      60,
+      65,
+      70,
+      75,
+      80,
+      85,
+      90,
+      95,
+      100,
+      300
+     ],
+     "optional": true,
+     "note": "Borgakh the Steel Heart."
+    },
+    {
+     "edid": "SexLabAmorousAdventuresElisif",
+     "name": "A Widow Reborn",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      200
+     ],
+     "dlc": "Amorous Adventures",
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70
+     ],
+     "optional": true,
+     "note": "Elisif the Fair."
+    },
+    {
+     "edid": "SexLabAmorousAdventuresElisif2",
+     "name": "The Body Double",
+     "stages": [
+      0,
+      5,
+      10,
+      11,
+      12,
+      14,
+      15,
+      16,
+      17,
+      19,
+      20,
+      21,
+      22,
+      24,
+      25,
+      30,
+      35,
+      37,
+      40,
+      45,
+      50,
+      55,
+      60,
+      65,
+      70,
+      75,
+      80,
+      85,
+      90,
+      91,
+      95,
+      100,
+      105,
+      200,
+      300
+     ],
+     "dlc": "Amorous Adventures",
+     "journal": [
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40,
+      45,
+      50,
+      60,
+      65,
+      70,
+      75,
+      80,
+      85,
+      90,
+      91,
+      95,
+      100
+     ],
+     "optional": true,
+     "note": "Elisif the Fair. Follows A Widow Reborn."
+    },
+    {
+     "edid": "SexLabAmorousAdventuresFarkas",
+     "name": "The Beast Within",
+     "stages": [
+      0,
+      5,
+      10,
+      20,
+      25,
+      30,
+      40,
+      50,
+      60,
+      199,
+      200
+     ],
+     "dlc": "Amorous Adventures",
+     "journal": [
+      10,
+      20,
+      25,
+      40,
+      60,
+      199
+     ],
+     "optional": true,
+     "note": "Farkas."
+    },
+    {
+     "edid": "SexLabAmorousAdventuresGerdur",
+     "name": "Nordic Hospitality",
+     "stages": [
+      0,
+      5,
+      10,
+      20,
+      30,
+      35,
+      40,
+      50,
+      100
+     ],
+     "dlc": "Amorous Adventures",
+     "journal": [
+      0,
+      10,
+      20,
+      30,
+      35,
+      40,
+      100
+     ],
+     "optional": true,
+     "note": "Gerdur and Ralof."
+    },
+    {
+     "edid": "SexLabAmorousAdventuresIdgrod",
+     "name": "Blinded By Visions",
+     "stages": [
+      0,
+      10,
+      15,
+      20,
+      30,
+      40,
+      45,
+      50,
+      60,
+      70,
+      80,
+      90,
+      100,
+      105,
+      109,
+      110,
+      115,
+      120,
+      130,
+      140,
+      150,
+      160,
+      170,
+      180,
+      190,
+      200,
+      300
+     ],
+     "dlc": "Amorous Adventures",
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      90,
+      100,
+      109,
+      110,
+      115,
+      120,
+      130,
+      140,
+      150,
+      160,
+      170,
+      180,
+      190,
+      300
+     ],
+     "optional": true,
+     "note": "Idgrod the Younger and Jonna."
+    },
+    {
+     "edid": "SexLabAmorousAdventuresIrileth",
+     "name": "Dragonborn Desires",
+     "stages": [
+      0,
+      5,
+      10,
+      20,
+      25,
+      30,
+      200,
+      300
+     ],
+     "dlc": "Amorous Adventures",
+     "journal": [
+      5,
+      10,
+      20,
+      25,
+      30,
+      300
+     ],
+     "optional": true,
+     "note": "Irileth."
+    },
+    {
+     "edid": "SexLabAmorousAdventuresJenassa",
+     "name": "Shadows And Scars",
+     "stages": [
+      0,
+      10,
+      15,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      90,
+      100,
+      110,
+      120,
+      130,
+      140,
+      150,
+      155,
+      160,
+      170,
+      175,
+      180,
+      185,
+      190,
+      195,
+      200,
+      300
+     ],
+     "dlc": "Amorous Adventures",
+     "journal": [
+      10,
+      20,
+      30,
+      50,
+      60,
+      70,
+      80,
+      90,
+      100,
+      110,
+      120,
+      130,
+      140,
+      150,
+      160,
+      170,
+      175,
+      180,
+      190,
+      300
+     ],
+     "optional": true,
+     "note": "Jenassa and Adelaisa Vendicci."
+    },
+    {
+     "edid": "SexLabAmorousAdventuresLisette",
+     "name": "A Song Of Lust And Guile",
+     "stages": [
+      0,
+      1,
+      5,
+      6,
+      10,
+      20,
+      25,
+      30,
+      40,
+      50,
+      60,
+      70,
+      75,
+      80,
+      90,
+      95,
+      100,
+      105,
+      110,
+      120,
+      200
+     ],
+     "dlc": "Amorous Adventures",
+     "journal": [
+      1,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      90,
+      100,
+      110,
+      120
+     ],
+     "optional": true,
+     "note": "Lisette, Pantea, and Illdi."
+    },
+    {
+     "edid": "SexLabAmorousAdventuresMirabelle",
+     "name": "Strange Magic",
+     "stages": [
+      0,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40,
+      50,
+      60,
+      70,
+      80,
+      90,
+      200,
+      300
+     ],
+     "dlc": "Amorous Adventures",
+     "journal": [
+      10,
+      15,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      300
+     ],
+     "optional": true,
+     "note": "Mirabelle Ervine."
+    },
+    {
+     "edid": "SexLabAmorousAdventuresNjada",
+     "name": "Njada's Dark Secrets",
+     "stages": [
+      0,
+      5,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      90,
+      100,
+      200,
+      300
+     ],
+     "dlc": "Amorous Adventures",
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      100,
+      300
+     ],
+     "optional": true,
+     "note": "Njada Stonearm."
+    },
+    {
+     "edid": "SexLabAmorousAdventuresOar",
+     "name": "Curse Of The Dead Bride",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      200
+     ],
+     "dlc": "Amorous Adventures",
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80
+     ],
+     "optional": true,
+     "note": "Elisif, Jordis, and Sybille."
+    },
+    {
+     "edid": "SexLabAmorousAdventuresRikke",
+     "name": "Rikke Don't Lose That Battle",
+     "stages": [
+      0,
+      5,
+      10,
+      20,
+      30,
+      40,
+      50,
+      200,
+      400
+     ],
+     "dlc": "Amorous Adventures",
+     "journal": [
+      5,
+      10,
+      20,
+      30,
+      40
+     ],
+     "optional": true,
+     "note": "Legate Rikke."
+    },
+    {
+     "edid": "SexLabAmorousAdventuresSenna",
+     "name": "The Art Of Dibella",
+     "stages": [
+      0,
+      5,
+      10,
+      20,
+      30,
+      40,
+      50,
+      200
+     ],
+     "dlc": "Amorous Adventures",
+     "journal": [
+      5,
+      10,
+      20,
+      30,
+      50
+     ],
+     "optional": true,
+     "note": "Senna."
+    },
+    {
+     "edid": "SexLabAmorousAdventuresSteel",
+     "name": "An Angel In Steel",
+     "stages": [
+      0,
+      10,
+      15,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      90,
+      100,
+      110,
+      120,
+      130,
+      140,
+      200,
+      300
+     ],
+     "dlc": "Amorous Adventures",
+     "journal": [
+      10,
+      15,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      90,
+      100,
+      110,
+      120,
+      130,
+      140,
+      300
+     ],
+     "optional": true,
+     "note": "Lydia and Adrianne Avenicci."
+    },
+    {
+     "edid": "SexLabAmorousAdventuresSybille",
+     "name": "Fangs Of Desire",
+     "stages": [
+      0,
+      1,
+      10,
+      20,
+      30,
+      200
+     ],
+     "dlc": "Amorous Adventures",
+     "journal": [
+      1,
+      10,
+      20,
+      30
+     ],
+     "optional": true,
+     "note": "Sybille Stentor."
+    },
+    {
+     "edid": "SexLabAmorousAdventuresSylgja",
+     "name": "The Mark Of Love",
+     "stages": [
+      0,
+      5,
+      10,
+      20,
+      23,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      90,
+      100,
+      110,
+      200,
+      300
+     ],
+     "dlc": "Amorous Adventures",
+     "journal": [
+      10,
+      20,
+      23,
+      40,
+      50,
+      60,
+      80,
+      90,
+      100,
+      110,
+      300
+     ],
+     "optional": true,
+     "note": "Sylgja."
+    },
+    {
+     "edid": "SexLabAmorousAdventuresTailors",
+     "name": "Threading The Needle",
+     "stages": [
+      0,
+      1,
+      2,
+      3,
+      6,
+      9,
+      10,
+      20,
+      22,
+      24,
+      26,
+      28,
+      29,
+      30,
+      31,
+      35,
+      40,
+      50,
+      55,
+      60,
+      65,
+      70,
+      80,
+      170,
+      180,
+      200
+     ],
+     "dlc": "Amorous Adventures",
+     "journal": [
+      2,
+      3,
+      6,
+      10,
+      20,
+      29,
+      30,
+      35,
+      40,
+      50,
+      55,
+      60,
+      65,
+      70,
+      80
+     ],
+     "optional": true,
+     "note": "Endarie and Taarie of Radiant Raiment, plus Lydia, Jordis, Sybille, and Pantea."
+    },
+    {
+     "edid": "SexLabAmorousAdventuresTextiles",
+     "name": "Finest Materials",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      200
+     ],
+     "dlc": "Amorous Adventures",
+     "journal": [
+      10,
+      20,
+      30,
+      40
+     ],
+     "optional": true,
+     "note": "Endarie and Taarie of Radiant Raiment, plus Lydia, Jordis, Sybille, and Pantea."
+    },
+    {
+     "edid": "SexLabAmorousAdventuresVilkas",
+     "name": "The Lone Wolf",
+     "stages": [
+      0,
+      5,
+      10,
+      20,
+      25,
+      30,
+      40,
+      50,
+      199,
+      200
+     ],
+     "dlc": "Amorous Adventures",
+     "journal": [
+      10,
+      20,
+      25,
+      30,
+      40,
+      50,
+      199
+     ],
+     "optional": true,
+     "note": "Vilkas."
+    },
+    {
+     "edid": "SexLabAmorousAdventuresWidow",
+     "name": "A Widow Too Soon",
+     "stages": [
+      0,
+      10,
+      20,
+      30,
+      31,
+      40,
+      41,
+      42,
+      50,
+      60,
+      200,
+      300
+     ],
+     "dlc": "Amorous Adventures",
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      41,
+      50,
+      60,
+      300
+     ],
+     "optional": true,
+     "note": "Elisif the Fair."
+    },
+    {
+     "edid": "SexLabAmorousAdventuresYsolda",
+     "name": "Ysolda's Tough Lesson",
+     "stages": [
+      0,
+      5,
+      10,
+      15,
+      20,
+      21,
+      22,
+      23,
+      30,
+      35,
+      40,
+      45,
+      50,
+      60,
+      70,
+      80,
+      90,
+      200,
+      300
+     ],
+     "dlc": "Amorous Adventures",
+     "journal": [
+      10,
+      15,
+      20,
+      40,
+      50,
+      60,
+      70,
+      90,
+      300
+     ],
+     "optional": true,
+     "note": "Ysolda."
+    },
+    {
+     "edid": "SexLabAmorousAdventuresDLC1_Main",
+     "name": "Our Love Runs Red",
+     "stages": [
+      0,
+      5,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      200
+     ],
+     "dlc": "Amorous Adventures",
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70
+     ],
+     "optional": true,
+     "note": "Serana. Start of the arc."
+    },
+    {
+     "edid": "SexLabAmorousAdventuresDLC1_1",
+     "name": "An Exquisite Corpse",
+     "stages": [
+      0,
+      5,
+      10,
+      20,
+      30,
+      40,
+      200,
+      300
+     ],
+     "dlc": "Amorous Adventures",
+     "journal": [
+      10,
+      20
+     ],
+     "optional": true,
+     "note": "Serana."
+    },
+    {
+     "edid": "SexLabAmorousAdventuresDLC1_2",
+     "name": "Amorous Serana: Prophet",
+     "stages": [
+      0,
+      5,
+      10,
+      20,
+      30,
+      40,
+      200
+     ],
+     "dlc": "Amorous Adventures",
+     "optional": true
+    },
+    {
+     "edid": "SexLabAmorousAdventuresDLC1_3",
+     "name": "Amorous Serana: Chasing Echoes",
+     "stages": [
+      0,
+      5,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      200
+     ],
+     "dlc": "Amorous Adventures",
+     "optional": true
+    },
+    {
+     "edid": "SexLabAmorousAdventuresDLC1_4",
+     "name": "Amorous Serana: Beyond Death",
+     "stages": [
+      0,
+      5,
+      10,
+      15,
+      20,
+      30,
+      40,
+      45,
+      50,
+      60,
+      70,
+      200
+     ],
+     "dlc": "Amorous Adventures",
+     "optional": true
+    },
+    {
+     "edid": "SexLabAmorousAdventuresDLC1_5",
+     "name": "Amorous Serana: Unseen Visions",
+     "stages": [
+      0,
+      5,
+      10,
+      30,
+      200
+     ],
+     "dlc": "Amorous Adventures",
+     "optional": true
+    },
+    {
+     "edid": "SexLabAmorousAdventuresDLC1_6",
+     "name": "Amorous Serana: Touching The Sky",
+     "stages": [
+      0,
+      5,
+      10,
+      200
+     ],
+     "dlc": "Amorous Adventures",
+     "optional": true
+    },
+    {
+     "edid": "SexLabAmorousAdventuresDLC1_7",
+     "name": "Amorous Serana: Kindred Judgement",
+     "stages": [
+      0,
+      5,
+      10,
+      200
+     ],
+     "dlc": "Amorous Adventures",
+     "optional": true
+    },
+    {
+     "edid": "SexLabAmorousAdventuresDLC1_Mark",
+     "name": "Serana and the Mark of Dibella",
+     "stages": [
+      0,
+      5,
+      10,
+      11,
+      14,
+      15,
+      20,
+      22,
+      25,
+      30,
+      35,
+      40,
+      45,
+      50,
+      55,
+      60,
+      65,
+      70,
+      75,
+      80,
+      85,
+      88,
+      90,
+      95,
+      100,
+      105,
+      110,
+      115,
+      120,
+      125,
+      130,
+      135,
+      140,
+      145,
+      150,
+      155,
+      160,
+      165,
+      170,
+      175,
+      180,
+      185,
+      200,
+      300
+     ],
+     "dlc": "Amorous Adventures",
+     "journal": [
+      10,
+      11,
+      14,
+      15,
+      20,
+      22,
+      25,
+      30,
+      35,
+      40,
+      45,
+      50,
+      55,
+      60,
+      65,
+      70,
+      75,
+      88,
+      90,
+      95,
+      100,
+      105,
+      110,
+      115,
+      125,
+      130,
+      135,
+      140,
+      145,
+      165,
+      170,
+      175,
+      180
+     ],
+     "optional": true
+    },
+    {
+     "edid": "SexLabAmorousAdventuresDLC1_Arts",
+     "name": "Burning from the Inside",
+     "stages": [
+      0,
+      5,
+      10,
+      20,
+      22,
+      24,
+      30,
+      32,
+      34,
+      40,
+      42,
+      44,
+      50,
+      52,
+      54,
+      60,
+      200
+     ],
+     "dlc": "Amorous Adventures",
+     "journal": [
+      10,
+      20,
+      30,
+      40,
+      50
+     ],
+     "optional": true,
+     "note": "Serana."
+    }
+   ],
+   "blurb": "Independent romance quests, one per character \u2014 only in MGO's NSFW variant. The Serana arc at the bottom runs alongside the Dawnguard main line. All optional.",
+   "nsfw": true
+  }
+ ]
+}

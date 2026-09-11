@@ -43,8 +43,14 @@ function assignDlcHues() {
 
 function dlcPill(dlc, q) {
   const hue = state.dlcHues.get(dlc) ?? 210;
-  return ' <span class="tag dlc" style="color:hsl(' + hue + ' 65% 75%);border-color:hsl(' + hue + ' 65% 75% / 0.35)">' +
+  return '<span class="tag dlc" style="color:hsl(' + hue + ' 65% 75%);border-color:hsl(' + hue + ' 65% 75% / 0.35)">' +
     highlight(dlc, q) + '</span>';
+}
+
+// Pills travel as one unit: either they all fit on the current line, or the
+// line wraps before the whole group.
+function pillGroup(pills) {
+  return pills.length ? ' <span class="tags">' + pills.join(' ') + '</span>' : '';
 }
 
 const $ = (sel) => document.querySelector(sel);
@@ -71,20 +77,56 @@ function lineDlc(line) {
 }
 
 function lineLabel(line, q) {
+  const pills = [];
   const dlc = lineDlc(line);
-  return highlight(line.title, q) + (dlc ? dlcPill(dlc, q) : '');
+  if (dlc) pills.push(dlcPill(dlc, q));
+  if (line.nsfw) pills.push('<span class="tag nsfw">NSFW</span>');
+  return highlight(line.title, q) + pillGroup(pills);
 }
 
-function questLabel(quest, q) {
-  return highlight(quest.name, q) + ' <span class="edid">' + highlight(quest.edid, q) + '</span>' +
-    (quest.dlc ? dlcPill(quest.dlc, q) : '') +
-    (quest.optional ? ' <span class="tag">optional</span>' : '');
+function questLabel(quest, q, lineBadge) {
+  // The name is one unbreakable unit (it must never wrap away from its
+  // checkbox); the edid and the pill group may flow to the next line.
+  // A quest's plugin pill is omitted when the line's title already wears the
+  // same badge — it only appears where it adds information (mixed lines).
+  const pills = [];
+  if (quest.dlc && quest.dlc !== lineBadge) pills.push(dlcPill(quest.dlc, q));
+  if (quest.optional) pills.push('<span class="tag">optional</span>');
+  return '<span class="qname">' + highlight(quest.name, q) + '</span> <span class="edid">' + highlight(quest.edid, q) + '</span>' +
+    pillGroup(pills);
 }
+
+let manifest = null;
+
+// Packs are addressable as ?pack=<key>, where the key is the pack file's
+// basename — so the MGO docs can link straight to the MGO pack.
+function packKey(entry) { return entry.file.replace(/^.*\//, '').replace(/\.json$/, ''); }
 
 async function load() {
-  const manifest = await (await fetch('data/manifest.json')).json();
-  const entry = manifest.packs.find(p => p.default) || manifest.packs[0];
+  manifest = await (await fetch('data/manifest.json')).json();
+  const want = new URLSearchParams(location.search).get('pack');
+  const entry = manifest.packs.find(p => packKey(p) === want) ||
+    manifest.packs.find(p => p.default) || manifest.packs[0];
+  if (manifest.packs.length > 1) {
+    const sel = $('#pack-select');
+    sel.innerHTML = '';
+    for (const p of manifest.packs) {
+      const opt = document.createElement('option');
+      opt.value = packKey(p);
+      opt.textContent = p.title || packKey(p);
+      sel.appendChild(opt);
+    }
+    sel.value = packKey(entry);
+    sel.hidden = false;
+    $('#pack-title').hidden = true;
+  }
+  await loadPack(entry);
+}
+
+async function loadPack(entry) {
   state.pack = await (await fetch('data/' + entry.file)).json();
+  state.selected.clear();
+  openBeforeFilter = null;
   assignDlcHues();
   $('#pack-title').textContent = state.pack.title;
   $('#source-note').textContent = state.pack.source.notes;
@@ -172,8 +214,13 @@ function render() {
       const list = document.createElement('ul');
       for (const quest of group.quests) {
         const li = document.createElement('li');
-        li.dataset.search = (quest.name + ' ' + quest.edid + ' ' + (quest.note || '') + ' ' + (quest.dlc || '') + ' ' + line.title).toLowerCase();
+        li.dataset.search = (quest.name + ' ' + quest.edid + ' ' + (quest.note || '') + ' ' + (quest.dlc || '') + ' ' + line.title + (line.nsfw ? ' nsfw' : '')).toLowerCase();
         li._quest = quest; // for the filter's match highlighting
+        // The row is a nowrap flexbox so the button can never drop below the
+        // checkbox — it shrinks and wraps its own inline content instead.
+        const row = document.createElement('div');
+        row.className = 'qrow';
+        li.appendChild(row);
 
         const box = document.createElement('input');
         box.type = 'checkbox';
@@ -182,13 +229,13 @@ function render() {
           box.checked ? selectQuest(line, quest) : state.selected.delete(quest.edid);
           update();
         });
-        li.appendChild(box);
+        row.appendChild(box);
 
         const name = document.createElement('button');
         name.type = 'button';
         name.className = 'quest-name';
         name.title = 'Complete ' + line.title + ' through here (click again to undo)';
-        name.innerHTML = questLabel(quest, '');
+        name.innerHTML = questLabel(quest, '', lineDlc(line));
         name.addEventListener('click', () => {
           // Through-here, as a toggle. Selecting sweeps in this quest plus
           // every earlier non-optional quest in the line; clicking a quest
@@ -206,7 +253,7 @@ function render() {
           }
           update();
         });
-        li.appendChild(name);
+        row.appendChild(name);
 
         if (quest.note) {
           const note = document.createElement('p');
@@ -254,8 +301,10 @@ function applyFilter() {
   }
   let anyHit = false;
   for (const [i, d] of details.entries()) {
+    const line = state.pack.lines[i];
+    const badge = lineDlc(line);
     const lineTitle = d.querySelector('.line-title');
-    lineTitle.innerHTML = lineLabel(state.pack.lines[i], filtering ? q : '');
+    lineTitle.innerHTML = lineLabel(line, filtering ? q : '');
     let lineHit = false;
     for (const li of d.querySelectorAll('li')) {
       const hit = !filtering || li.dataset.search.includes(q);
@@ -263,7 +312,7 @@ function applyFilter() {
       if (hit) lineHit = true;
       // Re-render the row's text with (or without) match highlighting.
       const mq = hit && filtering ? q : '';
-      li.querySelector('.quest-name').innerHTML = questLabel(li._quest, mq);
+      li.querySelector('.quest-name').innerHTML = questLabel(li._quest, mq, badge);
       const note = li.querySelector('.note');
       if (note) note.innerHTML = highlight(li._quest.note, mq);
     }
@@ -363,6 +412,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const anyOpen = Array.from(details).some(d => d.open);
     details.forEach(d => { d.open = !anyOpen; });
     updateToggleLines();
+  });
+  $('#pack-select').addEventListener('change', (e) => {
+    const entry = manifest.packs.find(p => packKey(p) === e.target.value);
+    if (!entry) return;
+    history.replaceState(null, '', '?pack=' + packKey(entry));
+    loadPack(entry);
   });
   $('#filter').addEventListener('input', (e) => { state.filter = e.target.value; applyFilter(); });
   $('#filter').addEventListener('keydown', (e) => {

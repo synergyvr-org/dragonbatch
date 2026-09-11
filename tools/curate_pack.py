@@ -14,7 +14,7 @@ case-insensitive). Overlay edids missing from the skeleton are reported on
 stderr and the exit code is nonzero, so a renamed or removed quest can't
 vanish silently.
 """
-import argparse, fnmatch, json, sys
+import argparse, fnmatch, json, os, sys
 
 
 def main():
@@ -25,6 +25,15 @@ def main():
 
     skel = json.load(open(args.skeleton, encoding='utf-8'))
     cur = json.load(open(args.curation, encoding='utf-8'))
+
+    # An overlay may extend another (path relative to itself): the base's
+    # lines come first and prune lists concatenate, while id/title/notes stay
+    # the child's. This is how a mod-list pack reuses the vanilla curation.
+    if cur.get('extends'):
+        base_path = os.path.join(os.path.dirname(args.curation), cur['extends'])
+        base = json.load(open(base_path, encoding='utf-8'))
+        cur['lines'] = base.get('lines', []) + cur.get('lines', [])
+        cur['prune'] = base.get('prune', []) + cur.get('prune', [])
 
     pool = {}
     for line in skel['lines']:
@@ -51,6 +60,8 @@ def main():
         line = {'id': cl['id'], 'title': cl['title'], 'quests': quests}
         if cl.get('blurb'):
             line['blurb'] = cl['blurb']
+        if cl.get('nsfw'):
+            line['nsfw'] = True
         lines.append(line)
 
     pruned = 0

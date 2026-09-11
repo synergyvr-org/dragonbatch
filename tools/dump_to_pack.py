@@ -49,8 +49,13 @@ def main():
             merged[key] = q
     plugin = plugins[0]
 
-    # Display names for non-base origins ("dlc" on the quest entry).
-    DLC_NAMES = {'HearthFires.esm': 'Hearthfire'}
+    # Display names for non-base origins ("dlc" on the quest entry) whose
+    # file stems make lousy badges.
+    DLC_NAMES = {
+        'HearthFires.esm': 'Hearthfire',
+        'College Of Winterhold - Quest Expansion.esp': 'CoW Quest Expansion',
+        'SexLab-AmorousAdventures.esp': 'Amorous Adventures',
+    }
     def dlc_of(q):
         o = origin[q['edid'].lower()]
         if o == plugin:
@@ -83,12 +88,14 @@ def main():
         # log text, or if an objective shares its index (Bethesda convention
         # for stages that update objectives without a journal entry). All of
         # them get a setstage; 'journal' just lets the GUI dim internal lines.
-        # Older dumps without the 'log' field: treat everything as journal.
+        # No visibility signal at all (older dumps, or mods whose log text
+        # the exporter can't see) means unknown, not internal: omit 'journal'
+        # rather than dim the whole quest.
         if any('log' in s for s in q.get('stages', [])):
             visible = {s['i'] for s in q.get('stages', []) if s.get('log')}
             visible |= set(q.get('objectives', []))
             journal = [i for i in entry['stages'] if i in visible]
-            if len(journal) < len(entry['stages']):
+            if visible and len(journal) < len(entry['stages']):
                 entry['journal'] = journal
         quests.append(entry)
 

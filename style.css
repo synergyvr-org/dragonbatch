@@ -23,7 +23,7 @@ body {
 }
 
 header, main, footer {
-  width: min(72rem, 100%);
+  width: min(80rem, 100%);
   margin: 0 auto;
 }
 
@@ -37,7 +37,7 @@ h1 {
 
 main {
   display: grid;
-  grid-template-columns: minmax(24rem, 3fr) minmax(20rem, 2fr);
+  grid-template-columns: minmax(24rem, 2fr) minmax(20rem, 1fr);
   gap: 1.5rem;
   align-items: start;
 }
@@ -55,6 +55,18 @@ section {
 h2 { font-weight: 400; font-size: 1.15rem; margin-bottom: 0.75rem; }
 
 .picker-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+#pack-select {
+  background: #ffffff08;
+  color: var(--text);
+  border: 1px solid var(--edge);
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.6rem;
+  font: inherit;
+  font-size: 1.05rem;
+  cursor: pointer;
+}
+#pack-select:hover, #pack-select:focus { border-color: var(--accent-dim); outline: none; }
+#pack-select option { background: var(--panel); }
 .hint { color: var(--dim); font-size: 0.9rem; margin: 0.5rem 0 1rem; }
 
 #filter {
@@ -92,7 +104,8 @@ details.line[open] summary::before { transform: rotate(90deg); }
 .blurb { color: var(--dim); font-size: 0.9rem; margin: 0.35rem 0 0.35rem 2.3rem; }
 
 details.line ul { list-style: none; margin: 0.5rem 0 0.25rem 2.1rem; }
-details.line li { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.55rem; padding: 0.18rem 0; }
+details.line li { padding: 0.18rem 0; }
+.qrow { display: flex; align-items: baseline; flex-wrap: nowrap; gap: 0.55rem; }
 
 /* Mutually exclusive alternatives within a line: labeled rails with an "or"
    divider between them. */
@@ -122,7 +135,10 @@ details.line .branch ul { margin: 0.2rem 0 0; }
   font: inherit;
   cursor: pointer;
   text-align: left;
+  min-width: 0; /* shrink and wrap internally rather than drop below the checkbox */
 }
+.qname { white-space: nowrap; }
+.tags { white-space: nowrap; }
 .quest-name:hover, .quest-name:focus-visible {
   color: var(--accent);
   text-decoration: underline;
@@ -139,11 +155,13 @@ details.line .branch ul { margin: 0.2rem 0 0; }
   border-radius: 999px;
   padding: 0.05em 0.55em;
   vertical-align: middle;
+  white-space: nowrap; /* a pill may move to the next line, never break inside */
 }
 /* Per-plugin color comes inline from app.js (assignDlcHues); this is only
    the fallback if a pill ever renders without one. */
 .tag.dlc { color: var(--link); border-color: #8ab4f84d; }
-.note { flex-basis: 100%; margin-left: 1.9rem; color: var(--dim); font-size: 0.85rem; }
+.tag.nsfw { color: hsl(0 70% 72%); border-color: hsl(0 70% 72% / 0.35); }
+.note { margin-left: 1.9rem; color: var(--dim); font-size: 0.85rem; }
 
 input[type="checkbox"] { accent-color: var(--accent); width: 1rem; height: 1rem; }
 

@@ -53,12 +53,16 @@ The vanilla pack currently covers the **main quest line**, compiled from UESP's 
 5. `python3 tools/curate_pack.py skeleton.json data/curation/skyrim.json > data/packs/skyrim.json` — applies the overlay; anything unplaced and unpruned lands in a trailing "Uncurated" line, and a quest named in the overlay but missing from the skeleton fails the run loudly.
 6. Add the pack to `data/manifest.json`.
 
+A mod-list pack builds on the same steps: dump the list's quest mods, feed all the dumps to `dump_to_pack.py` in load order, and give the list its own overlay that `"extends"` the vanilla one — the base overlay's lines and prunes come along, the child adds the mods' lines and its own prunes, and id/title/notes are the child's. `data/curation/mgo.json` is the template: Skyrim + DLC + Vigilant + Wyrmstooth.
+
 The dump keeps each stage's `complete`/`fail` flags, whether it has log text, and the quest's objective indices. The converter drops fail stages, trims anything after the last completion stage, and records in `journal` the stages that are player-visible (log text, or an objective sharing the stage index) so the GUI can dim the internal ones. Editor IDs and stage indices are never hand-typed anywhere in this pipeline; that's the point of it.
 
 ## Roadmap
 
-- [ ] Full vanilla + DLC coverage from an xEdit dump (guilds, Daedric, civil war, Dawnguard, Dragonborn, Hearthfire)
-- [ ] Handling for mutually exclusive branches (civil war sides, Paarthurnax) beyond the `optional` flag
-- [ ] Per-list packs layered on top of vanilla (MGO / Synergy VR / Nordic)
-- [ ] Pack picker UI once there's more than one pack
-- [ ] Hosting (likely a synergyvr-org repo → synergyvr.org/&lt;path&gt;)
+- [x] Full vanilla + DLC coverage from an xEdit dump (guilds, Daedric, civil war, Dawnguard, Dragonborn, Hearthfire)
+- [x] Handling for mutually exclusive branches (civil war sides, join-vs-destroy, Dawnguard sides) via `branch` groups with enforced pick-one
+- [x] Per-list packs layered on top of vanilla — MGO shipped (Vigilant + Wyrmstooth); Synergy VR and Nordic Adventures still to come
+- [x] Pack picker UI (`?pack=<key>` deep links, e.g. `?pack=mgo`)
+- [x] Hosting: synergyvr.org/dragonbatch
+- [ ] Verify Vigilant/Wyrmstooth quest order against a playthrough
+- [ ] Synergy VR and Nordic Adventures packs

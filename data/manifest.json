@@ -3,7 +3,13 @@
  "packs": [
   {
    "file": "packs/skyrim.json",
+   "title": "Skyrim + official DLC",
    "default": true
+  },
+  {
+   "file": "packs/mgo.json",
+   "title": "Mad God's Overhaul",
+   "default": false
   }
  ]
 }
