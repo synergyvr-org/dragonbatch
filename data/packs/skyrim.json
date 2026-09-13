@@ -1758,6 +1758,12 @@
       40,
       50,
       200
+     ],
+     "commands": [
+      "player.additem 00036584 1",
+      "player.additem 00036583 1",
+      "player.additem 00042BE9 1",
+      "player.additem 00036585 1"
      ]
     },
     {
@@ -1776,6 +1782,9 @@
       20,
       30,
       200
+     ],
+     "fixups": [
+      "player.addfac 29DA9 0"
      ]
     },
     {
@@ -1982,6 +1991,12 @@
       60,
       70,
       200
+     ],
+     "commands": [
+      "player.additem 000FCC0F 1",
+      "player.additem 000FCC0D 1",
+      "player.additem 000FCC11 1",
+      "player.additem 000FCC12 1"
      ]
     },
     {
@@ -2014,6 +2029,9 @@
       50,
       60,
       200
+     ],
+     "commands": [
+      "player.additem 000F652C 1"
      ]
     },
     {
@@ -2178,7 +2196,18 @@
       50,
       200
      ],
-     "note": "Under New Management, the Guild Master capstone."
+     "note": "Under New Management, the Guild Master capstone.",
+     "commands": [
+      "player.additem 000E35D7 1",
+      "player.additem 000E35D6 1",
+      "player.additem 000E35D8 1",
+      "player.additem 000E35D9 1",
+      "player.additem 000F6911 1",
+      "player.additem 000F84CB 1"
+     ],
+     "fixups": [
+      "player.addfac 29DA9 1"
+     ]
     }
    ],
    "blurb": "'A Chance Arrangement' through 'Darkness Returns', then the four city-influence jobs on the road to Guild Master. Click 'Darkness Returns' to stop there, or 'Under New Management' for the whole arc."

@@ -94,23 +94,23 @@
    "blurb": "'A Chance Arrangement' through 'Darkness Returns', then the four city-influence jobs on the road to Guild Master. Click 'Darkness Returns' to stop there, or 'Under New Management' for the whole arc.",
    "quests": [
     {"edid": "TG00"},
-    {"edid": "TG01"},
-    {"edid": "TG02B"},
+    {"edid": "TG01", "grants": [{"addItem": "ArmorThievesGuildCuirass"}, {"addItem": "ArmorThievesGuildBoots"}, {"addItem": "ArmorThievesGuildGauntlets"}, {"addItem": "ArmorThievesGuildHelmet"}]},
+    {"edid": "TG02B", "fixups": ["player.addfac 29DA9 0"]},
     {"edid": "TG02"},
     {"edid": "TG03"},
     {"edid": "TG04"},
     {"edid": "TG05", "emitStages": [200]},
     {"edid": "TG06"},
     {"edid": "TG07"},
-    {"edid": "TG08A"},
-    {"edid": "TG08B"},
+    {"edid": "TG08A", "grants": [{"addItem": "ArmorNightingaleCuirassPlayer03"}, {"addItem": "ArmorNightingaleBootsPlayer03"}, {"addItem": "ArmorNightingaleGauntletsPlayer03"}, {"addItem": "ArmorNightingaleHelmetPlayer03"}]},
+    {"edid": "TG08B", "grants": [{"addItem": "NightingaleBow05"}]},
     {"edid": "TG09"},
     {"edid": "TGTQ01", "note": "City influence job (Windhelm). Normally unlocked by radiant jobs. All four are needed to become Guild Master."},
     {"edid": "TGTQ02", "note": "City influence job (Solitude)."},
     {"edid": "TGTQ03", "note": "City influence job (Whiterun)."},
     {"edid": "TGTQ04", "note": "City influence job (Markarth)."},
     {"edid": "TGCrown", "optional": true, "note": "No Stone Unturned, Vex's Stones of Barenziah hunt."},
-    {"edid": "TGLeadership", "note": "Under New Management, the Guild Master capstone."}
+    {"edid": "TGLeadership", "note": "Under New Management, the Guild Master capstone.", "fixups": ["player.addfac 29DA9 1"], "grants": [{"addItem": "ArmorThievesGuildLeaderCuirass"}, {"addItem": "ArmorThievesGuildLeaderBoots"}, {"addItem": "ArmorThievesGuildLeaderGauntlets"}, {"addItem": "ArmorThievesGuildLeaderHelmet"}, {"addItem": "TGAmuletofArticulation07"}, {"addItem": "TGTributeChestKey"}]}
    ]
   },
   {
