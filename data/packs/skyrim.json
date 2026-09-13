@@ -140,6 +140,9 @@
       800,
       900
      ],
+     "trimmed": [
+      1000
+     ],
      "journal": [
       30,
       50,
@@ -184,6 +187,9 @@
       150,
       160
      ],
+     "trimmed": [
+      200
+     ],
      "journal": [
       10,
       20,
@@ -215,11 +221,17 @@
       185,
       190
      ],
+     "trimmed": [
+      200
+     ],
      "journal": [
       10,
       50,
       80,
       190
+     ],
+     "commands": [
+      "player.teachword 00013E22"
      ]
     },
     {
@@ -258,6 +270,11 @@
       150,
       160
      ],
+     "trimmed": [
+      170,
+      180,
+      200
+     ],
      "journal": [
       10,
       13,
@@ -269,6 +286,9 @@
       80,
       90,
       160
+     ],
+     "commands": [
+      "player.modav dragonsouls 1"
      ]
     },
     {
@@ -311,6 +331,26 @@
       150,
       160
      ],
+     "trimmed": [
+      180,
+      190,
+      200,
+      220,
+      240,
+      242,
+      245,
+      250,
+      255,
+      260,
+      265,
+      270,
+      280,
+      282,
+      284,
+      288,
+      290,
+      300
+     ],
      "journal": [
       10,
       20,
@@ -320,6 +360,11 @@
       60,
       70,
       160
+     ],
+     "commands": [
+      "player.teachword 00013E23",
+      "player.teachword 0002F7BB",
+      "player.modav dragonsouls 2"
      ]
     },
     {
@@ -333,6 +378,10 @@
       40,
       50,
       60
+     ],
+     "commands": [
+      "player.teachword 00013E24",
+      "player.modav dragonsouls 1"
      ]
     },
     {
@@ -382,6 +431,9 @@
       50,
       150,
       200
+     ],
+     "commands": [
+      "player.modav dragonsouls 1"
      ]
     },
     {
@@ -433,17 +485,8 @@
       255
      ],
      "journal": [
-      10,
-      20,
-      30,
-      40,
-      50,
-      70,
-      90,
-      100,
-      140,
-      210,
-      250
+      250,
+      255
      ]
     },
     {
@@ -470,6 +513,10 @@
       170,
       175,
       180
+     ],
+     "trimmed": [
+      200,
+      300
      ],
      "journal": [
       10,
@@ -512,6 +559,10 @@
       250,
       260,
       280
+     ],
+     "trimmed": [
+      290,
+      300
      ],
      "journal": [
       10,
@@ -563,6 +614,11 @@
       195,
       200
      ],
+     "trimmed": [
+      205,
+      210,
+      220
+     ],
      "journal": [
       10,
       20,
@@ -572,6 +628,12 @@
       60,
       100,
       200
+     ],
+     "commands": [
+      "player.teachword 0003CD31",
+      "player.teachword 0003CD32",
+      "player.teachword 0003CD33",
+      "player.modav dragonsouls 3"
      ]
     },
     {
@@ -636,12 +698,18 @@
       200,
       220
      ],
+     "trimmed": [
+      230,
+      240
+     ],
      "journal": [
-      10,
-      20,
-      30,
-      100,
       220
+     ],
+     "commands": [
+      "player.teachword 00044251",
+      "player.teachword 00044252",
+      "player.teachword 00044253",
+      "player.modav dragonsouls 3"
      ]
     },
     {
@@ -669,6 +737,10 @@
       200,
       220
      ],
+     "trimmed": [
+      230,
+      240
+     ],
      "journal": [
       10,
       20,
@@ -679,6 +751,12 @@
       70,
       200,
       220
+     ],
+     "commands": [
+      "player.teachword 00046B89",
+      "player.teachword 00046B8A",
+      "player.teachword 00046B8B",
+      "player.modav dragonsouls 3"
      ]
     },
     {
@@ -750,14 +828,9 @@
       350
      ],
      "journal": [
-      10,
-      15,
-      20,
-      30,
-      40,
-      50,
-      60,
-      300
+      300,
+      310,
+      350
      ],
      "optional": true,
      "note": "Season Unending is the peace-council quest, and the game skips it on its own if the civil war is far enough along. Selecting it records the truce as brokered."
@@ -773,10 +846,14 @@
       50,
       100
      ],
+     "trimmed": [
+      150
+     ],
      "journal": [
       10,
       20,
-      50
+      50,
+      100
      ],
      "optional": true,
      "note": "Completing this quest means Paarthurnax dies. If you'd rather he lived, leave this unchecked; the main quest completes fine without it."
@@ -813,7 +890,8 @@
       40,
       100,
       300
-     ]
+     ],
+     "note": "Skuldafn's portal is the only way into Sovngarde, and completing this by console skips the flight there. If you want to play the ending yourself, stop at The Fallen. Otherwise select Sovngarde and Dragonslayer too."
     },
     {
      "edid": "MQ304",
@@ -846,6 +924,9 @@
       180,
       200
      ],
+     "trimmed": [
+      300
+     ],
      "journal": [
       10,
       20,
@@ -873,6 +954,13 @@
       140,
       190,
       200
+     ],
+     "trimmed": [
+      210,
+      220,
+      250,
+      260,
+      300
      ],
      "journal": [
       10,
@@ -902,7 +990,8 @@
      "journal": [
       1,
       100,
-      160
+      160,
+      200
      ],
      "branch": "Imperial Legion"
     },
@@ -954,17 +1043,11 @@
       190,
       200
      ],
+     "trimmed": [
+      220
+     ],
      "journal": [
-      10,
-      20,
-      30,
-      40,
-      45,
-      50,
-      60,
-      65,
-      70,
-      80
+      200
      ],
      "branch": "Imperial Legion"
     },
@@ -982,7 +1065,8 @@
      "journal": [
       1,
       100,
-      160
+      160,
+      200
      ],
      "branch": "Stormcloaks"
     },
@@ -1034,13 +1118,11 @@
       190,
       200
      ],
+     "trimmed": [
+      220
+     ],
      "journal": [
-      10,
-      20,
-      30,
-      40,
-      50,
-      80
+      200
      ],
      "branch": "Stormcloaks"
     }
@@ -1063,6 +1145,9 @@
       40,
       50,
       100
+     ],
+     "trimmed": [
+      150
      ],
      "journal": [
       10,
@@ -1123,13 +1208,14 @@
       200
      ],
      "journal": [
-      5,
-      10,
-      15,
-      20,
-      25,
-      30,
       200
+     ],
+     "commands": [
+      "player.addspell 00092C48"
+     ],
+     "fixups": [
+      "prid 0001A691",
+      "kill"
      ]
     },
     {
@@ -1162,7 +1248,8 @@
      ],
      "journal": [
       10,
-      20
+      20,
+      200
      ]
     },
     {
@@ -1368,11 +1455,6 @@
       200
      ],
      "journal": [
-      10,
-      20,
-      30,
-      40,
-      50,
       200
      ]
     },
@@ -1424,6 +1506,14 @@
       40,
       50,
       200
+     ],
+     "commands": [
+      "player.additem 0010F570 1",
+      "player.additem 000C5140 1"
+     ],
+     "fixups": [
+      "prid 000E1533",
+      "disable"
      ]
     }
    ],
@@ -1431,7 +1521,7 @@
   },
   {
    "id": "college-side",
-   "title": "College of Winterhold \u2014 Side Quests",
+   "title": "College of Winterhold: Side Quests",
    "quests": [
     {
      "edid": "MGRArniel01",
@@ -1470,6 +1560,9 @@
       30,
       40,
       200
+     ],
+     "trimmed": [
+      255
      ]
     },
     {
@@ -1792,10 +1885,6 @@
       200
      ],
      "journal": [
-      10,
-      20,
-      35,
-      50,
       200
      ]
     },
@@ -2111,6 +2200,10 @@
       50,
       200
      ],
+     "trimmed": [
+      215,
+      255
+     ],
      "journal": [
       5,
       10,
@@ -2134,6 +2227,9 @@
       30,
       200
      ],
+     "trimmed": [
+      255
+     ],
      "journal": [
       5,
       20,
@@ -2153,6 +2249,9 @@
       50,
       200
      ],
+     "trimmed": [
+      255
+     ],
      "branch": "Join the Dark Brotherhood"
     },
     {
@@ -2164,12 +2263,18 @@
       20,
       200
      ],
+     "trimmed": [
+      255
+     ],
      "journal": [
       10,
       20,
       200
      ],
-     "branch": "Join the Dark Brotherhood"
+     "branch": "Join the Dark Brotherhood",
+     "fixups": [
+      "player.addfac 1BDB3 0"
+     ]
     },
     {
      "edid": "DB03",
@@ -2186,6 +2291,9 @@
       40,
       50,
       200
+     ],
+     "trimmed": [
+      255
      ],
      "journal": [
       5,
@@ -2210,6 +2318,9 @@
       40,
       50,
       200
+     ],
+     "trimmed": [
+      255
      ],
      "journal": [
       10,
@@ -2254,6 +2365,9 @@
       20,
       200
      ],
+     "trimmed": [
+      255
+     ],
      "journal": [
       10,
       20,
@@ -2271,6 +2385,9 @@
       20,
       30,
       200
+     ],
+     "trimmed": [
+      255
      ],
      "journal": [
       5,
@@ -2297,6 +2414,9 @@
       50,
       60,
       200
+     ],
+     "trimmed": [
+      255
      ],
      "journal": [
       10,
@@ -2326,6 +2446,9 @@
       30,
       200
      ],
+     "trimmed": [
+      255
+     ],
      "journal": [
       2,
       4,
@@ -2353,6 +2476,9 @@
       70,
       75,
       200
+     ],
+     "trimmed": [
+      255
      ],
      "journal": [
       5,
@@ -2391,6 +2517,9 @@
       80,
       200
      ],
+     "trimmed": [
+      255
+     ],
      "journal": [
       10,
       15,
@@ -2425,6 +2554,9 @@
       80,
       200
      ],
+     "trimmed": [
+      255
+     ],
      "journal": [
       5,
       10,
@@ -2448,6 +2580,9 @@
       20,
       200
      ],
+     "trimmed": [
+      255
+     ],
      "journal": [
       10,
       20,
@@ -2466,6 +2601,9 @@
       20,
       200
      ],
+     "trimmed": [
+      255
+     ],
      "journal": [
       10,
       20,
@@ -2482,6 +2620,9 @@
       10,
       20,
       200
+     ],
+     "trimmed": [
+      255
      ],
      "journal": [
       10,
@@ -2500,6 +2641,9 @@
       20,
       200
      ],
+     "trimmed": [
+      255
+     ],
      "journal": [
       10,
       20,
@@ -2516,6 +2660,9 @@
       10,
       20,
       200
+     ],
+     "trimmed": [
+      255
      ],
      "journal": [
       10,
@@ -2534,6 +2681,9 @@
       20,
       200
      ],
+     "trimmed": [
+      255
+     ],
      "journal": [
       10,
       20,
@@ -2550,6 +2700,9 @@
       10,
       20,
       200
+     ],
+     "trimmed": [
+      255
      ],
      "journal": [
       10,
@@ -2568,6 +2721,9 @@
       20,
       200
      ],
+     "trimmed": [
+      255
+     ],
      "journal": [
       10,
       20,
@@ -2584,6 +2740,9 @@
       10,
       20,
       200
+     ],
+     "trimmed": [
+      255
      ],
      "journal": [
       10,
@@ -2602,6 +2761,9 @@
       20,
       200
      ],
+     "trimmed": [
+      255
+     ],
      "journal": [
       10,
       20,
@@ -2618,6 +2780,9 @@
       10,
       20,
       200
+     ],
+     "trimmed": [
+      255
      ],
      "journal": [
       10,
@@ -2636,6 +2801,9 @@
       20,
       200
      ],
+     "trimmed": [
+      255
+     ],
      "journal": [
       10,
       20,
@@ -2651,6 +2819,9 @@
       0,
       10,
       200
+     ],
+     "trimmed": [
+      255
      ],
      "journal": [
       10,
@@ -2672,6 +2843,9 @@
       40,
       200
      ],
+     "trimmed": [
+      255
+     ],
      "journal": [
       10,
       20,
@@ -2684,7 +2858,7 @@
      "branch": "Destroy the Dark Brotherhood"
     }
    ],
-   "blurb": "Innocence Lost through Hail Sithis! \u2014 or burn the whole thing down instead."
+   "blurb": "Innocence Lost through Hail Sithis! Or burn the whole thing down instead."
   },
   {
    "id": "daedric",
@@ -2761,6 +2935,9 @@
       81,
       100
      ],
+     "trimmed": [
+      200
+     ],
      "journal": [
       1,
       5,
@@ -2815,7 +2992,8 @@
       110,
       150,
       155,
-      200
+      200,
+      205
      ],
      "optional": true,
      "note": "Clavicus Vile."
@@ -2835,6 +3013,9 @@
       55,
       60,
       100
+     ],
+     "trimmed": [
+      200
      ],
      "journal": [
       5,
@@ -2866,6 +3047,10 @@
       80,
       100,
       105
+     ],
+     "trimmed": [
+      200,
+      210
      ],
      "journal": [
       10,
@@ -2980,6 +3165,9 @@
       51,
       60
      ],
+     "trimmed": [
+      80
+     ],
      "journal": [
       10,
       20,
@@ -3084,6 +3272,11 @@
       70,
       100
      ],
+     "trimmed": [
+      200,
+      225,
+      600
+     ],
      "journal": [
       10,
       20,
@@ -3125,7 +3318,8 @@
       20,
       21,
       40,
-      75
+      75,
+      100
      ],
      "optional": true,
      "note": "Peryite."
@@ -3405,7 +3599,8 @@
       30,
       50,
       200,
-      225
+      225,
+      275
      ],
      "optional": true
     },
@@ -3463,7 +3658,8 @@
      "journal": [
       10,
       100,
-      900
+      900,
+      1000
      ],
      "optional": true
     },
@@ -3493,7 +3689,8 @@
      "journal": [
       15,
       50,
-      100
+      100,
+      250
      ],
      "optional": true,
      "note": "The Man Who Cried Wolf, part one of the Wolf Queen story."
@@ -3576,6 +3773,9 @@
       199,
       200,
       201
+     ],
+     "trimmed": [
+      255
      ],
      "journal": [
       10,
@@ -3782,6 +3982,9 @@
       100,
       110
      ],
+     "trimmed": [
+      250
+     ],
      "journal": [
       10,
       12,
@@ -3878,21 +4081,6 @@
       100,
       200
      ],
-     "journal": [
-      10,
-      20,
-      25,
-      30,
-      40,
-      45,
-      50,
-      55,
-      70,
-      80,
-      90,
-      95,
-      100
-     ],
      "optional": true
     },
     {
@@ -3909,6 +4097,9 @@
       75,
       100,
       105
+     ],
+     "trimmed": [
+      200
      ],
      "journal": [
       20,
@@ -4022,7 +4213,8 @@
      ],
      "journal": [
       20,
-      40
+      40,
+      200
      ],
      "optional": true
     },
@@ -4038,7 +4230,8 @@
      ],
      "journal": [
       20,
-      40
+      40,
+      200
      ],
      "optional": true
     },
@@ -4054,7 +4247,8 @@
      ],
      "journal": [
       20,
-      40
+      40,
+      200
      ],
      "optional": true
     },
@@ -4156,6 +4350,9 @@
       100,
       110
      ],
+     "trimmed": [
+      200
+     ],
      "journal": [
       10,
       20,
@@ -4163,7 +4360,8 @@
       40,
       50,
       60,
-      70
+      70,
+      110
      ],
      "optional": true
     },
@@ -4235,10 +4433,14 @@
       40,
       50
      ],
+     "trimmed": [
+      55
+     ],
      "journal": [
       10,
       20,
-      40
+      40,
+      50
      ],
      "optional": true
     },
@@ -4343,6 +4545,9 @@
       90,
       100
      ],
+     "trimmed": [
+      110
+     ],
      "journal": [
       10,
       20,
@@ -4375,11 +4580,16 @@
       95,
       100
      ],
+     "trimmed": [
+      101,
+      200
+     ],
      "journal": [
       5,
       10,
       35,
-      90
+      90,
+      100
      ],
      "optional": true
     },
@@ -4393,6 +4603,9 @@
       50,
       100,
       110
+     ],
+     "trimmed": [
+      255
      ],
      "journal": [
       10,
@@ -4472,7 +4685,6 @@
       100,
       200
      ],
-     "journal": [],
      "optional": true
     },
     {
@@ -4490,8 +4702,13 @@
       60,
       100
      ],
+     "trimmed": [
+      200,
+      256
+     ],
      "journal": [
-      15
+      15,
+      100
      ],
      "optional": true
     },
@@ -4520,7 +4737,6 @@
       30,
       100
      ],
-     "journal": [],
      "optional": true
     },
     {
@@ -4535,7 +4751,6 @@
       80,
       100
      ],
-     "journal": [],
      "optional": true
     }
    ],
@@ -4564,8 +4779,14 @@
       180
      ],
      "dlc": "Dawnguard",
+     "trimmed": [
+      190,
+      200,
+      250
+     ],
      "journal": [
-      10
+      10,
+      180
      ],
      "note": "The 'Dawnguard' misc intro: word of the vampire attacks, and directions to Fort Dawnguard."
     },
@@ -4587,6 +4808,9 @@
       200
      ],
      "dlc": "Dawnguard",
+     "trimmed": [
+      999
+     ],
      "journal": [
       10,
       30,
@@ -4623,7 +4847,8 @@
       30,
       40,
       180,
-      190
+      190,
+      200
      ]
     },
     {
@@ -4642,6 +4867,9 @@
       200
      ],
      "dlc": "Dawnguard",
+     "trimmed": [
+      255
+     ],
      "journal": [
       10,
       20,
@@ -4996,7 +5224,8 @@
       10,
       20,
       30,
-      40
+      40,
+      200
      ]
     }
    ],
@@ -5226,7 +5455,8 @@
       40,
       50,
       60,
-      70
+      70,
+      200
      ]
     },
     {
@@ -5310,6 +5540,9 @@
       550
      ],
      "dlc": "Dragonborn",
+     "trimmed": [
+      600
+     ],
      "journal": [
       10,
       20,
@@ -5353,6 +5586,9 @@
       1000
      ],
      "dlc": "Dragonborn",
+     "trimmed": [
+      1100
+     ],
      "journal": [
       10,
       340,
@@ -5384,6 +5620,12 @@
       550
      ],
      "dlc": "Dragonborn",
+     "trimmed": [
+      580,
+      590,
+      600,
+      1000
+     ],
      "journal": [
       10,
       200,
@@ -5545,7 +5787,8 @@
      "dlc": "Dragonborn",
      "journal": [
       10,
-      20
+      20,
+      200
      ],
      "optional": true,
      "note": "An Axe to Find leads into The Final Descent; select both."
@@ -5763,6 +6006,40 @@
       200
      ],
      "dlc": "Dragonborn",
+     "trimmed": [
+      300,
+      305,
+      310,
+      312,
+      313,
+      315,
+      320,
+      322,
+      323,
+      325,
+      330,
+      332,
+      333,
+      335,
+      340,
+      345,
+      401,
+      402,
+      500,
+      505,
+      510,
+      515,
+      520,
+      550,
+      600,
+      610,
+      620,
+      630,
+      701,
+      702,
+      703,
+      704
+     ],
      "journal": [
       10,
       20,
@@ -5809,6 +6086,9 @@
       100
      ],
      "dlc": "Dragonborn",
+     "trimmed": [
+      200
+     ],
      "journal": [
       10,
       15,
@@ -5829,7 +6109,8 @@
      "dlc": "Dragonborn",
      "journal": [
       10,
-      20
+      20,
+      200
      ],
      "optional": true,
      "note": "Paid in Full, Glover Mallory's favor. Expects a Thieves Guild member."
@@ -5867,6 +6148,9 @@
       200
      ],
      "dlc": "Dragonborn",
+     "trimmed": [
+      205
+     ],
      "journal": [
       10,
       20,
@@ -5895,6 +6179,9 @@
       200
      ],
      "dlc": "Dragonborn",
+     "trimmed": [
+      205
+     ],
      "journal": [
       10,
       15,
@@ -5909,7 +6196,7 @@
      "branch": "Serve the Riekling Chief"
     }
    ],
-   "blurb": "Raven Rock and the island, all optional \u2014 except Thirsk Mead Hall at the bottom, where you pick a side."
+   "blurb": "Raven Rock and the island, all optional except Thirsk Mead Hall at the bottom, where you pick a side."
   },
   {
    "id": "telvanni",
@@ -5939,7 +6226,8 @@
       210,
       300,
       310,
-      400
+      400,
+      500
      ]
     },
     {
@@ -5985,7 +6273,8 @@
       200,
       300,
       400,
-      500
+      500,
+      600
      ]
     },
     {
@@ -6002,6 +6291,11 @@
       300
      ],
      "dlc": "Dragonborn",
+     "trimmed": [
+      310,
+      320,
+      400
+     ],
      "journal": [
       100,
       200,

@@ -10,21 +10,21 @@
    "quests": [
     {"edid": "MQ101"},
     {"edid": "MQ102"},
-    {"edid": "MQ103"},
-    {"edid": "MQ104"},
-    {"edid": "MQ105"},
-    {"edid": "MQ105Ustengrav"},
-    {"edid": "MQ106"},
-    {"edid": "MQ201"},
+    {"edid": "MQ103", "grants": [{"teachWord": "WordFus"}]},
+    {"edid": "MQ104", "grants": [{"dragonSouls": 1}]},
+    {"edid": "MQ105", "grants": [{"teachWord": "WordRo"}, {"teachWord": "WordWuld"}, {"dragonSouls": 2}]},
+    {"edid": "MQ105Ustengrav", "grants": [{"teachWord": "WordDah"}, {"dragonSouls": 1}]},
+    {"edid": "MQ106", "grants": [{"dragonSouls": 1}]},
+    {"edid": "MQ201", "emitStages": [250, 255]},
     {"edid": "MQ202"},
     {"edid": "MQ203"},
-    {"edid": "MQ204"},
+    {"edid": "MQ204", "grants": [{"teachShout": "ClearSkiesShout"}, {"dragonSouls": 3}]},
     {"edid": "MQ205"},
-    {"edid": "MQ206"},
-    {"edid": "MQ301"},
-    {"edid": "MQ302", "optional": true, "note": "Season Unending is the peace-council quest, and the game skips it on its own if the civil war is far enough along. Selecting it records the truce as brokered."},
+    {"edid": "MQ206", "emitStages": [220], "grants": [{"teachShout": "DragonrendShout"}, {"dragonSouls": 3}]},
+    {"edid": "MQ301", "grants": [{"teachShout": "CallDragonShout"}, {"dragonSouls": 3}]},
+    {"edid": "MQ302", "optional": true, "emitStages": [300, 310, 350], "note": "Season Unending is the peace-council quest, and the game skips it on its own if the civil war is far enough along. Selecting it records the truce as brokered."},
     {"edid": "MQPaarthurnax", "optional": true, "note": "Completing this quest means Paarthurnax dies. If you'd rather he lived, leave this unchecked; the main quest completes fine without it."},
-    {"edid": "MQ303"},
+    {"edid": "MQ303", "note": "Skuldafn's portal is the only way into Sovngarde, and completing this by console skips the flight there. If you want to play the ending yourself, stop at The Fallen. Otherwise select Sovngarde and Dragonslayer too."},
     {"edid": "MQ304"},
     {"edid": "MQ305"}
    ]
@@ -35,9 +35,9 @@
    "blurb": "Pick ONE side here. For either side, 'Joining' and the 'Jagged Crown' are the only scriptable skips. The campaign battles beyond these reuse radiant quest records for every hold and both sides, so replaying their stages blind would corrupt the war's state. Play the campaign out, or sidestep the war with 'Season Unending' from the main quest.",
    "quests": [
     {"edid": "CW01A", "branch": "Imperial Legion"},
-    {"edid": "CW02A", "branch": "Imperial Legion"},
+    {"edid": "CW02A", "branch": "Imperial Legion", "emitStages": [200]},
     {"edid": "CW01B", "branch": "Stormcloaks"},
-    {"edid": "CW02B", "branch": "Stormcloaks"}
+    {"edid": "CW02B", "branch": "Stormcloaks", "emitStages": [200]}
    ]
   },
   {
@@ -48,7 +48,7 @@
     {"edid": "C00"},
     {"edid": "C01"},
     {"edid": "C02"},
-    {"edid": "C03"},
+    {"edid": "C03", "emitStages": [200], "fixups": ["prid 0001A691", "kill"], "grants": [{"addSpell": "WerewolfChange"}]},
     {"edid": "C04"},
     {"edid": "C05"},
     {"edid": "C06"}
@@ -64,14 +64,14 @@
     {"edid": "MG03"},
     {"edid": "MG04"},
     {"edid": "mg06", "note": "'Revealing the Unseen' plays before 'Containment' despite the editor IDs."},
-    {"edid": "MG05"},
+    {"edid": "MG05", "emitStages": [200]},
     {"edid": "MG07"},
-    {"edid": "MG08"}
+    {"edid": "MG08", "fixups": ["prid 000E1533", "disable"], "grants": [{"addItem": "ClothesMGRobesArchmage1Hooded"}, {"addItem": "CollegeArchMageKey"}]}
    ]
   },
   {
    "id": "college-side",
-   "title": "College of Winterhold — Side Quests",
+   "title": "College of Winterhold: Side Quests",
    "blurb": "Arniel's Endeavor is a four-part series, in order. The apprentices' favors and the master-spell rituals are independent, so they're optional. The rituals normally unlock at skill 90 in their school.",
    "quests": [
     {"edid": "MGRArniel01", "note": "Part one of four."},
@@ -99,7 +99,7 @@
     {"edid": "TG02"},
     {"edid": "TG03"},
     {"edid": "TG04"},
-    {"edid": "TG05"},
+    {"edid": "TG05", "emitStages": [200]},
     {"edid": "TG06"},
     {"edid": "TG07"},
     {"edid": "TG08A"},
@@ -116,12 +116,12 @@
   {
    "id": "dark-brotherhood",
    "title": "The Dark Brotherhood",
-   "blurb": "Innocence Lost through Hail Sithis! — or burn the whole thing down instead.",
+   "blurb": "Innocence Lost through Hail Sithis! Or burn the whole thing down instead.",
    "quests": [
     {"edid": "DB01Misc", "optional": true, "note": "Delayed Burial, the Cicero wagon intro. Skippable.", "branch": "Join the Dark Brotherhood"},
     {"edid": "DB01", "branch": "Join the Dark Brotherhood"},
     {"edid": "DB02", "branch": "Join the Dark Brotherhood"},
-    {"edid": "DB02a", "branch": "Join the Dark Brotherhood"},
+    {"edid": "DB02a", "branch": "Join the Dark Brotherhood", "fixups": ["player.addfac 1BDB3 0"]},
     {"edid": "DB03", "branch": "Join the Dark Brotherhood"},
     {"edid": "DB04", "branch": "Join the Dark Brotherhood"},
     {"edid": "DB04a", "branch": "Join the Dark Brotherhood"},
@@ -294,7 +294,7 @@
   {
    "id": "solstheim-side",
    "title": "Solstheim Side Quests",
-   "blurb": "Raven Rock and the island, all optional — except Thirsk Mead Hall at the bottom, where you pick a side.",
+   "blurb": "Raven Rock and the island, all optional except Thirsk Mead Hall at the bottom, where you pick a side.",
    "quests": [
     {"edid": "DLC2RR01", "optional": true},
     {"edid": "DLC2RR02", "optional": true},

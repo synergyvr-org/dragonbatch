@@ -3,12 +3,12 @@
  "title": "Mad God's Overhaul",
  "extends": "skyrim.json",
  "mo2Only": true,
- "notes": "Skyrim + DLC plus MGO's quest mods, via xEdit in load order. Vigilant and Wyrmstooth ordering compiled from the mods' quest numbering — verify against a playthrough before relying on it. Verified (vanilla portion) 2026-09-11.",
+ "notes": "Skyrim + DLC plus MGO's quest mods, via xEdit in load order. Vigilant and Wyrmstooth ordering compiled from the mods' quest numbering; verify against a playthrough before relying on it. Verified (vanilla portion) 2026-09-11.",
  "lines": [
   {
    "id": "vigilant",
    "title": "Vigilant",
-   "blurb": "Vicn's four acts: the Stendarr cases, 'Child of Oblivion', the Blood Matron hunt, then Coldharbour. Heavily scripted — skip with care and keep a save. Order compiled from quest numbering; treat late-act order as approximate.",
+   "blurb": "Vicn's four acts: the Stendarr cases, 'Child of Oblivion', the Blood Matron hunt, then Coldharbour. Heavily scripted, so skip with care and keep a save. Order compiled from quest numbering; treat late-act order as approximate.",
    "quests": [
     {"edid": "zzzAoMMq00"},
     {"edid": "zzzAoMMq01"},
@@ -35,7 +35,7 @@
   },
   {
    "id": "vigilant-side",
-   "title": "Vigilant — Side Quests",
+   "title": "Vigilant: Side Quests",
    "blurb": "Sub-quests across the acts, unordered. All optional.",
    "quests": [
     {"edid": "zzzAoMSubQ01", "optional": true},
@@ -64,7 +64,7 @@
   },
   {
    "id": "vigilant-memories",
-   "title": "Vigilant — Memories",
+   "title": "Vigilant: Memories",
    "blurb": "Coldharbour's memory trials, unordered. All optional.",
    "quests": [
     {"edid": "zzzCHMemoryQuest01", "optional": true},
@@ -107,7 +107,7 @@
   {
    "id": "college-expansion",
    "title": "College Classes",
-   "blurb": "JaySerpa's Quest Expansion classes — attend any, in any order. 'College Curriculum' is the tracker that completes once the classes are done. All optional.",
+   "blurb": "JaySerpa's Quest Expansion classes: attend any, in any order. 'College Curriculum' is the tracker that completes once the classes are done. All optional.",
    "quests": [
     {"edid": "COW_CentralQuest", "optional": true, "note": "The attendance tracker."},
     {"edid": "Cow_Breathing", "optional": true},
@@ -123,7 +123,7 @@
    "id": "amorous",
    "title": "Amorous Adventures",
    "nsfw": true,
-   "blurb": "Independent romance quests, one per character — only in MGO's NSFW variant. The Serana arc at the bottom runs alongside the Dawnguard main line. All optional.",
+   "blurb": "Independent romance quests, one per character, only in MGO's NSFW variant. The Serana arc at the bottom runs alongside the Dawnguard main line. All optional.",
    "quests": [
     {"edid": "SexLabAmorousAdventuresAela", "optional": true, "note": "Aela the Huntress."},
     {"edid": "SexLabAmorousAdventuresAerin", "optional": true, "note": "Mjoll the Lioness, Ingun Black-Briar, Sapphire, and Illia."},
