@@ -12,3 +12,6 @@ __pycache__/
 
 # Raw xEdit dumps (intermediate; curated packs live in data/packs/)
 *.quests.json
+
+# Raw xEdit reference dumps (regenerable; used via curate_pack --refs)
+*.refs.json
