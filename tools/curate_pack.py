@@ -71,10 +71,14 @@ def main():
             if r is None:
                 unresolved.append(g[kind])
                 continue
+            # Story-taught words are unlocked for free in-game, so teaching
+            # pairs each word with an unlock instead of depending on the
+            # player having dragon souls to spend.
             if kind == 'teachShout':
-                commands += ['player.teachword ' + w for w in r['fullwords']]
+                for w in r['fullwords']:
+                    commands += ['player.teachword ' + w, 'player.unlockword ' + w]
             elif kind == 'teachWord':
-                commands.append('player.teachword ' + r['full'])
+                commands += ['player.teachword ' + r['full'], 'player.unlockword ' + r['full']]
             elif kind == 'addSpell':
                 commands.append('player.addspell ' + r['full'])
             else:

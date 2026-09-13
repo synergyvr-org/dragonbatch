@@ -12,16 +12,16 @@
     {"edid": "MQ102"},
     {"edid": "MQ103", "grants": [{"teachWord": "WordFus"}]},
     {"edid": "MQ104", "grants": [{"dragonSouls": 1}]},
-    {"edid": "MQ105", "grants": [{"teachWord": "WordRo"}, {"teachWord": "WordWuld"}, {"dragonSouls": 2}]},
-    {"edid": "MQ105Ustengrav", "grants": [{"teachWord": "WordDah"}, {"dragonSouls": 1}]},
+    {"edid": "MQ105", "grants": [{"teachWord": "WordRo"}, {"teachWord": "WordWuld"}]},
+    {"edid": "MQ105Ustengrav", "grants": [{"teachWord": "WordDah"}]},
     {"edid": "MQ106", "grants": [{"dragonSouls": 1}]},
     {"edid": "MQ201", "emitStages": [250, 255]},
     {"edid": "MQ202"},
     {"edid": "MQ203"},
-    {"edid": "MQ204", "grants": [{"teachShout": "ClearSkiesShout"}, {"dragonSouls": 3}]},
+    {"edid": "MQ204", "grants": [{"teachShout": "ClearSkiesShout"}]},
     {"edid": "MQ205"},
-    {"edid": "MQ206", "emitStages": [220], "grants": [{"teachShout": "DragonrendShout"}, {"dragonSouls": 3}]},
-    {"edid": "MQ301", "grants": [{"teachShout": "CallDragonShout"}, {"dragonSouls": 3}]},
+    {"edid": "MQ206", "emitStages": [220], "grants": [{"teachShout": "DragonrendShout"}]},
+    {"edid": "MQ301", "grants": [{"teachShout": "CallDragonShout"}]},
     {"edid": "MQ302", "optional": true, "emitStages": [300, 310, 350], "note": "Season Unending is the peace-council quest, and the game skips it on its own if the civil war is far enough along. Selecting it records the truce as brokered."},
     {"edid": "MQPaarthurnax", "optional": true, "note": "Completing this quest means Paarthurnax dies. If you'd rather he lived, leave this unchecked; the main quest completes fine without it."},
     {"edid": "MQ303", "note": "Skuldafn's portal is the only way into Sovngarde, and completing this by console skips the flight there. If you want to play the ending yourself, stop at The Fallen. Otherwise select Sovngarde and Dragonslayer too."},
@@ -66,7 +66,7 @@
     {"edid": "mg06", "note": "'Revealing the Unseen' plays before 'Containment' despite the editor IDs."},
     {"edid": "MG05", "emitStages": [200]},
     {"edid": "MG07"},
-    {"edid": "MG08", "fixups": ["prid 000E1533", "disable"], "grants": [{"addItem": "ClothesMGRobesArchmage1Hooded"}, {"addItem": "CollegeArchMageKey"}]}
+    {"edid": "MG08", "fixups": ["prid 000E1533", "disable", "prid 000F0EA9", "disable"], "note": "If the barriers around and inside the College are still up when you arrive, open the console there and run the four prid/disable lines from the batch file again. They only work near Winterhold.", "grants": [{"addItem": "ClothesMGRobesArchmage1Hooded"}, {"addItem": "CollegeArchMageKey"}]}
    ]
   },
   {
@@ -166,7 +166,7 @@
     {"edid": "DA11", "optional": true, "note": "Namira."},
     {"edid": "DA13", "optional": true, "note": "Peryite."},
     {"edid": "DA14", "optional": true, "note": "Sanguine."},
-    {"edid": "DA15", "optional": true, "note": "Sheogorath."},
+    {"edid": "DA15", "optional": true, "note": "Sheogorath. The batch leaves you in the Pelagius Wing; the door out leads to the Blue Palace."},
     {"edid": "DA16", "optional": true, "note": "Vaermina."}
    ]
   },

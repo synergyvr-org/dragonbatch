@@ -231,7 +231,8 @@
       190
      ],
      "commands": [
-      "player.teachword 00013E22"
+      "player.teachword 00013E22",
+      "player.unlockword 00013E22"
      ]
     },
     {
@@ -363,8 +364,9 @@
      ],
      "commands": [
       "player.teachword 00013E23",
+      "player.unlockword 00013E23",
       "player.teachword 0002F7BB",
-      "player.modav dragonsouls 2"
+      "player.unlockword 0002F7BB"
      ]
     },
     {
@@ -381,7 +383,7 @@
      ],
      "commands": [
       "player.teachword 00013E24",
-      "player.modav dragonsouls 1"
+      "player.unlockword 00013E24"
      ]
     },
     {
@@ -631,9 +633,11 @@
      ],
      "commands": [
       "player.teachword 0003CD31",
+      "player.unlockword 0003CD31",
       "player.teachword 0003CD32",
+      "player.unlockword 0003CD32",
       "player.teachword 0003CD33",
-      "player.modav dragonsouls 3"
+      "player.unlockword 0003CD33"
      ]
     },
     {
@@ -707,9 +711,11 @@
      ],
      "commands": [
       "player.teachword 00044251",
+      "player.unlockword 00044251",
       "player.teachword 00044252",
+      "player.unlockword 00044252",
       "player.teachword 00044253",
-      "player.modav dragonsouls 3"
+      "player.unlockword 00044253"
      ]
     },
     {
@@ -754,9 +760,11 @@
      ],
      "commands": [
       "player.teachword 00046B89",
+      "player.unlockword 00046B89",
       "player.teachword 00046B8A",
+      "player.unlockword 00046B8A",
       "player.teachword 00046B8B",
-      "player.modav dragonsouls 3"
+      "player.unlockword 00046B8B"
      ]
     },
     {
@@ -1507,12 +1515,15 @@
       50,
       200
      ],
+     "note": "If the barriers around and inside the College are still up when you arrive, open the console there and run the four prid/disable lines from the batch file again. They only work near Winterhold.",
      "commands": [
       "player.additem 0010F570 1",
       "player.additem 000C5140 1"
      ],
      "fixups": [
       "prid 000E1533",
+      "disable",
+      "prid 000F0EA9",
       "disable"
      ]
     }
@@ -3426,7 +3437,7 @@
       200
      ],
      "optional": true,
-     "note": "Sheogorath."
+     "note": "Sheogorath. The batch leaves you in the Pelagius Wing; the door out leads to the Blue Palace."
     },
     {
      "edid": "DA16",
