@@ -1,13 +1,13 @@
 // Dragonbatch: pick quests, get a console batch file that completes them.
 //
 // Data lives in JSON packs (data/manifest.json lists them). A pack holds
-// ordered questlines; each quest carries its editor ID and the ascending list
-// of stage indices (an optional `journal` subset marks the ones that show in
-// the quest log; the rest are internal, dimmed in the preview but still
-// generated). Generation replays every stage in order with
-// `setstage`, because completing a quest properly means running the script
-// fragments its stages carry: `completequest` alone marks the journal and
-// leaves the world none the wiser.
+// ordered questlines; each quest carries its editor ID, the full ascending
+// list of stage indices, and a `journal` subset naming the player-visible
+// ones. Generation replays the journal stages in order with `setstage`,
+// because completing a quest properly means running the script fragments its
+// stages carry: `completequest` alone marks the journal and leaves the world
+// none the wiser. Internal stages are deliberately NOT emitted; their scene
+// plumbing, replayed back-to-back, can hard-crash the game.
 //
 // Selection state lives in a Set of editor IDs. Output order always follows
 // pack order (line by line, quest by quest), never click order, because the
@@ -88,7 +88,7 @@ function questLabel(quest, q, lineBadge) {
   // The name is one unbreakable unit (it must never wrap away from its
   // checkbox); the edid and the pill group may flow to the next line.
   // A quest's plugin pill is omitted when the line's title already wears the
-  // same badge — it only appears where it adds information (mixed lines).
+  // same badge; it only appears where it adds information (mixed lines).
   const pills = [];
   if (quest.dlc && quest.dlc !== lineBadge) pills.push(dlcPill(quest.dlc, q));
   if (quest.optional) pills.push('<span class="tag">optional</span>');
@@ -99,7 +99,7 @@ function questLabel(quest, q, lineBadge) {
 let manifest = null;
 
 // Packs are addressable as ?pack=<key>, where the key is the pack file's
-// basename — so the MGO docs can link straight to the MGO pack.
+// basename, so the MGO docs can link straight to the MGO pack.
 function packKey(entry) { return entry.file.replace(/^.*\//, '').replace(/\.json$/, ''); }
 
 async function load() {
@@ -136,6 +136,8 @@ async function loadPack(entry) {
   $('#howto-file-mo2').hidden = !state.pack.mo2Only;
   $('#launch-vanilla').hidden = !!state.pack.mo2Only;
   $('#launch-mo2').hidden = !state.pack.mo2Only;
+  // Offer the catch-up toggle only when this pack has grants to offer.
+  $('#grants-label').hidden = !state.pack.lines.some(l => l.quests.some(q => q.commands));
   render();
   update();
 }
@@ -143,7 +145,7 @@ async function loadPack(entry) {
 function questsOf(line) { return line.quests; }
 
 // Selecting a quest that belongs to a mutually exclusive branch clears the
-// line's other branches — the "pick one" rule the branch labels advertise.
+// line's other branches: the "pick one" rule the branch labels advertise.
 // Unbranched quests in the same line are never touched.
 function selectQuest(line, quest) {
   if (quest.branch) {
@@ -154,7 +156,7 @@ function selectQuest(line, quest) {
   state.selected.add(quest.edid);
 }
 
-// What the line's select-all checkbox covers: every non-optional quest —
+// What the line's select-all checkbox covers: every non-optional quest,
 // except that when two or more branches have non-optional quests, the choice
 // between them is the reader's, so all branched quests drop out. A line that
 // is nothing but such a choice has no targets, and no select-all checkbox.
@@ -208,7 +210,7 @@ function render() {
 
     // Chunk the line's quests into runs sharing a `branch` label. Adjacent
     // branch groups are mutually exclusive alternatives: each renders under
-    // its label, with an "or" divider between them. Purely presentational —
+    // its label, with an "or" divider between them. Purely presentational;
     // sweep and select-all semantics come from `optional` alone.
     const groups = [];
     for (const quest of questsOf(line)) {
@@ -230,7 +232,7 @@ function render() {
         li.dataset.search = (quest.name + ' ' + quest.edid + ' ' + (quest.note || '') + ' ' + (quest.dlc || '') + ' ' + line.title + (line.nsfw ? ' nsfw' : '')).toLowerCase();
         li._quest = quest; // for the filter's match highlighting
         // The row is a nowrap flexbox so the button can never drop below the
-        // checkbox — it shrinks and wraps its own inline content instead.
+        // checkbox; it shrinks and wraps its own inline content instead.
         const row = document.createElement('div');
         row.className = 'qrow';
         li.appendChild(row);
@@ -349,24 +351,38 @@ function updateToggleLines() {
 
 function generate() {
   const withComments = $('#comments').checked;
-  const rows = [];
+  const out = [];
   let quests = 0, commands = 0;
   for (const line of state.pack.lines) {
     for (const quest of questsOf(line)) {
       if (!state.selected.has(quest.edid)) continue;
       quests++;
-      if (withComments) rows.push({ text: '; ' + quest.name + ' (' + quest.edid + ')', internal: false });
-      // quest.journal, when present, lists the stages that show in the quest
-      // log; the rest are internal. All of them get a setstage either way —
-      // the split only affects how the preview displays them.
-      const journal = quest.journal ? new Set(quest.journal) : null;
-      for (const stage of quest.stages) {
-        rows.push({ text: 'setstage ' + quest.edid + ' ' + stage, internal: journal !== null && !journal.has(stage) });
+      if (withComments) out.push('; ' + quest.name + ' (' + quest.edid + ')');
+      // Only journal-visible stages are emitted: the community-proven skip
+      // set. Replaying a quest's internal stages fires its scene plumbing
+      // (teleports, actor spawns) back-to-back and can hard-crash the game;
+      // the full stage list stays in the pack for reference only. Quests
+      // with no journal data (some mods) fall back to every stage.
+      const stages = quest.journal && quest.journal.length ? quest.journal : quest.stages;
+      for (const stage of stages) {
+        out.push('setstage ' + quest.edid + ' ' + stage);
         commands++;
+      }
+      // Fixups: world-state repairs no stage can make (scene-scripted deaths
+      // and the like). Always emitted; skipping them leaves the world wrong.
+      if (quest.fixups) {
+        out.push(...quest.fixups);
+        commands += quest.fixups.length;
+      }
+      // Catch-up rewards: console grants for the things this quest would
+      // have provided (word-wall shouts, dragon souls) that setstage can't.
+      if (quest.commands && $('#grants').checked) {
+        out.push(...quest.commands);
+        commands += quest.commands.length;
       }
     }
   }
-  return { rows, text: rows.map(r => r.text).join('\n') + (rows.length ? '\n' : ''), quests, commands };
+  return { text: out.join('\n') + (out.length ? '\n' : ''), quests, commands };
 }
 
 function update() {
@@ -386,18 +402,8 @@ function update() {
       lineBox.indeterminate = on > 0 && !lineBox.checked;
     }
   }
-  const { rows, quests, commands } = generate();
-  const pre = $('#preview');
-  pre.textContent = '';
-  let internal = 0;
-  for (const row of rows) {
-    const span = document.createElement('span');
-    span.textContent = row.text + '\n';
-    if (row.internal) { span.className = 'internal'; internal++; }
-    pre.appendChild(span);
-  }
-  if (!rows.length) pre.textContent = '(no quests selected)';
-  $('#internal-note').hidden = internal === 0;
+  const { text, quests, commands } = generate();
+  $('#preview').textContent = text || '(no quests selected)';
   $('#count').textContent = quests + ' quest' + (quests === 1 ? '' : 's') + ' · ' + commands + ' command' + (commands === 1 ? '' : 's');
   $('#download').disabled = $('#copy').disabled = commands === 0;
 }
@@ -437,6 +443,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape') { e.target.value = ''; state.filter = ''; applyFilter(); }
   });
   $('#comments').addEventListener('change', update);
+  $('#grants').addEventListener('change', update);
   $('#download').addEventListener('click', download);
   $('#copy').addEventListener('click', async () => {
     await navigator.clipboard.writeText(generate().text);

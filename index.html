@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dragonbatch — Skyrim console batch builder</title>
+  <title>Dragonbatch: Skyrim console batch builder</title>
   <link rel="stylesheet" href="style.css">
   <script src="app.js" defer></script>
 </head>
@@ -39,12 +39,15 @@
           <input type="checkbox" id="comments">
           Include comments <span class="dim">(the console logs a harmless error)</span>
         </label>
+        <label class="toggle" id="grants-label" hidden>
+          <input type="checkbox" id="grants" checked>
+          Catch-up rewards <span class="dim">(shouts and souls the skipped quests would have granted)</span>
+        </label>
         <span class="count" id="count">0 quests · 0 commands</span>
         <button type="button" id="copy">Copy</button>
         <button type="button" id="download" class="primary">Download</button>
       </div>
       <pre id="preview" aria-live="polite"></pre>
-      <p class="fine-print" id="internal-note" hidden>Dimmed lines are internal stages: they never show in the journal, but they carry script fragments the quest needs, so the batch runs them too.</p>
 
       <h2>Get the file in place</h2>
       <ol class="howto" id="howto-file-vanilla">
@@ -52,15 +55,15 @@
         <li>Put the file in your Skyrim VR <code>Data</code> folder (the one with all the plugins). The console also finds batch files next to <code>SkyrimVR.exe</code>, but <code>Data</code> keeps the game's root folder clean.
           <details class="aside">
             <summary>Using Mod Organizer 2? Keep it out of the game folder entirely.</summary>
-            <p>In MO2's left pane, right-click → <strong>All Mods → Create empty mod</strong>, name it something like <em>Dragonbatch batch files</em>, then right-click the new mod → <strong>Open in Explorer</strong> and drop the <code>.txt</code> in at the top level. Enable the mod and launch the game through MO2 as usual: its virtual file system merges the mod into <code>Data</code>, so <code>bat</code> finds the file without anything touching your actual install. MO2 may flag the mod as containing no valid game data — that's fine, plain text files just aren't on its checklist.</p>
+            <p>In MO2's left pane, right-click → <strong>All Mods → Create empty mod</strong>, name it something like <em>Dragonbatch batch files</em>, then right-click the new mod → <strong>Open in Explorer</strong> and drop the <code>.txt</code> in at the top level. Enable the mod and launch the game through MO2 as usual: its virtual file system merges the mod into <code>Data</code>, so <code>bat</code> finds the file without anything touching your actual install. MO2 may flag the mod as containing no valid game data. That's fine; plain text files just aren't on its checklist.</p>
           </details>
         </li>
       </ol>
       <ol class="howto" id="howto-file-mo2" hidden>
         <li>Pick your quests above and hit <strong>Download</strong>.</li>
-        <li>In MO2's left pane, right-click → <strong>All Mods → Create empty mod</strong>, and name it something like <em>Dragonbatch batch files</em>. The file lives in MO2, <strong>never in the game's own folders</strong> — your mod list expects those to stay untouched.</li>
+        <li>In MO2's left pane, right-click → <strong>All Mods → Create empty mod</strong>, and name it something like <em>Dragonbatch batch files</em>. The file lives in MO2, <strong>never in the game's own folders</strong>. Your mod list expects those to stay untouched.</li>
         <li>Right-click the new mod → <strong>Open in Explorer</strong>, and drop the <code>.txt</code> in at the top level.</li>
-        <li>Enable the mod. MO2 may flag it as containing no valid game data — that's fine, plain text files just aren't on its checklist. Its virtual file system merges the mod into <code>Data</code>, so <code>bat</code> will find the file.</li>
+        <li>Enable the mod. MO2 may flag it as containing no valid game data. That's fine; plain text files just aren't on its checklist. Its virtual file system merges the mod into <code>Data</code>, so <code>bat</code> will find the file.</li>
       </ol>
 
       <h2>In the game</h2>

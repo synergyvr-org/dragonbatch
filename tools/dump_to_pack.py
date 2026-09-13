@@ -7,13 +7,13 @@ Pass dumps in load order: quests are merged by editor ID (case-insensitive)
 and a later plugin's override of a quest wins, exactly as it does in-game.
 
 The output is a *skeleton*: every player-facing quest lands in one
-"Uncurated" line, sorted by editor ID. Curation — grouping quests into
-questlines, ordering them, marking optional branches, writing blurbs — is
+"Uncurated" line, sorted by editor ID. Curation (grouping quests into
+questlines, ordering them, marking optional branches, writing blurbs) is
 deliberately a human step. The stage lists, though, are authoritative:
-straight from the plugin, ascending, fail stages dropped. Internal stages
-(no log entries) are kept, because their script fragments matter; when a
-quest has any, its 'journal' key lists the stages that do show in the quest
-log, so the GUI can dim the internal ones.
+straight from the plugin, ascending, fail stages dropped. A quest's 'journal'
+key lists the player-visible stages plus the final completion stage; that is
+what the batch emits. The remaining internal stages stay in the pack as
+reference only, because replaying their scene plumbing can crash the game.
 
 Options:
   --include-nameless   keep quests with no display name (internal machinery,
@@ -79,11 +79,17 @@ def main():
         if dlc_of(q):
             entry['dlc'] = dlc_of(q)
         # If the plugin marks explicit completion stages, trim past the last one:
-        # stages after the final "complete" flag are usually epilogue bookkeeping.
+        # stages after the final "complete" flag are usually epilogue
+        # bookkeeping. Usually, that is: sometimes they're cleanup the world needs
+        # (Season Unending unlocks High Hrothgar at 310/350), so the trimmed
+        # tail is kept for emitStages overrides to reach.
         completes = [s['i'] for s in q.get('stages', []) if s.get('complete')]
         if completes:
             last = max(completes)
             entry['stages'] = [i for i in stages if i <= last]
+            tail = [i for i in stages if i > last]
+            if tail:
+                entry['trimmed'] = tail
         # Journal stages vs internal ones. A stage is player-visible if it has
         # log text, or if an objective shares its index (Bethesda convention
         # for stages that update objectives without a journal entry). All of
@@ -95,6 +101,13 @@ def main():
             visible = {s['i'] for s in q.get('stages', []) if s.get('log')}
             visible |= set(q.get('objectives', []))
             journal = [i for i in entry['stages'] if i in visible]
+            # The final completion stage often has no journal text (the
+            # quest just closes), but without it the quest never completes,
+            # so it is always part of the emitted set.
+            if completes:
+                last = max(completes)
+                if last in entry['stages'] and last not in journal:
+                    journal.append(last)
             if visible and len(journal) < len(entry['stages']):
                 entry['journal'] = journal
         quests.append(entry)
