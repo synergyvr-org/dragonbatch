@@ -270,6 +270,17 @@ function render() {
         });
         row.appendChild(name);
 
+        if (quest.uesp) {
+          const link = document.createElement('a');
+          link.className = 'uesp';
+          link.href = 'https://en.uesp.net/wiki/' + quest.uesp.replace(/ /g, '_');
+          link.target = '_blank';
+          link.rel = 'noopener';
+          link.title = quest.uesp + ' on UESP';
+          link.textContent = 'UESP';
+          row.appendChild(link);
+        }
+
         if (quest.note) {
           const note = document.createElement('p');
           note.className = 'note';

@@ -23,6 +23,7 @@ def main():
     ap.add_argument('curation')
     ap.add_argument('--refs', action='append', default=[],
                     help='ExportRefsJSON dump; repeatable. Needed when the overlay uses "grants".')
+    ap.add_argument('--uesp', help='edid-to-UESP-page-title mapping (data/uesp-links.json)')
     args = ap.parse_args()
 
     skel = json.load(open(args.skeleton, encoding='utf-8'))
@@ -57,6 +58,13 @@ def main():
             # with the wrong load-order slot (Update.esm overrides the
             # Arch-Mage robes, but the form lives in Skyrim.esm's 00 slot).
             refs.setdefault(r['edid'].lower(), r)
+
+    # UESP page titles, verified against the wiki's API and checked in as
+    # data/uesp-links.json. An overlay quest may set "uesp" to a page title
+    # to override, or to false to suppress the link.
+    uesp = {}
+    if args.uesp:
+        uesp = {k.lower(): v for k, v in json.load(open(args.uesp, encoding='utf-8')).items()}
 
     unresolved = []
 
@@ -115,6 +123,11 @@ def main():
             # xEdit in the commit that adds one.
             if cq.get('fixups'):
                 q['fixups'] = list(cq['fixups'])
+            if 'uesp' in cq:
+                if cq['uesp']:
+                    q['uesp'] = cq['uesp']
+            elif cq['edid'].lower() in uesp:
+                q['uesp'] = uesp[cq['edid'].lower()]
             # Curation override for cinematic quests: emit exactly these
             # stages instead of the derived journal set. Journal-visible
             # stages can still start scenes (teleports, boss spawns); this
